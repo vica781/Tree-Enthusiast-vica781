@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'Victoria-Laptop', 'DESKTOP-5QJH8QH']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'Victoria-Laptop', 'DESKTOP-5QJH8QH', 'https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com']
 
 
 # Application definition
