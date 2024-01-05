@@ -1,1 +1,1 @@
-web: gunicorn tree-enthusiast.wsgi 
+web: gunicorn tree_enthusiast.wsgi 
