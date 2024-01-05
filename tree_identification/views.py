@@ -1,8 +1,8 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import HttpResponse
 
 # Create your views here.
 
-def say_hello(request):
+def index(request):
     return HttpResponse("Hello, world. You're at the tree_identification index.")
 
 
