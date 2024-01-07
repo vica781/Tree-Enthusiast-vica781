@@ -1,14 +1,25 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three Enthusiast</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    
 </head>
 <body>
 
     <header>
-        <h1>Three Enthusiast</h1>
+        <h1>Tree Enthusiast</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <!-- Other navigation links here -->
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -17,8 +28,10 @@
     </main>
 
     <footer>
-        <p>&copy; {{ year }} Three Enthusiast</p>
+        <p>&copy; {{ current_year }} Tree Enthusiast</p>
     </footer>
     
+    <!-- Additional JavaScript files or scripts here -->
+
 </body>
 </html>

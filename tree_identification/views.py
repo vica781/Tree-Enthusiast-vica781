@@ -2,11 +2,18 @@ from django.shortcuts import render, redirect
 from .forms import UserRegisterForm
 from django.contrib.auth.models import User
 from django.contrib import messages
+from datetime import datetime
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    context = {
+            'title': 'Home Page',
+            'content': 'Welcome to the home page!',
+            'date_posted': datetime.now(),
+        }
+    return render(request, 'home.html', context)
+    
 
 def register(request):
     # if the request is a POST request, then the user is trying to register
