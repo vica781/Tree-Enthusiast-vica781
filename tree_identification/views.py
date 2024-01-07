@@ -5,6 +5,9 @@ from django.contrib import messages
 
 # Create your views here.
 
+def home(request):
+    return render(request, 'home.html')
+
 def register(request):
     # if the request is a POST request, then the user is trying to register
     if request.method == 'POST':
@@ -26,6 +29,6 @@ def register(request):
         # create an empty form
         form = UserRegisterForm()
     # render the registration page
-    return render(request, 'tree_identification/register.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
 
