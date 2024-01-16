@@ -13,12 +13,30 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="{% static 'assets/images/favicon/oak.png' %}"
+      type="image/png"
+    />
   </head>
+
   <body>
     <header>
+      <!-- Main Title -->
       <h1>Tree Enthusiast</h1>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-bg">
+        <a class="navbar-brand" href="/">
+          <img
+            src="{% static 'assets/images/favicon/oak.png' %}"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -34,45 +52,28 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
+              <a class="nav-link" href="{% url 'home' %}"
+                >Home<span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                data-toggle="dropdown"
-                aria-expanded="false"
-                >Dropdown</a
-              >
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+              <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
           <p class="my-2 my-lg-0 d-flex flex-row">
-            <button class="btn btn-primary nav-link mr-1" href="#">
-              Login
-            </button>
-            <button class="btn btn-info nav-link me-1" href="#">
+            <a class="btn btn-primary nav-link mr-1" href="#"> Login </a>
+            <a class="btn btn-info nav-link me-1" href="{% url 'register' %}">
               Register
-            </button>
+            </a>
           </p>
         </div>
       </nav>
     </header>
 
+    <!-- Main Content Block -->
     <main>{% block content %} {% endblock %}</main>
 
+    <!-- Footer -->
     <footer>
       <p>&copy; {{ current_year }} Tree Enthusiast</p>
     </footer>
