@@ -1,11 +1,29 @@
 header {
-    background-color: #333;
+    /* background-color: #333; */
     color: white;
     padding: 10px 0;
     text-align: center;
 }
 
 /* Navbar */
+.navbar-bg {
+    background-color: #f9f2d9;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar-brand img {
+    height: 3rem;
+    width: 3rem ;
+}
+#nav-title {
+    color: #3a5020;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 1.5rem 0 0;
+    padding: 0;
+}
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -15,8 +33,9 @@ nav ul li {
     margin-right: 10px;
 }
 nav ul li a {
-    color: white;
+    color: rgb(9, 78, 32);
     text-decoration: none;
+    font-weight: bold;
 }
 footer {
     background-color: #333;
