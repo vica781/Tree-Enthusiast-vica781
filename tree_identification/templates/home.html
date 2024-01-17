@@ -1,5 +1,19 @@
 {% extends 'base_generic.html' %} {% load static %} {% block content %}
 
+<!-- Inserting the Image -->
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <img
+        src="{% static 'assets/images/landing_page_image/landing-img.png' %}"
+        alt="Landing Image"
+        class="img-fluid w-100"
+        style="height: 100vh; object-fit: cover"
+      />
+    </div>
+  </div>
+</div>
+
 <button>
   <a href="{% url 'register' %}">Register</a>
 </button>
