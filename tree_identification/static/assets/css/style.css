@@ -6,7 +6,7 @@ html, body {
 
 /* Navbar */
 .navbar-bg {
-    background-color: #f9f2d9;
+    background-color: #2e302e;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -17,7 +17,7 @@ html, body {
     width: 3rem ;
 }
 #nav-title {
-    color: #3a5020;
+    color: #eff4eb;
     font-size: 3rem;
     font-weight: bold;
     margin: 0 1.5rem 0 0;
@@ -32,7 +32,7 @@ nav ul li {
     margin-right: 10px;
 }
 nav ul li a {
-    color: rgb(9, 78, 32);
+    color: #eff4eb;
     text-decoration: none;
     font-weight: bold;
 }
@@ -45,18 +45,28 @@ footer {
     padding: 10px 0;
 }
 /* REGISTER PAGE */
-body,
-  html {
-    height: 100%;
-    margin: 0;
-  }
-  body {
-    /* Background image */
-    background-image: url('{% static "assets/images/background_images/register-page-img.png" %}');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+/* Form */
+.btn {
+    background-color: #2e302e;
+    border: none;
+    color: #eff4eb;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#signup-btn {
+    background-color: #3b3d3b;
+    border: none;
+}
+#signup-btn:hover {
+    background-color: #486f48;    
+}
+
+  
 
 
 
