@@ -1,11 +1,37 @@
-{% extends 'base_generic.html' %}
+{% extends 'base_generic.html' %} {% load static %} {% block content %}
 
-{% block content %}
-    <h2>Sign Up</h2>
-    <form method="post">
-        <!-- Add CSRF token to form for security purposes -->     
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Sign Up</button>
-    </form>
+<!-- Background Image Container -->
+<div class="position-relative">
+  <img
+    src="{% static 'assets/images/background_images/register-page-img-1.png' %}"
+    alt="Landing Image"
+    class="img-fluid w-100"
+    style="height: 100vh; object-fit: cover"
+  />
+
+  <!-- Form Container -->
+  <div
+    class="container position-absolute"
+    style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+  >
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div
+          class="p-4"
+          style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+        >
+          <h2 class="text-center">Sign Up</h2>
+          <form method="post" class="mt-4">
+            {% csrf_token %}
+            <div class="form-group">{{ form.as_p }}</div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}

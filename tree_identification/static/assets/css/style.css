@@ -36,16 +36,6 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
-/* LANDING PAGE IMAGE */
-/* Adjusting image height */
-.img-fluid {
-    height: calc(100vh - 76px);
-}
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* This will cover the full area, you can use 'contain' to fit the whole image */
-}
 
 /* FOOTER */
 footer {
@@ -54,24 +44,19 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+/* REGISTER PAGE */
+body,
+  html {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    /* Background image */
+    background-image: url('{% static "assets/images/background_images/register-page-img.png" %}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-/* MEDIA QUERIES */
-/* Default height for mobile devices */
-.img-fluid {
-    height: calc(100vh - 56px); /* Assuming 56px is the navbar height on mobile */
-}
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    .img-fluid {
-        height: calc(100vh - 72px); /* Adjust if your navbar height is different */
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    .img-fluid {
-        height: calc(100vh - 72px); /* Adjust if your navbar height is different */
-    }
-}
 
