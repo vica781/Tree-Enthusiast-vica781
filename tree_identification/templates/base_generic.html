@@ -23,11 +23,8 @@
 
   <body>
     <header>
-      <!-- Main Title -->
-      <h1>Tree Enthusiast</h1>
-
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-md fixed-top navbar-bg">
+      <nav class="navbar navbar-expand-md navbar-bg">
         <a class="navbar-brand" href="/">
           <img
             src="{% static 'assets/images/favicon/oak-1.png' %}"
@@ -73,7 +70,17 @@
         </div>
       </nav>
     </header>
-
+    {% if messages %} {% for message in messages %}
+    <div class="alert alert-info fade show" role="alert">
+      {{ message }}
+      <button
+        type="button"
+        class="btn-close btn-sm"
+        aria-label="Close"
+        data-bs-dismiss="alert"
+      ></button>
+    </div>
+    {% endfor %} {% endif %}
     <!-- Main Content Block -->
     <main>{% block content %} {% endblock %}</main>
 

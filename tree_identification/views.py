@@ -18,7 +18,7 @@ def home(request):
     return render(request, "home.html", context)
 
 
-def register(request):
+def register_user(request):
     # if the request is a POST request, then the user is trying to register
     if request.method == "POST":
         # create a form with the POST data
@@ -32,7 +32,7 @@ def register(request):
             # display a success message
             messages.success(request, f"Account created for {username}!")
             # redirect to the home page
-            return redirect("tree_identification-home")
+            return redirect("home")
     else:
         # if the request is not a POST request,
         # then the user is trying to access the registration page
@@ -42,21 +42,26 @@ def register(request):
     return render(request, "register.html", {"form": form})
 
 
-def login(request):
+def login_user(request):
     if request.method == "POST":
         # get the username and password from the POST data
-        username = request.POST.get("username")
-        password = request.POST.get("password")
+        username = request.POST["username"]
+        password = request.POST["password"]
+        print(username, password)
         # authenticate the user
         user = authenticate(request, username=username, password=password)
         # if the user is authenticated
         if user is not None:
             # log the user in
             login(request, user)
+            print("User logged in")
             # redirect to the home page
-            return redirect("tree_identification-home")
+            messages.success(request, f"Logged in as {username}!")
+            return redirect("home")
         else:
             # display an error message
             messages.error(request, "Invalid username or password!")
+            # redirect to the login page
+            return redirect("login")
     # render the login page
-    return render(request, "login.html")
+    return render(request, "login.html", {})
