@@ -75,12 +75,15 @@
       {{ message }}
       <button
         type="button"
-        class="btn-close btn-sm"
+        class="close"
+        data-dismiss="alert"
         aria-label="Close"
-        data-bs-dismiss="alert"
-      ></button>
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
     {% endfor %} {% endif %}
+
     <!-- Main Content Block -->
     <main>{% block content %} {% endblock %}</main>
 
