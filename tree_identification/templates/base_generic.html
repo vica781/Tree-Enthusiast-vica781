@@ -67,6 +67,18 @@
               Sign Up
             </a>
           </p>
+          {% if user.is_authenticated %}
+          <a class="btn btn-danger nav-link" href="{% url 'logout' %}"
+            >Logout</a
+          >
+          {% else %}
+          <a class="btn btn-primary nav-link mr-1" href="{% url 'login' %}"
+            >Login</a
+          >
+          <a class="btn btn-info nav-link me-1" href="{% url 'register' %}"
+            >Sign Up</a
+          >
+          {% endif %}
         </div>
       </nav>
     </header>

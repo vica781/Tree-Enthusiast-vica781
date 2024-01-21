@@ -1,0 +1,9 @@
+{% extends 'base_generic.html' %} {% load static %} {% block content %} {%
+<a
+  class="btn btn-danger nav-link"
+  href="{% url 'logout' %}"
+  onclick="return confirm('Are you sure you want to log out?');"
+  >Logout</a
+>
+
+endblock %}

@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from datetime import datetime
 from django.contrib.auth import login
+from django.contrib.auth import logout
 from django.contrib.auth import authenticate
 
 # Create your views here.
@@ -65,3 +66,9 @@ def login_user(request):
             return redirect("login")
     # render the login page
     return render(request, "login.html", {})
+
+
+def logout_user(request):
+    logout(request)
+    messages.info(request, "You have successfully logged out.")
+    return redirect("home")
