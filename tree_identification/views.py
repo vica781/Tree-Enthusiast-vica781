@@ -72,3 +72,8 @@ def logout_user(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
     return redirect("home")
+
+
+def contact(request):
+    # Add logic for handling the contact form
+    return render(request, "contact.html", {})

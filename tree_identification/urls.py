@@ -27,4 +27,5 @@ urlpatterns = [
         name="password_reset_complete",
     ),
     path("logout/", logout_user, name="logout"),
+    path("contact/", views.contact, name="contact"),
 ]
