@@ -6,6 +6,9 @@ from datetime import datetime
 from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.contrib.auth import authenticate
+from django.core.mail import send_mail
+from django.conf import settings
+from .models import Contact
 
 # Create your views here.
 
@@ -75,5 +78,24 @@ def logout_user(request):
 
 
 def contact(request):
-    # Add logic for handling the contact form
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        subject = request.POST.get("subject", "")
+        message = request.POST.get("message")
+
+        # Save the message in the database
+        Contact.objects.create(name=name, email=email, subject=subject, message=message)
+
+        # Send confirmation email
+        send_mail(
+            "Confirmation - We Received Your Message",
+            "Thank you for contacting us. We have received your message and will respond shortly.",
+            settings.DEFAULT_FROM_EMAIL,
+            [email],
+            fail_silently=False,
+        )
+
+        messages.success(request, "Your message has been sent successfully!")
+
     return render(request, "contact.html", {})
