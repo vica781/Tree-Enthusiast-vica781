@@ -4,7 +4,7 @@
   <!-- Background Image -->
   <img
     src="{% static 'assets/images/background_images/contact-page-img-1.png' %}"
-    alt="Login Page Background"
+    alt="Contact Page Background"
     class="img-fluid w-100"
     style="height: 100vh; object-fit: cover"
   />
@@ -12,7 +12,7 @@
   <!-- Form Overlay -->
   <div
     class="container position-absolute"
-    style="top: 35%; left: 35%; transform: translate(-50%, -50%)"
+    style="top: 35%; left: 30%; transform: translate(-50%, -50%)"
   >
     <div class="row">
       <div class="col-md-4 offset-md-3">
@@ -20,42 +20,63 @@
           class="p-4"
           style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
         >
-          <h2 class="text-center mb-4">Contact Us</h2>
+          <h2 class="text-center mb-4">Let's Talk</h2>
           <form method="post" class="mt-4">
             {% csrf_token %}
-            <!-- Form Fields -->
+            <!-- Name Field -->
             <div class="form-group">
-              <label for="username">Username</label>
+              <label for="name">Name*</label>
               <input
                 type="text"
                 class="form-control"
-                id="username"
-                name="username"
+                id="name"
+                name="name"
+                placeholder="Your name"
                 required
               />
             </div>
+            <!-- Email Field -->
             <div class="form-group">
-              <label for="password">Password</label>
+              <label for="email">Email*</label>
               <input
-                type="password"
+                type="email"
                 class="form-control"
-                id="password"
-                name="password"
+                id="email"
+                name="email"
+                placeholder="Your email"
                 required
               />
             </div>
-            
-            
-          </div>
-          
-
-            <!-- Submit Button -->
+            <!-- Subject Field -->
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                name="subject"
+                placeholder="Your subject"
+              />
+            </div>
+            <!-- Message Field -->
+            <div class="form-group">
+              <label for="message">Message*</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                placeholder="Write your message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <!-- Send Message Button -->
             <button
               type="submit"
               class="btn btn-primary btn-block"
-              id="login-btn"
+              id="send-message-btn"
             >
-              Login
+              Send Message
             </button>
           </form>
         </div>
