@@ -27,16 +27,33 @@ def register_user(request):
     if request.method == "POST":
         # create a form with the POST data
         form = UserRegisterForm(request.POST)
+        print(form)
         # check if the form is valid
         if form.is_valid():
             # save the user to the database
             form.save()
             # get the username
             username = form.cleaned_data.get("username")
+            # TODO: GET THE PASSWORD
+            # Get the password
+            password = form.cleaned_data.get("password1")
+            # Authenticate the user
+            print(username, password)
+            # user = authenticate(username=username, password=password)
+            # Log the user in
+            # login(request, user)
+
+            # TODO: AUTHENTICATE THE USER
+            # TODO: LOG THE USER IN
             # display a success message
             messages.success(request, f"Account created for {username}!")
             # redirect to the home page
             return redirect("home")
+        else:
+            # if the form is not valid,
+            # then the user has entered invalid data
+            # display an error message
+            messages.error(request, "Invalid data!")
     else:
         # if the request is not a POST request,
         # then the user is trying to access the registration page
