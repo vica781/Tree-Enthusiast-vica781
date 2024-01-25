@@ -50,9 +50,8 @@ def register_user(request):
             # redirect to the home page
             return redirect("home")
         else:
-            # if the form is not valid,
-            # then the user has entered invalid data
-            # display an error message
+            # Log form errors for debugging
+            print("Form errors:", form.errors)
             messages.error(request, "Invalid data!")
     else:
         # if the request is not a POST request,
