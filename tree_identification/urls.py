@@ -1,7 +1,11 @@
 from django.urls import path, include
-from . import views
 from django.contrib.auth import views as auth_views
+from .views import home
+from . import views
+from .views import register_user
+from .views import login_user
 from .views import logout_user
+from .views import contact
 
 
 urlpatterns = [
