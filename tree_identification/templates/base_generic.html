@@ -68,13 +68,14 @@
             <!-- Authentication Links -->
       {% if user.is_authenticated %}
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'profile' %}">
-          <i class="fa-solid fa-user"></i> {{ user.username }}
+        <a class="nav-link text-white mr-3" href="{% url 'profile' %}">
+          <i class="fa-solid fa-2x mr-3 fa-user text-white"></i> {{ user.username }}
         </a>
       </li>
       <li class="nav-item">
         <!-- Trigger button for Logout Modal -->
-        <a class="btn btn-danger nav-link" data-toggle="modal" data-target="#logoutModal">Logout</a>
+        <a class="btn btn-success nav-link" data-toggle="modal" 
+        data-target="#logoutModal">Logout</a>
       </li>
     {% else %}
       <li class="nav-item">
