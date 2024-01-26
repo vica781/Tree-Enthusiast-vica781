@@ -115,3 +115,7 @@ def contact(request):
         messages.success(request, "Your message has been sent successfully!")
 
     return render(request, "contact.html", {})
+
+
+def profile_user(request):
+    return render(request, "profile.html", {})
