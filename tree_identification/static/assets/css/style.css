@@ -29,13 +29,17 @@ nav ul {
 }
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 10px;    
 }
 nav ul li a {
     color: #eff4eb;
     text-decoration: none;
     font-weight: bold;
 }
+.nav-item .nav-link:hover {
+    color: #f8da17;
+}
+
 
 /* FOOTER */
 footer {
@@ -46,7 +50,7 @@ footer {
 }
 /* REGISTER PAGE */
 /* Form */
-.btn {
+/* .btn {
     background-color: #2e302e;
     border: none;
     color: #eff4eb;
@@ -64,7 +68,25 @@ footer {
 }
 #signup-btn:hover {
     background-color: #486f48;    
+} */
+
+/* USER PROFILE PAGE */
+.background-image {
+    height: 100vh;
+    object-fit: cover;
 }
+
+.form-overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
 
 
   

@@ -14,9 +14,13 @@
       crossorigin="anonymous"
     />
     <!-- Font Awesome 6.4.2 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Favicon -->
     <link
@@ -64,30 +68,43 @@
               <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>
           </ul>
-          <p class="my-2 my-lg-0 d-flex flex-row">
+          <ul class="my-2 my-lg-0 d-flex flex-row">
             <!-- Authentication Links -->
-      {% if user.is_authenticated %}
-      <li class="nav-item">
-        <a class="nav-link text-white mr-3" href="{% url 'profile' %}">
-          <i class="fa-solid fa-2x mr-3 fa-user text-white"></i> {{ user.username }}
-        </a>
-      </li>
-      <li class="nav-item">
-        <!-- Trigger button for Logout Modal -->
-        <a class="btn btn-success nav-link" data-toggle="modal" 
-        data-target="#logoutModal">Logout</a>
-      </li>
-    {% else %}
-      <li class="nav-item">
-        <a class="btn btn-primary nav-link mr-1" href="{% url 'login' %}">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="btn btn-info nav-link me-1" href="{% url 'register' %}">Sign Up</a>
-      </li>
-    {% endif %}
-  </ul>
-</div>
-</nav>
+            {% if user.is_authenticated %}
+            <li class="nav-item nav-item-user">
+              <a
+                class="nav-link mr-3"
+                href="{% url 'profile' %}"
+                id="nav-username"
+              >
+                <i class="fa-solid fa-1.8x mr-2 fa-user text-white"></i>
+                <span>{{ user.username }}</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <!-- Trigger button for Logout Modal -->
+              <a
+                class="btn btn-success nav-link"
+                data-toggle="modal"
+                data-target="#logoutModal"
+                >Logout</a
+              >
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="btn btn-primary nav-link mr-1" href="{% url 'login' %}"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-info nav-link me-1" href="{% url 'register' %}"
+                >Sign Up</a
+              >
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
     </header>
     {% if messages %} {% for message in messages %}
     <div class="alert alert-info fade show" role="alert">
@@ -142,7 +159,9 @@
             >
               Cancel
             </button>
-            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+            <a href="{% url 'logout' %}" class="btn bg-success text-white"
+              >Logout</a
+            >
           </div>
         </div>
       </div>

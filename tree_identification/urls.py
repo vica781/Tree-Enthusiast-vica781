@@ -1,12 +1,14 @@
-from django.urls import path, include
+from django.contrib import admin
 from django.contrib.auth import views as auth_views
-from .views import home
+from django.urls import path, include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+from .views import home
 from .views import register_user
 from .views import login_user
 from .views import logout_user
 from .views import contact
-
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -34,3 +36,8 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("profile/", views.profile_user, name="profile"),
 ]
+
+# adapted from tutorial video:
+# https://www.youtube.com/watch?v=FdVuKt_iuSI&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

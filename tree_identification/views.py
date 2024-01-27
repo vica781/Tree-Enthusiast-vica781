@@ -38,12 +38,13 @@ def register_user(request):
             # Get the password
             password = form.cleaned_data.get("password1")
             # Authenticate the user
-            print(username, password)
-            # user = authenticate(username=username, password=password)
+
+            user = authenticate(username=username, password=password)
             # Log the user in
-            # login(request, user)
+            login(request, user)
 
             # TODO: AUTHENTICATE THE USER
+
             # TODO: LOG THE USER IN
             # display a success message
             messages.success(request, f"Account created for {username}!")

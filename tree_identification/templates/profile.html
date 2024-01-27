@@ -1,0 +1,48 @@
+{% extends 'base_generic.html' %} {% load static %} {% block content %}
+
+<div class="position-relative">
+  <!-- Background Image -->
+  <img
+    src="{% static 'assets/images/background_images/userprofile-page-img.png' %}"
+    alt="Login Page Background"
+    class="img-fluid w-100"
+    style="height: 100vh; object-fit: cover"
+  />
+  <!-- Form Overlay -->
+  <div
+    class="container position-absolute"
+    style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+  >
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <div
+          class="p-4"
+          style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+        >
+          <div class="content-section">
+            <div class="media">
+              <img
+                class="mr-3 account-img"
+                src="{% if user.profile.image.url %}
+                  {{ user.profile.image.url }}
+                  {% else %}
+                  https://i.pinimg.com/736x/cb/73/15/cb73150342526c2c914e154abe779325.jpg
+                  {% endif %}"
+                alt="Close up image on a birch tree leaves"
+                width="100px"
+                height="100px"
+              />
+              <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+                <p class="text-secondary">{{ user.first_name }}</p>
+                <p class="text-secondary">{{ user.last_name }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

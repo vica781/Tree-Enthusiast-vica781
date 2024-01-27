@@ -16,13 +16,12 @@ class Contact(models.Model):
 
 # Model to store Registration form data
 class Profile(models.Model):
-    username = models.CharField(max_length=100)
-    email = models.EmailField()
-    password = models.CharField(max_length=200, blank=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    image = models.ImageField(default="default.jpg", upload_to="profile_pics")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Message from {self.username}"
+        return f"{self.user.username} Profile"
 
 
 # Model to store Login form data
