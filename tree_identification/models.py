@@ -17,7 +17,9 @@ class Contact(models.Model):
 # Model to store Registration form data
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    image = models.ImageField(default="default.jpg", upload_to="profile_pics")
+    image = models.ImageField(
+        default="profile_pics/profile-img.png", upload_to="profile_pics"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

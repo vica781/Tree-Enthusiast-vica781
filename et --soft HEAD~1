@@ -1,0 +1,249 @@
+[33mcommit 6f3dfd44168a0088efe210fa3ea17ab6fe4eca0f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sat Jan 27 18:30:48 2024 +0000
+
+    Fix: resolve user's authentication and profile displaying issues
+
+[33mcommit efde242b9d3fbc3bc986352e9c52453aad3b327f[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 26 19:27:53 2024 +0000
+
+    Feat: add extra fields to Registration Form
+
+[33mcommit c78cff75a93d7e138537e6e14f51cb0e90022014[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 26 18:03:56 2024 +0000
+
+    Feat: add user's generic icon next to Username on navbar
+
+[33mcommit bd2b9f6d55e2a06b861a6f3cd177fbd1c6484315[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 26 17:23:39 2024 +0000
+
+    Feat: add logged in user's Username as a link to navbar
+
+[33mcommit 684bd737c1af3a1562305f8774c6de548093268e[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Thu Jan 25 13:46:02 2024 +0000
+
+    Fix: Resolve redirection to Home Page issue after successful new user registration
+
+[33mcommit 4c1b618aa90350365df8398cd80456a0eeeb1784[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Thu Jan 25 13:21:54 2024 +0000
+
+    Fix: Resolve issue with new user registration functionality
+
+[33mcommit 3d9bc5f6e717d091ae11067f6d76b9b53253d62a[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Wed Jan 24 20:58:57 2024 +0000
+
+    Feat: change UserRegisterForm in forms.py
+
+[33mcommit 03809b4d7b85191c0e4407245525ab3513d0934f[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Mon Jan 22 20:25:56 2024 +0000
+
+    Feat: add user notification functionality upon submission of contact form
+
+[33mcommit 14418aaf4a18b420515aef5b8869ca021b163383[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Mon Jan 22 18:33:05 2024 +0000
+
+    Feat: update Contact Us Form with a new title and fields
+
+[33mcommit 99a4a8c55154a23b45f9864ce559fdefd706e2e5[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 21 21:19:19 2024 +0000
+
+    Feat: add Contact Page with basic functionality
+
+[33mcommit 7d011f7bcd1ca6a2542aa74574806c56956b7974[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 21 18:19:59 2024 +0000
+
+    Fix: update navbar for registered and logged in User
+
+[33mcommit 5f10bf3abc6420915d9caeb4b574010441ac5a5c[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 21 16:48:02 2024 +0000
+
+    Feat: add Modal to confirm User's intention to Logout
+
+[33mcommit 6224b1bd621855e84da6d058462627ae7399e990[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 21 16:23:13 2024 +0000
+
+    Feat: add basic Logout functionality
+
+[33mcommit 4d2c9f60da60416af2a488ffde8cf77a2e4887a9[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 21 11:50:41 2024 +0000
+
+    Feat: add Registration Prompt for unregistered user to Login Form
+
+[33mcommit 713474f7da53fbcdf26cb4e0e4e1c33fd4b7aa47[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sat Jan 20 22:30:30 2024 +0000
+
+    Feat: add Password Reset functionality to Login Form
+
+[33mcommit 1663cd941ac6320876deafe9aec0b32b4ba1eab7[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sat Jan 20 19:31:17 2024 +0000
+
+    Fix: user's login notification message dismissal
+
+[33mcommit b141aee191d05bdcc494091a4a7aa80ce787609e[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sat Jan 20 18:43:39 2024 +0000
+
+    Fix: user authentication
+
+[33mcommit 736158162240051527f1aea1f804031104a27a05[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Thu Jan 18 19:57:03 2024 +0000
+
+    Create Login page with basic functionality
+
+[33mcommit e239a372d31cf777b264fbedfc07426133dcd6b0[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Wed Jan 17 20:45:43 2024 +0000
+
+    Change Register Form structure
+
+[33mcommit 751dda3cded398c7e9837c3d022255b78e474c6e[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Wed Jan 17 16:17:00 2024 +0000
+
+    Format Sign Up Form and add background image to register.html
+
+[33mcommit 91046e6a0eb77a5f6ab09c98adfc7f30a5d9733a[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Wed Jan 17 10:59:58 2024 +0000
+
+    Fix sizing of landing page image
+
+[33mcommit c6b8f77e7f69a6930471bb229d1eebbe0e8b16c7[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Tue Jan 16 20:27:50 2024 +0000
+
+    Change navbar styling
+
+[33mcommit 9d6d9a0f7e09a31dd3bd13fe840e11eba69ed4b2[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Tue Jan 16 14:23:55 2024 +0000
+
+    Fix the navbar link for register view
+
+[33mcommit b4ab5cdd858040f14c96d7b01bc6f4d26a6e229b[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sat Jan 13 14:47:05 2024 +0000
+
+    Add raw navbar using Bootstrap
+
+[33mcommit f98d320b9c52fd2eabfa49db903b5fe4c4c715b5[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sat Jan 13 14:23:07 2024 +0000
+
+    Add Bootstrap links
+
+[33mcommit f3f75ecffb94991ae12350ba5f6e2dca236cf1d9[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 7 21:13:20 2024 +0000
+
+    Add basic structure and visibility to Home page
+
+[33mcommit bfb6dd4ecd25d223f741e013df6e6f55714154fc[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 7 19:16:46 2024 +0000
+
+    Fix issue with Register Form view
+
+[33mcommit b2321f7dddc92de0231ebcb8c293b6b0e421afa0[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 7 16:57:25 2024 +0000
+
+    Create the Base Template
+
+[33mcommit 0c480c3e8a5ce99de6153b433a4a50a5b43656da[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 7 16:53:25 2024 +0000
+
+    Create the Registration Template
+
+[33mcommit d8ce410457cceeec4aa2703d59caae69b1f8b665[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 7 16:41:40 2024 +0000
+
+    Create a URL pattern to map new user registration view
+
+[33mcommit 027dc8b1f25f5ae52f184a5e6f5bf01ca380a2be[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 7 14:31:02 2024 +0000
+
+    Create a View for Registration
+
+[33mcommit 6744411fbd5b832a1eafd41e3601921fe229ba0c[m
+Merge: ddf5bc1 f8de542
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 7 14:19:35 2024 +0000
+
+    Merge branch 'main' of https://github.com/vica781/Tree-Enthusiast-vica781
+
+[33mcommit ddf5bc1dd9ff25ae18e846c86e35da512ce048ea[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Sun Jan 7 14:16:24 2024 +0000
+
+    Create a User Registration Form
+
+[33mcommit f8de542751606f1f80f814a0116bf01c2e909648[m
+Author: Victoria Kalenik <vk781@hotmail.com>
+Date:   Sat Jan 6 20:41:33 2024 +0000
+
+    Update issue templates
+
+[33mcommit fc75e972f3bf7046685ec8acbae976e307c751fd[m
+Author: Victoria Kalenik <vk781@hotmail.com>
+Date:   Sat Jan 6 20:37:52 2024 +0000
+
+    Update issue templates
+
+[33mcommit 020b70fe10094d544a480af8d97f7921d2fac574[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 5 20:39:18 2024 +0000
+
+    Fix allowed hosts address
+
+[33mcommit 0311f441fffaf48ef2ea2602fd1c7b0e808980ac[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 5 20:37:30 2024 +0000
+
+    Change DEBUG to True
+
+[33mcommit c6c55ea5813b5705c3334658a4f35d63ea1c15ae[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 5 20:32:55 2024 +0000
+
+    Add Heroku app address to ALLOWED_HOSTS
+
+[33mcommit d5ccb151016a76216c6474a06ed23e237d0d4e1c[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 5 20:29:58 2024 +0000
+
+    Fix Procfile project name
+
+[33mcommit b5808dcca6e55b12862047ae9200d0ff1f7cbcc8[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 5 20:26:04 2024 +0000
+
+    Add Procfile
+
+[33mcommit d59b9012131d0a52e86376c63289d7e2af3ab72e[m
+Author: Victoria Kalenik-Harris <vk781@hotmail.com>
+Date:   Fri Jan 5 20:21:33 2024 +0000
+
+    Add venv to gitignore
+
+[33mcommit aa36c22ac4cd963c08d27d60202dbf0fbf3220b7[m
+Author: Victoria Kalenik-Har
