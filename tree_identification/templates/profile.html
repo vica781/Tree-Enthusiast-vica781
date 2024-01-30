@@ -3,8 +3,8 @@
 <div class="position-relative">
   <!-- Background Image -->
   <img
-    src="{% static 'assets/images/background_images/userprofile-page-img.png' %}"
-    alt="Login Page Background"
+    src="{% static 'assets/images/background_images/login-page-img-1.png' %}"
+    alt="Close up image of a lilac flowers and leaves"
     class="img-fluid w-100"
     style="height: 100vh; object-fit: cover"
   />
@@ -22,6 +22,12 @@
           <div class="content-section">
             <div class="media">
               <img
+                class="rounded-circle account-img mr-3"
+                scr="{{ user.profile.image.url }}"
+                alt="Profile Image"
+              />
+
+              <!-- <img
                 class="mr-3 account-img"
                 src="{% if user.profile.image.url %}
                   {{ user.profile.image.url }}
@@ -31,7 +37,7 @@
                 alt="Close up image on a birch tree leaves"
                 width="100px"
                 height="100px"
-              />
+              /> -->
               <div class="media-body">
                 <h2 class="account-heading">{{ user.username }}</h2>
                 <p class="text-secondary">{{ user.email }}</p>

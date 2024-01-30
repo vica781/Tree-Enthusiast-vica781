@@ -18,7 +18,7 @@ class Contact(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     image = models.ImageField(
-        default="profile_pics/profile-img.png", upload_to="profile_pics"
+        default="profile_pics/default.png", upload_to="profile_pics"
     )
     created_at = models.DateTimeField(auto_now_add=True)
 
