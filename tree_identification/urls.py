@@ -9,6 +9,7 @@ from .views import register_user
 from .views import login_user
 from .views import logout_user
 from .views import contact
+from tree_identification import views as user_views
 
 urlpatterns = [
     path("", views.home, name="home"),
