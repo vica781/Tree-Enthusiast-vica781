@@ -8,35 +8,35 @@
     class="img-fluid w-100"
     style="height: 100vh; object-fit: cover"
   />
+
   <!-- Form Overlay -->
   <div
     class="container position-absolute"
-    style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+    style="top: 50%; left: 35%; transform: translate(-50%, -50%)"
   >
     <div class="row">
-      <div class="col-md-4 offset-md-4">
+      <div class="col-md-6 offset-md-6">
         <div
-          class="p-4"
+          class="p-4 shadow-lg rounded-lg"
           style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
         >
-          <div class="content-section">
+          <!-- Header Section -->
+          <div class="header-section profile-header">
+            <h2 class="account-heading">Welcome, {{ user.username }}!</h2>
+            <hr />
+          </div>
+
+          <!-- Main Section -->
+          <div class="main-section">
             <div class="media">
               <img
                 class="rounded_circle mr-3 account-img"
-                src="{% if user.profile.image.url %}
-                  {{ user.profile.image.url }}
-                  {% else %}
-                  {% static 'assets/profile_images/user-prof-img.png' %}
-                  {% endif %}"
-                alt="default profile picture of a tree"
+                src="{% if user.profile.image.url %}{{ user.profile.image.url }}{% else %}{% static 'assets/profile_images/user-prof-img.png' %}{% endif %}"
+                alt="default profile picture"
                 width="100px"
                 height="100px"
               />
               <div class="media-body">
-                <div id="profile-heading">
-                  <h2 class="account-heading">Welcom, {{ user.username }}!</h2>
-                </div>
-                <hr />
                 <p class="text-secondary">
                   <strong>First Name:</strong> {{ user.first_name }}
                 </p>
@@ -46,14 +46,23 @@
                 <p class="text-secondary">
                   <strong>Email:</strong> {{ user.email }}
                 </p>
-                <hr />
-                <div id="profile-footer"></div>
               </div>
             </div>
+          </div>
+
+          <hr />
+
+          <!-- Footer Section -->
+          <div class="footer-section profile-footer">
+            <button type="button" class="btn btn-primary">
+              Update Profile
+            </button>
+            <button type="button" class="btn btn-danger">Delete Profile</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 {% endblock %}
