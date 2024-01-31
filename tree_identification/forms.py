@@ -2,6 +2,7 @@ from typing import Any
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Profile
 
 
 class UserRegisterForm(UserCreationForm):
@@ -27,3 +28,20 @@ class UserRegisterForm(UserCreationForm):
         self.fields["username"].widget.attrs["class"] = "form-control"
         self.fields["password1"].widget.attrs["class"] = "form-control"
         self.fields["password2"].widget.attrs["class"] = "form-control"
+
+
+# Create a form for updating the user profile
+class ProfileUpdateForm(forms.ModelForm):
+    email = forms.EmailField()
+    current_password = forms.CharField(widget=forms.PasswordInput(), required=False)
+    new_password = forms.CharField(widget=forms.PasswordInput(), required=False)
+    confirm_new_password = forms.CharField(widget=forms.PasswordInput(), required=False)
+
+    class Meta:
+        model = Profile
+        fields = ["image"]
+
+    def clean(self):
+        # Add validation for passwords
+        cleaned_data = super().clean()
+        return cleaned_data

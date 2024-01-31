@@ -41,21 +41,7 @@ nav ul li a {
 }
 
 /* USER PROFILE PAGE */
-div.profile-header {
-    background-color: #c3db39;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-div.profile-footer {
-    background-color: #c3db39;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
 
 
 /* FOOTER */

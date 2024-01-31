@@ -36,6 +36,7 @@ urlpatterns = [
     path("logout/", logout_user, name="logout"),
     path("contact/", views.contact, name="contact"),
     path("profile/", views.profile_user, name="profile"),
+    path("profile/update/", views.profile_update, name="profile-update"),
 ]
 
 # adapted from tutorial video:

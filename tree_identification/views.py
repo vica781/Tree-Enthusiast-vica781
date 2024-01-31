@@ -9,8 +9,7 @@ from django.contrib.auth import authenticate
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import Contact
-
-# Create your views here.
+from .forms import ProfileUpdateForm
 
 
 def home(request):
@@ -120,3 +119,17 @@ def contact(request):
 
 def profile_user(request):
     return render(request, "profile.html", {})
+
+
+def profile_update(request):
+    if request.method == "POST":
+        form = ProfileUpdateForm(
+            request.POST, request.FILES, instance=request.user.profile
+        )
+        if form.is_valid():
+            form.save()
+            return redirect("profile")  # Redirect to the profile view
+    else:
+        form = ProfileUpdateForm(instance=request.user.profile)
+
+    return render(request, "profile_update.html", {"form": form})
