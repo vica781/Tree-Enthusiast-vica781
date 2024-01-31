@@ -10,6 +10,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .models import Contact
 from .forms import ProfileUpdateForm
+from .models import Profile
 
 
 def home(request):
@@ -122,6 +123,8 @@ def profile_user(request):
 
 
 def profile_update(request):
+    user = request.user
+    profile, created = Profile.objects.get_or_create(user=user)
     if request.method == "POST":
         form = ProfileUpdateForm(
             request.POST, request.FILES, instance=request.user.profile
