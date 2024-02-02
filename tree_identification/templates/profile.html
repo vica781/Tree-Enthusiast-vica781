@@ -22,7 +22,9 @@
         >
           <!-- Header Section -->
           <div class="header-section profile-header">
-            <h2 class="account-heading">Welcome, {{ user.username }}!</h2>
+            <h2 class="account-heading text-center">
+              Welcome, {{ user.username }}!
+            </h2>
             <hr />
           </div>
 
@@ -33,11 +35,11 @@
                 class="rounded_circle mr-3 account-img"
                 src="{% if user.profile.image.url %}{{ user.profile.image.url }}{% else %}{% static 'assets/profile_images/user-prof-img.png' %}{% endif %}"
                 alt="default profile picture"
-                width="100px"
-                height="100px"
+                width="200px"
+                height="200px"
               />
-              <div class="media-body">
-                <p class="text-secondary">
+              <div class="media-body ml-4">
+                <p class="text-secondary mt-5">
                   <strong>First Name:</strong> {{ user.first_name }}
                 </p>
                 <p class="text-secondary">
@@ -53,7 +55,7 @@
           <hr />
 
           <!-- Footer Section -->
-          <div class="footer-section profile-footer">
+          <div class="text-center">
             <a href="{% url 'profile-update' %}" class="btn btn-primary"
               >Update Profile</a
             >

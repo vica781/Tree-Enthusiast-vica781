@@ -21,7 +21,7 @@
           style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
         >
           <!-- Header Section -->
-          <div class="header-section profile-header">
+          <div class="text-center">
             <h2 class="account-heading">
               Update {{ user.username }}'s Profile:
             </h2>
@@ -33,11 +33,11 @@
             <form method="POST" enctype="multipart/form-data">
               {% csrf_token %}
               <img
-                class="rounded_circle account-img"
+                class="rounded_circle account-img d-block mx-auto mb-3"
                 src="{{ user.profile.image.url }}"
                 alt="Profile Picture"
-                width="100px"
-                height="100px"
+                width="200px"
+                height="200px"
               />
               <p class="text-secondary">
                 <strong>Email:</strong> {{ user.email }}
@@ -45,11 +45,13 @@
               <!-- Add your form fields here -->
               {{ form.as_p }}
               <hr />
-              <div class="footer-section profile-footer">
+              <div class="text-center">
                 <button type="submit" class="btn btn-primary">
                   Update Profile
                 </button>
-                <a href="{% url 'profile' %}" class="btn btn-danger">Cancel</a>
+                <a href="{% url 'profile' %}" class="btn btn-danger w-25"
+                  >Cancel</a
+                >
               </div>
             </form>
           </div>
