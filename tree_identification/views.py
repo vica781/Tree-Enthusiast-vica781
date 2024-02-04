@@ -124,25 +124,37 @@ def profile_user(request):
     return render(request, "profile.html", {})
 
 
+@login_required
 def profile_update(request):
     user = request.user
     profile, created = Profile.objects.get_or_create(user=user)
     if request.method == "POST":
-        form = ProfileUpdateForm(
-            request.POST, request.FILES, instance=request.user.profile
-        )
+        form = ProfileUpdateForm(request.POST, request.FILES, instance=user.profile)
+
+        # Check if the form is valid
         if form.is_valid():
             # Check the current password if it's provided
             current_password = form.cleaned_data.get("current_password")
-            if not request.user.check_password(current_password):
+            if not user.check_password(current_password):
                 messages.error(request, "The current password is incorrect.")
                 return render(
                     request, "profile_update.html", {"form": form}
                 )  # Re-render the page with the form
-            form.save()
+
+            # Check if there are changes in the form
+            if form.has_changed():
+                # Perform the update
+                form.save()
+                messages.success(request, "Your profile has been updated successfully.")
+            else:
+                # No changes were made
+                messages.info(request, "No changes were detected in your profile.")
             return redirect("profile")  # Redirect to the profile view
+        else:
+            # Form is not valid
+            messages.error(request, "Please correct the error below.")
     else:
-        form = ProfileUpdateForm(instance=request.user.profile)
+        form = ProfileUpdateForm(instance=user.profile)
 
     return render(request, "profile_update.html", {"form": form})
 
