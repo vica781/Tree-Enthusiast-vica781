@@ -7,12 +7,16 @@ from django.contrib.auth import (
     login,
     logout,
     authenticate,
+    get_user_model,
 )  # authenticate is used to check if the user is valid
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import Contact, Profile
 from .forms import ProfileUpdateForm
 from .forms import UserRegisterForm
+
+# from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 def home(request):
@@ -135,12 +139,31 @@ def profile_update(request):
     return render(request, "profile_update.html", {"form": form})
 
 
+from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.shortcuts import redirect
+
+
 @login_required
 def profile_delete(request):
-    # Store the username before deleting the user
-    username = request.user.username
-    # Delete the user
-    request.user.delete()
-    # Now display the message with the stored username
-    messages.info(request, f"{username}'s profile has been successfully deleted!")
-    return redirect("home")
+    if request.method == "POST":
+        # Retrieve the password from the form
+        password = request.POST.get("confirm_password")
+
+        # Debugging: Print the password and username to the console (remove in production)
+        print(f"Password received: {password}")
+        print(f"User: {request.user.username}")
+
+        # Manually check the password
+        if request.user.check_password(password):
+            username = request.user.username  # Store the username before deletion
+            request.user.delete()  # Delete the user
+            messages.info(
+                request, f"{username}'s profile has been successfully deleted!"
+            )
+            return redirect("home")
+        else:
+            # If password check fails, inform the user
+            messages.error(request, "Password is incorrect. Profile was not deleted.")
+            return redirect("profile")
