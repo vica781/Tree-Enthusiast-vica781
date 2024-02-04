@@ -37,6 +37,7 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("profile/", views.profile_user, name="profile"),
     path("profile/update/", views.profile_update, name="profile-update"),
+    path("profile/delete/", views.profile_delete, name="profile-delete"),
 ]
 
 # adapted from tutorial video:

@@ -1,16 +1,18 @@
 from django.shortcuts import render, redirect
-from .forms import UserRegisterForm
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 from datetime import datetime
-from django.contrib.auth import login
-from django.contrib.auth import logout
-from django.contrib.auth import authenticate
+from django.contrib.auth import (
+    login,
+    logout,
+    authenticate,
+)  # authenticate is used to check if the user is valid
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Contact
+from .models import Contact, Profile
 from .forms import ProfileUpdateForm
-from .models import Profile
+from .forms import UserRegisterForm
 
 
 def home(request):
@@ -34,7 +36,6 @@ def register_user(request):
             form.save()
             # get the username
             username = form.cleaned_data.get("username")
-            # TODO: GET THE PASSWORD
             # Get the password
             password = form.cleaned_data.get("password1")
             # Authenticate the user
@@ -42,10 +43,6 @@ def register_user(request):
             user = authenticate(username=username, password=password)
             # Log the user in
             login(request, user)
-
-            # TODO: AUTHENTICATE THE USER
-
-            # TODO: LOG THE USER IN
             # display a success message
             messages.success(request, f"Account created for {username}!")
             # redirect to the home page
@@ -136,3 +133,14 @@ def profile_update(request):
         form = ProfileUpdateForm(instance=request.user.profile)
 
     return render(request, "profile_update.html", {"form": form})
+
+
+@login_required
+def profile_delete(request):
+    # Store the username before deleting the user
+    username = request.user.username
+    # Delete the user
+    request.user.delete()
+    # Now display the message with the stored username
+    messages.info(request, f"{username}'s profile has been successfully deleted!")
+    return redirect("home")
