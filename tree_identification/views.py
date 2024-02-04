@@ -134,9 +134,11 @@ def profile_update(request):
         if form.is_valid():
             # Check the current password if it's provided
             current_password = form.cleaned_data.get("current_password")
-            if current_password and not request.user.check_password(current_password):
+            if not request.user.check_password(current_password):
                 messages.error(request, "The current password is incorrect.")
-                return redirect("profile-update")
+                return render(
+                    request, "profile_update.html", {"form": form}
+                )  # Re-render the page with the form
             form.save()
             return redirect("profile")  # Redirect to the profile view
     else:

@@ -40,7 +40,7 @@ class UserRegisterForm(UserCreationForm):
 # Create a form for updating the user profile
 class ProfileUpdateForm(forms.ModelForm):
     email = forms.EmailField()
-    current_password = forms.CharField(widget=forms.PasswordInput(), required=False)
+    current_password = forms.CharField(widget=forms.PasswordInput(), required=True)
     new_password = forms.CharField(widget=forms.PasswordInput(), required=False)
     confirm_new_password = forms.CharField(widget=forms.PasswordInput(), required=False)
 

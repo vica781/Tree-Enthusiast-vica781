@@ -33,7 +33,8 @@
             <div class="media">
               <img
                 class="rounded_circle mr-3 account-img"
-                src="{% if user.profile.image.url %}{{ user.profile.image.url }}{% else %}{% static 'assets/profile_images/user-prof-img.png' %}{% endif %}"
+                src="{% if user.profile.image.url %}
+                {{ user.profile.image.url }}{% else %}{% static 'assets/images/profile_images/users-prof-img.png' %}{% endif %}"
                 alt="default profile picture"
                 width="200px"
                 height="200px"
