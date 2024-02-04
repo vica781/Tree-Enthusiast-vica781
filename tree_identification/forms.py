@@ -3,6 +3,8 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Profile
+from django.core.exceptions import ValidationError
+from django.contrib.auth.hashers import check_password
 
 
 class UserRegisterForm(UserCreationForm):
@@ -28,6 +30,11 @@ class UserRegisterForm(UserCreationForm):
         self.fields["username"].widget.attrs["class"] = "form-control"
         self.fields["password1"].widget.attrs["class"] = "form-control"
         self.fields["password2"].widget.attrs["class"] = "form-control"
+
+    def clean_current_password(self):
+        current_password = self.cleaned_data.get("current_password")
+        if not check_password(current_password, self.instance.user.password):
+            raise ValidationError("The current password is incorrect.")
 
 
 # Create a form for updating the user profile

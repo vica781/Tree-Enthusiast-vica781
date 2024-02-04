@@ -12,8 +12,10 @@ from django.contrib.auth import (
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import Contact, Profile
-from .forms import ProfileUpdateForm
-from .forms import UserRegisterForm
+from .forms import ProfileUpdateForm, UserRegisterForm
+from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
+
 
 # from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -43,7 +45,6 @@ def register_user(request):
             # Get the password
             password = form.cleaned_data.get("password1")
             # Authenticate the user
-
             user = authenticate(username=username, password=password)
             # Log the user in
             login(request, user)
@@ -131,18 +132,17 @@ def profile_update(request):
             request.POST, request.FILES, instance=request.user.profile
         )
         if form.is_valid():
+            # Check the current password if it's provided
+            current_password = form.cleaned_data.get("current_password")
+            if current_password and not request.user.check_password(current_password):
+                messages.error(request, "The current password is incorrect.")
+                return redirect("profile-update")
             form.save()
             return redirect("profile")  # Redirect to the profile view
     else:
         form = ProfileUpdateForm(instance=request.user.profile)
 
     return render(request, "profile_update.html", {"form": form})
-
-
-from django.contrib.auth import get_user_model
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from django.shortcuts import redirect
 
 
 @login_required
