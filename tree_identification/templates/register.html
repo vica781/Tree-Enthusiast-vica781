@@ -29,7 +29,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="username"
+                id="id_username"
                 name="username"
                 placeholder="Choose a username"
                 required
@@ -100,6 +100,30 @@
               Sign Up
             </button>
           </form>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var usernameInput = document.getElementById("id_username");
+
+              usernameInput.addEventListener("keyup", function () {
+                var username = this.value;
+
+                fetch("/check_username/?username=" + username)
+                  .then((response) => response.json())
+                  .then((data) => {
+                    if (data.is_taken) {
+                      usernameInput.setCustomValidity(
+                        "This username is already taken."
+                      );
+                    } else {
+                      usernameInput.setCustomValidity("");
+                    }
+                  })
+                  .catch(() => {
+                    // Handle any errors here
+                  });
+              });
+            });
+          </script>
         </div>
       </div>
     </div>

@@ -38,6 +38,7 @@ urlpatterns = [
     path("profile/", views.profile_user, name="profile"),
     path("profile/update/", views.profile_update, name="profile-update"),
     path("profile/delete/", views.profile_delete, name="profile-delete"),
+    path("check_username/", views.check_username, name="check_username"),
 ]
 
 # adapted from tutorial video:
