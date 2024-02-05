@@ -108,46 +108,11 @@
               Sign Up
             </button>
           </form>
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              let usernameInput = document.getElementById("id_username");
-
-              usernameInput.addEventListener("keyup", function () {
-                let username = this.value;
-
-                fetch("/check_username/?username=" + username)
-                  .then((response) => response.json())
-                  .then((data) => {
-                    if (data.is_taken) {
-                      usernameInput.setCustomValidity(
-                        "This username is already taken."
-                      );
-                    } else {
-                      usernameInput.setCustomValidity("");
-                    }
-                  })
-                  .catch(() => {});
-              });
-            });
-          </script>
-          <script>
-            function togglePassword() {
-              let passwordInput = document.getElementById("password");
-              let toggleButton = document.getElementById(
-                "togglePasswordButton"
-              );
-              if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                toggleButton.textContent = "Hide Password";
-              } else {
-                passwordInput.type = "password";
-                toggleButton.textContent = "Show Password";
-              }
-            }
-          </script>
         </div>
       </div>
     </div>
   </div>
 </div>
-{% endblock %}
+{% block javascript %}
+<script src="{% static 'assets/js/script.js' %}"></script>
+{% endblock %} {% endblock content %}
