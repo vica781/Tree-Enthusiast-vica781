@@ -79,6 +79,14 @@
               <small class="form-text text-muted">
                 Must be at least 8 characters.
               </small>
+              <!-- Toggle Button -->
+              <button
+                type="button"
+                id="togglePasswordButton"
+                onclick="togglePassword()"
+              >
+                Show Password
+              </button>
             </div>
             <div class="form-group">
               <label for="password-confirm">Confirm Password</label>
@@ -102,10 +110,10 @@
           </form>
           <script>
             document.addEventListener("DOMContentLoaded", function () {
-              var usernameInput = document.getElementById("id_username");
+              let usernameInput = document.getElementById("id_username");
 
               usernameInput.addEventListener("keyup", function () {
-                var username = this.value;
+                let username = this.value;
 
                 fetch("/check_username/?username=" + username)
                   .then((response) => response.json())
@@ -118,11 +126,24 @@
                       usernameInput.setCustomValidity("");
                     }
                   })
-                  .catch(() => {
-                    // Handle any errors here
-                  });
+                  .catch(() => {});
               });
             });
+          </script>
+          <script>
+            function togglePassword() {
+              let passwordInput = document.getElementById("password");
+              let toggleButton = document.getElementById(
+                "togglePasswordButton"
+              );
+              if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleButton.textContent = "Hide Password";
+              } else {
+                passwordInput.type = "password";
+                toggleButton.textContent = "Show Password";
+              }
+            }
           </script>
         </div>
       </div>
