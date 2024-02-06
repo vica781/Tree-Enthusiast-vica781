@@ -53,25 +53,11 @@ footer {
 }
 /* REGISTER PAGE */
 /* Form */
-/* .btn {
-    background-color: #2e302e;
-    border: none;
-    color: #eff4eb;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-#signup-btn {
-    background-color: #3b3d3b;
-    border: none;
-}
-#signup-btn:hover {
-    background-color: #486f48;    
-} */
+#togglePasswordButton {
+    border: 1px solid #b2bcc6;
+    border-radius: 5px;
+  }
+
 
 /* USER PROFILE PAGE */
 .background-image {
