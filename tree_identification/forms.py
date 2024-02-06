@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from .models import Profile
 from django.core.exceptions import ValidationError
 from django.contrib.auth.hashers import check_password
+from .models import Contact, Login, PasswordResetConfirmView, Tree
 
 
 class UserRegisterForm(UserCreationForm):
@@ -52,3 +53,11 @@ class ProfileUpdateForm(forms.ModelForm):
         # Add validation for passwords
         cleaned_data = super().clean()
         return cleaned_data
+
+    # Create a Tree Model Form to add a tree
+
+
+class TreeForm(forms.ModelForm):
+    class Meta:
+        model = Tree
+        fields = ["title", "description", "image"]
