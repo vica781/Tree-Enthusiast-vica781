@@ -188,3 +188,7 @@ def profile_delete(request):
             # If password check fails, inform the user
             messages.error(request, "Password is incorrect. Profile was not deleted.")
             return redirect("profile")
+
+
+def add_tree(request):
+    return render(request, "add_tree.html", {})
