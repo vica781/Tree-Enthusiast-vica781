@@ -67,10 +67,32 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link me-1" href="#"
+                >Add Tree</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-1" href="#"
+                >My Trees</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-1" href="#"
+                >Search</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-1" href="#"
+                >Tree Map</a
+              >
+            </li>
+            {% endif %}
           </ul>
           <ul class="my-2 my-lg-0 d-flex flex-row">
             <!-- Authentication Links -->
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated %}            
             <li class="nav-item nav-item-user">
               <a
                 class="nav-link mr-3"
