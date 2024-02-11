@@ -39,7 +39,7 @@ urlpatterns = [
     path("profile/update/", views.profile_update, name="profile-update"),
     path("profile/delete/", views.profile_delete, name="profile-delete"),
     path("check_username/", views.check_username, name="check_username"),
-    path("add_tree/", views.add_tree, name="add-tree"),
+    path("add_tree/", views.add_tree, name="add_tree"),
 ]
 
 # adapted from tutorial video:

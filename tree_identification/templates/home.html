@@ -10,12 +10,61 @@
         class="img-fluid w-100"
         style="height: 100vh; object-fit: cover"
       />
+      <!-- Form Overlay -->
+      <div
+        class="container position-absolute"
+        style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+      >
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1 col-md-12">
+            <div
+              class="p-4"
+              style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+            >
+              <!-- Adding the quote -->
+              <blockquote class="blockquote text-center">
+                <p class="mb-0">
+                  "The tree which moves some to tears of joy is in the eyes of
+                  others only a green thing that stands in the way."
+                </p>
+                <p class="blockquote-footer">William Blake</p>
+              </blockquote>
+
+              <!-- Auto-layout Columns Under the Quote -->
+              <div class="row text-center mt-4">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                  <h5>A guide to identifying British trees</h5>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                  <h5>
+                    Outdoor Therapy and Grounding Techniques for Mental Health
+                  </h5>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                  <h5>A beginner's guide to forest bathing</h5>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                  <h5>Where to go forest bathing</h5>
+                </div>
+              </div>
+
+              <!-- Buttons Under the Columns -->
+              <div class="row text-center mt-4">
+                <div class="col-12">
+                  <a href="{% url 'login' %}" class="btn btn-primary mr-2"
+                    >Login</a
+                  >
+                  <a href="{% url 'register' %}" class="btn btn-info"
+                    >Register</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-<button>
-  <a href="{% url 'register' %}">Register</a>
-</button>
 
 {% endblock %}
