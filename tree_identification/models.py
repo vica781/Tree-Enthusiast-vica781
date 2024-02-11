@@ -48,6 +48,14 @@ class PasswordResetConfirmView(models.Model):
 # Model to represent the tree data
 class Tree(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # common_name = models.CharField(max_length=200)
+    # type = models.CharField(max_length=200)
+    # origin = models.CharField(max_length=200)
+    # introduction = models.TextField()
+    # tree_image = models.ImageField(upload_to="tree_images/")
+    # tree_image2 = models.ImageField(upload_to="tree_images/", blank=True)
+    # tree_image3 = models.ImageField(upload_to="tree_images/", blank=True)
+    # tree_habitat = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
     description = models.TextField()
     image = models.ImageField(upload_to="tree_images/")

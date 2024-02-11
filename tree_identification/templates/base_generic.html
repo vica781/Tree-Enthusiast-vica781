@@ -69,14 +69,10 @@
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link me-1" href="{% url 'add_tree' %}"
-                >Add Tree</a
-              >
+              <a class="nav-link me-1" href="{% url 'add_tree' %}">Add Tree</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-1" href="#"
-                >My Trees</a
-              >
+              <a class="nav-link me-1" href="{% url 'my_trees' %}">My Trees</a>
             </li>
             <li class="nav-item">
               <a class="nav-link me-1" href="#"

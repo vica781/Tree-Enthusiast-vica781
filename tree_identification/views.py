@@ -16,6 +16,8 @@ from .forms import ProfileUpdateForm, UserRegisterForm
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
+from .models import Tree
+from .forms import TreeForm
 
 
 # from django.contrib.auth import get_user_model
@@ -190,5 +192,24 @@ def profile_delete(request):
             return redirect("profile")
 
 
+@login_required
 def add_tree(request):
-    return render(request, "add_tree.html", {})
+    if request.method == 'POST':
+        # Replace TreeForm with the actual form class you have defined
+        form = TreeForm(request.POST, request.FILES)
+        if form.is_valid():
+            tree = form.save(commit=False)
+            tree.user = request.user
+            tree.save()
+            messages.success(request, 'Tree added successfully!')
+            return redirect('some-view-name')  # Redirect to a success page or the tree detail page
+    else:
+        form = TreeForm()
+    return render(request, 'add_tree.html', {'form': form})
+
+
+@login_required
+def my_trees(request):
+    trees = Tree.objects.filter(user=request.user)  # Assuming you have a Tree model with a user ForeignKey
+    return render(request, 'my_trees.html', {'trees': trees})
+
