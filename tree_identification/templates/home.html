@@ -51,12 +51,16 @@
               <!-- Buttons Under the Columns -->
               <div class="row text-center mt-4">
                 <div class="col-12">
+                  {% if user.is_authenticated %} 
+                  user is authenticated 
+                  {% else %}
                   <a href="{% url 'login' %}" class="btn btn-primary mr-2"
                     >Login</a
                   >
                   <a href="{% url 'register' %}" class="btn btn-info"
-                    >Register</a
+                    >Sign Up</a
                   >
+                  {% endif %}
                 </div>
               </div>
             </div>
