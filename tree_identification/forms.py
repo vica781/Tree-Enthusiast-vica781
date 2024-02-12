@@ -60,4 +60,11 @@ class ProfileUpdateForm(forms.ModelForm):
 class TreeForm(forms.ModelForm):
     class Meta:
         model = Tree
-        fields = ["title", "description", "image"]
+        fields = [
+            "common_name",
+            "tree_type",
+            "origin",
+            "introduction",
+            "tree_image",
+            "tree_habitat",
+        ]
