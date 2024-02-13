@@ -195,16 +195,13 @@ def profile_delete(request):
 @login_required
 def add_tree(request):
     if request.method == "POST":
-        # Replace TreeForm with the actual form class you have defined
         form = TreeForm(request.POST, request.FILES)
         if form.is_valid():
             tree = form.save(commit=False)
             tree.user = request.user
             tree.save()
             messages.success(request, "Tree added successfully!")
-            return redirect(
-                "home"
-            )  # Redirect to a success page or the tree detail page
+            return redirect("home")  # Redirect to home page
     else:
         form = TreeForm()
     return render(request, "add_tree.html", {"form": form})
@@ -212,5 +209,5 @@ def add_tree(request):
 
 @login_required
 def my_trees(request):
-    trees = Tree.objects.filter(user=request.user)
+    trees = Tree.objects.filter(user=request.user)  # Fetch trees for the logged-in user
     return render(request, "my_trees.html", {"trees": trees})

@@ -16,7 +16,7 @@
         style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
       >
         <div class="row">
-          <div class="col-lg-10 offset-lg-1 col-md-12">
+          <div class="col-lg-8 offset-lg-1 col-md-12">
             <div
               class="p-4"
               style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
@@ -30,7 +30,7 @@
                   <!-- New Card Layout for Trees -->
                   <div class="row">
                     {% for tree in trees %}
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <div class="card">
                         <img
                           src="{{ tree.tree_image.url }}"
@@ -39,10 +39,6 @@
                         />
                         <div class="card-body">
                           <h5 class="card-title">{{ tree.common_name }}</h5>
-                          <p class="card-text">Type: {{ tree.tree_type }}</p>
-                          <p>Origin: {{ tree.origin }}</p>
-                          <p>Introduction: {{ tree.introduction }}</p>
-                          <p>Habitat: {{ tree.tree_habitat }}</p>
                         </div>
                       </div>
                     </div>
