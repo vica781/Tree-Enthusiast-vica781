@@ -1,97 +1,104 @@
-{% extends 'base_generic.html' %} 
-{% load static %} 
-{% block content %}
+{% extends 'base_generic.html' %} {% load static %} {% block content %}
 
 <div class="container-fluid p-0">
   <div class="row no-gutters">
     <div class="col-12">
-      <img src="{% static 'assets/images/background_images/juniper.webp' %}" 
-      alt="Landing Image" 
-      class="img-fluid w-100" 
-      style="height: 100vh; object-fit: cover"/>
+      <img
+        src="{% static 'assets/images/background_images/juniper.webp' %}"
+        alt="Landing Image"
+        class="img-fluid w-100"
+        style="height: 100vh; object-fit: cover"
+      />
 
       <!-- Overlay Container -->
-      <div class="container position-absolute" 
-           style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <div
+        class="container position-absolute"
+        style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+      >
         <div class="row">
           <div class="col-lg-10 offset-lg-1 col-md-12">
-            <div class="p-4" 
-            style="background: rgba(255, 255, 255, 0.8); border-radius: 10px;">
-          <!-- MAIN FORM Add Tree -->
-          <div class="col-lg-12 col-md-6">
-            <div class="p-3">
-              <form method="post" 
-              action="{% url 'add_tree' %}" 
-              enctype="multipart/form-data">
-                {% csrf_token %}
-                <h3>Information about the tree:</h3>
-                <hr />
-                <div class="form-group">
-                  <label for="common_name">Common Name:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="common_name"
-                    name="common_name"
-                    placeholder="Enter name of a tree"
-                  />
+            <div
+              class="p-3"
+              style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+            >
+              <!-- MAIN FORM Add Tree -->
+              <div class="col-lg-12 col-md-6">
+                <div class="p-3">
+                  <form
+                    method="post"
+                    action="{% url 'add_tree' %}"
+                    enctype="multipart/form-data"
+                  >
+                    {% csrf_token %}
+                    <h3>Information about the tree:</h3>
+                    <hr />
+                    <div class="form-group">
+                      <label for="common_name">Common Name:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="common_name"
+                        name="common_name"
+                        placeholder="Enter name of a tree"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="type">Type:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="type"
+                        name="tree_type"
+                        placeholder="Is it a tree or shrub?"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="origin">Origin:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="origin"
+                        name="origin"
+                        placeholder="Is it native, non-native or naturalised species?"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="tree_name">Introduction:</label>
+                      <textarea
+                        class="form-control"
+                        id="tree_description"
+                        name="introduction"
+                        rows="3"
+                        placeholder="Enter a short description of the tree"
+                      ></textarea>
+                    </div>
+                    <h5>What does it look like?</h5>
+                    <div class="form-group">
+                      <label for="tree_image">Tree Image:</label>
+                      <input
+                        type="file"
+                        class="form-control-file"
+                        id="tree_image"
+                        name="tree_image"
+                      />
+                    </div>
+                    <h5>Where can it be found?</h5>
+                    <div class="form-group">
+                      <label for="tree_description">Tree Habitat:</label>
+                      <textarea
+                        class="form-control"
+                        id="tree_habitat"
+                        name="tree_habitat"
+                        rows="2"
+                        placeholder="Enter the places where the tree can be found"
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Add Tree
+                    </button>
+                  </form>
                 </div>
-                <div class="form-group">
-                  <label for="type">Type:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="type"
-                    name="tree_type"
-                    placeholder="Is it a tree or shrub?"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="origin">Origin:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="origin"
-                    name="origin"
-                    placeholder="Is it native, non-native or naturalised species?"                    
-                  />
-              </div>            
-                <div class="form-group">
-                  <label for="tree_name">Introduction:</label>
-                  <textarea
-                    class="form-control"
-                    id="tree_description"
-                    name="introduction"
-                    rows="3"
-                    placeholder="Enter a short description of the tree"
-                  ></textarea>
-                </div>
-                <h5>What does it look like?</h5>
-                <div class="form-group">
-                  <label for="tree_image">Tree Image:</label>
-                  <input
-                    type="file"
-                    class="form-control-file"
-                    id="tree_image"
-                    name="tree_image"
-                  />
-                </div>
-                <h5>Where can it be found?</h5>
-                <div class="form-group">
-                  <label for="tree_description">Tree Habitat:</label>
-                  <textarea
-                    class="form-control"
-                    id="tree_habitat"
-                    name="tree_habitat"
-                    rows="2"
-                    placeholder="Enter the places where the tree can be found"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                  Add Tree
-                </button>
-            </div>
-              </div>               
+              </div>
             </div>
           </div>
         </div>

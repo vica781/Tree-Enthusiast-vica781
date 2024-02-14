@@ -16,41 +16,53 @@
         style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
       >
         <div class="row">
-          <div class="col-lg-8 offset-lg-1 col-md-12">
+          <div class="col-lg-9 offset-lg-1 col-md-12">
             <div
               class="p-4"
-              style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+              style="
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                max-height: 80vh;
+                overflow-y: auto;
+              "
             >
-              <!-- MAIN FORM My Trees -->
-              <div class="col-lg-12 col-md-6">
-                <div class="p-3">
-                  <h3>My Trees Collection:</h3>
-                  <hr />
+              <!-- Scrollable Content Area -->
+              <div
+                class="scrollable-content"
+                style="max-height: 70vh; overflow-y: auto"
+              >
+                <!-- MAIN FORM My Trees -->
+                <div class="col-lg-12 col-md-6">
+                  <div class="p-3">
+                    <h3>My Trees Collection:</h3>
+                    <hr />
 
-                  <!-- New Card Layout for Trees -->
-                  <div class="row">
-                    {% for tree in trees %}
-                    <div class="col-md-3">
-                      <div class="card">
-                        <img
-                          src="{{ tree.tree_image.url }}"
-                          class="card-img-top"
-                          alt="{{ tree.common_name }}"
-                        />
-                        <div class="card-body">
-                          <h5 class="card-title">{{ tree.common_name }}</h5>
+                    <!-- New Card Layout for Trees -->
+                    <div class="row">
+                      {% for tree in trees %}
+                      <div class="col-md-3">
+                        <div class="card">
+                          <img
+                            src="{{ tree.tree_image.url }}"
+                            class="card-img-top"
+                            alt="{{ tree.common_name }}"
+                          />
+                          <div class="card-body">
+                            <h5 class="card-title">{{ tree.common_name }}</h5>
+                          </div>
                         </div>
                       </div>
+                      {% empty %}
+                      <div class="col-12">
+                        <p>You have not added any trees yet.</p>
+                      </div>
+                      {% endfor %}
                     </div>
-                    {% empty %}
-                    <div class="col-12">
-                      <p>You have not added any trees yet.</p>
-                    </div>
-                    {% endfor %}
+                    <!-- End of Card Layout for Trees -->
                   </div>
-                  <!-- End of Card Layout for Trees -->
                 </div>
               </div>
+              <!-- End of Scrollable Content Area -->
             </div>
           </div>
         </div>
