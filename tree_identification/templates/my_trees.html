@@ -13,7 +13,12 @@
       <!-- Overlay Container -->
       <div
         class="container position-absolute"
-        style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+        style="
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          overflow: hidden;
+        "
       >
         <div class="row">
           <div class="col-lg-9 offset-lg-1 col-md-12">
@@ -24,6 +29,7 @@
                 border-radius: 10px;
                 max-height: 80vh;
                 overflow-y: auto;
+                position: relative; /* Add position relative here */
               "
             >
               <!-- Scrollable Content Area -->
@@ -44,7 +50,7 @@
                         <div class="card">
                           <img
                             src="{{ tree.tree_image.url }}"
-                            class="card-img-top"
+                            class="card-img-top img-fluid"
                             alt="{{ tree.common_name }}"
                           />
                           <div class="card-body">
@@ -64,6 +70,29 @@
               </div>
               <!-- End of Scrollable Content Area -->
             </div>
+            <!-- "Back to Top" button -->
+            <button
+              onclick="topFunction()"
+              id="myBtn"
+              title="Go to top"
+              style="
+                display: none;
+                position: absolute; /* Changed from fixed to absolute */
+                bottom: 10px; /* Adjust as needed */
+                right: 10px; /* Adjust as needed */
+                z-index: 100; /* Ensure it's above other content */
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: rgb(229, 140, 24);
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 4px;
+              "
+            >
+              ↑ Top
+            </button>
           </div>
         </div>
       </div>
@@ -71,4 +100,6 @@
   </div>
 </div>
 
-{% endblock %}
+{% endblock %} {% block javascript %}
+<script src="{% static 'assets/js/script.js' %}"></script>
+{% endblock javascript %}

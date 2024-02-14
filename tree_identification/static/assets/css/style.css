@@ -93,28 +93,21 @@ footer {
   /* Optional: Add some spacing between cards */
     .card-body {
         padding: 0.5rem;
-    }
-
+    }   
     .card-title {
-        font-size: 1.2rem;
-        text-align: center;
+    height: 20px; /* Adjust as needed, enough for two lines of text */
+    font-size: 1rem;
+    text-align: center;
+    overflow: hidden;
+    }    
+    .card-img-top {
+        height: 150px; /* Fixed height for all images */
+        object-fit: cover; /* To keep the aspect ratio */
+        width: 100%;        
+    } 
+        .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* This ensures that the title is aligned at the bottom */        
     }
-
-    .card-text {
-        font-size: 1.2rem;
-    }
-  
-
-  
-  
-
-
-
-
-
-
-
-  
-
-
-
+    
