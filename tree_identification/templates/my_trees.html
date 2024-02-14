@@ -47,7 +47,10 @@
                     <div class="row">
                       {% for tree in trees %}
                       <div class="col-md-3">
-                        <a href="{% url 'tree_detail' tree.id %}">
+                        <a
+                          id="tree_info"
+                          href="{% url 'tree_detail' tree.id %}"
+                        >
                           <!-- Link to the detail page -->
                           <div class="card">
                             <img

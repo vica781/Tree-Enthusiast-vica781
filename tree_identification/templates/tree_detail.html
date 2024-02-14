@@ -1,11 +1,49 @@
-{% extends 'base_generic.html' %} {% block content %}
-<div class="container">
-  <h1>{{ tree.common_name }}</h1>
-  <!-- Display various tree details here -->
-  <img src="{{ tree.tree_image.url }}" alt="{{ tree.common_name }}" />
-  <p>Type: {{ tree.tree_type }}</p>
-  <p>Origin: {{ tree.origin }}</p>
-  <p>Introduction: {{ tree.introduction }}</p>
-  <p>Tree Habitat: {{ tree.tree_habitat}}</p>
+{% extends 'base_generic.html' %} {% load static %} {% block content %}
+
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <img
+        src="{% static 'assets/images/background_images/english_oak.webp' %}"
+        alt="Landing Image"
+        class="img-fluid w-100"
+        style="height: 100vh; object-fit: cover"
+      />
+
+      <!-- Overlay Container -->
+      <div
+        class="container position-absolute"
+        style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+      >
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1 col-md-12">
+            <div
+              class="p-3"
+              style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+            >
+              <div class="container">
+                <h1>{{ tree.common_name }}</h1>
+                <!-- Display various tree details here -->
+                <img
+                  src="{{ tree.tree_image.url }}"
+                  alt="{{ tree.common_name }}"
+                />
+                <p><strong>Type: </strong><em>{{ tree.tree_type }}</em></p>
+                <p><strong>Origin: </strong><em>{{ tree.origin }}</em></p>
+                <p>
+                  <strong>Introduction: </strong
+                  ><em>{{ tree.introduction }}</em>
+                </p>
+                <p>
+                  <strong>Tree Habitat: </strong><em>{{ tree.tree_habitat}}</em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 {% endblock %}
