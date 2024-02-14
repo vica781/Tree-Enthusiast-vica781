@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %} {% block content %}
+<div class="container">
+  <h1>{{ tree.common_name }}</h1>
+  <!-- Display various tree details here -->
+  <img src="{{ tree.tree_image.url }}" alt="{{ tree.common_name }}" />
+  <p>Type: {{ tree.tree_type }}</p>
+  <p>Origin: {{ tree.origin }}</p>
+  <p>Introduction: {{ tree.introduction }}</p>
+  <p>Tree Habitat: {{ tree.tree_habitat}}</p>
+</div>
+{% endblock %}

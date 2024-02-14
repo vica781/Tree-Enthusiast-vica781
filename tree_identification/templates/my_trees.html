@@ -47,16 +47,19 @@
                     <div class="row">
                       {% for tree in trees %}
                       <div class="col-md-3">
-                        <div class="card">
-                          <img
-                            src="{{ tree.tree_image.url }}"
-                            class="card-img-top img-fluid"
-                            alt="{{ tree.common_name }}"
-                          />
-                          <div class="card-body">
-                            <h5 class="card-title">{{ tree.common_name }}</h5>
+                        <a href="{% url 'tree_detail' tree.id %}">
+                          <!-- Link to the detail page -->
+                          <div class="card">
+                            <img
+                              src="{{ tree.tree_image.url }}"
+                              class="card-img-top img-fluid"
+                              alt="{{ tree.common_name }}"
+                            />
+                            <div class="card-body">
+                              <h5 class="card-title">{{ tree.common_name }}</h5>
+                            </div>
                           </div>
-                        </div>
+                        </a>
                       </div>
                       {% empty %}
                       <div class="col-12">
@@ -71,27 +74,8 @@
               <!-- End of Scrollable Content Area -->
             </div>
             <!-- "Back to Top" button -->
-            <button
-              onclick="topFunction()"
-              id="myBtn"
-              title="Go to top"
-              style="
-                display: none;
-                position: absolute; /* Changed from fixed to absolute */
-                bottom: 10px; /* Adjust as needed */
-                right: 10px; /* Adjust as needed */
-                z-index: 100; /* Ensure it's above other content */
-                font-size: 18px;
-                border: none;
-                outline: none;
-                background-color: rgb(229, 140, 24);
-                color: white;
-                cursor: pointer;
-                padding: 15px;
-                border-radius: 4px;
-              "
-            >
-              ↑ Top
+            <button onclick="topFunction()" id="myBtn" title="Go to top">
+              ↑
             </button>
           </div>
         </div>

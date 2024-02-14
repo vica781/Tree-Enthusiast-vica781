@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+  // Check the scroll position of the overlay container
+  let overlayContainer = document.querySelector('.scrollable-content');
+  if (overlayContainer.scrollTop > 5 || document.documentElement.scrollTop > 5) {
     document.getElementById("myBtn").style.display = "block";
   } else {
     document.getElementById("myBtn").style.display = "none";
@@ -46,9 +48,11 @@ function scrollFunction() {
 }
 
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  // Scroll to the top of the overlay container
+  let overlayContainer = document.querySelector('.scrollable-content');
+  overlayContainer.scrollTop = 0;
 }
+
 
 
   

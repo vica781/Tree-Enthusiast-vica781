@@ -10,6 +10,7 @@ from .views import login_user
 from .views import logout_user
 from .views import contact
 from tree_identification import views as user_views
+from .views import tree_detail
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -40,7 +41,8 @@ urlpatterns = [
     path("profile/delete/", views.profile_delete, name="profile-delete"),
     path("check_username/", views.check_username, name="check_username"),
     path("add_tree/", views.add_tree, name="add_tree"),
-    path('my_trees/', views.my_trees, name='my_trees'),
+    path("my_trees/", views.my_trees, name="my_trees"),
+    path("tree/<int:tree_id>/", tree_detail, name="tree_detail"),
 ]
 
 # adapted from tutorial video:

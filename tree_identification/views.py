@@ -18,6 +18,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from .models import Tree
 from .forms import TreeForm
+from django.shortcuts import get_object_or_404
 
 
 # from django.contrib.auth import get_user_model
@@ -211,3 +212,11 @@ def add_tree(request):
 def my_trees(request):
     trees = Tree.objects.filter(user=request.user)  # Fetch trees for the logged-in user
     return render(request, "my_trees.html", {"trees": trees})
+
+
+@login_required
+def tree_detail(request, tree_id):
+    tree = get_object_or_404(
+        Tree, id=tree_id, user=request.user
+    )  # Ensure the tree belongs to the logged-in user
+    return render(request, "tree_detail.html", {"tree": tree})
