@@ -54,8 +54,6 @@ class ProfileUpdateForm(forms.ModelForm):
         cleaned_data = super().clean()
         return cleaned_data
 
-    # Create a Tree Model Form to add a tree
-
 
 class TreeForm(forms.ModelForm):
     class Meta:

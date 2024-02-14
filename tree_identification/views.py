@@ -19,6 +19,7 @@ from django.http import JsonResponse
 from .models import Tree
 from .forms import TreeForm
 from django.shortcuts import get_object_or_404
+import logging
 
 
 # from django.contrib.auth import get_user_model
@@ -195,16 +196,24 @@ def profile_delete(request):
 
 @login_required
 def add_tree(request):
+    logger = logging.getLogger(__name__)
+    logger.debug("Add tree view called")
     if request.method == "POST":
         form = TreeForm(request.POST, request.FILES)
         if form.is_valid():
             tree = form.save(commit=False)
             tree.user = request.user
             tree.save()
+            logger.debug(f"Tree saved: {tree}")
             messages.success(request, "Tree added successfully!")
-            return redirect("home")  # Redirect to home page
+            return redirect("home")
+        else:
+            logger.warning(f"Form invalid: {form.errors}")
+            # Consider adding a message here for form invalidity
+            messages.error(request, "There was an error with your submission.")
     else:
         form = TreeForm()
+
     return render(request, "add_tree.html", {"form": form})
 
 

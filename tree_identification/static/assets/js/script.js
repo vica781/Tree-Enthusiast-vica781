@@ -51,8 +51,4 @@ function topFunction() {
   // Scroll to the top of the overlay container
   let overlayContainer = document.querySelector('.scrollable-content');
   overlayContainer.scrollTop = 0;
-}
-
-
-
-  
+}  
