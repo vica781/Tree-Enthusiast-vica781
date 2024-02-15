@@ -141,4 +141,9 @@ footer {
     border: 1px solid #b2bcc6;
     border-radius: 5px;
   }
+  .tree-image {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: contain;
+}
 
