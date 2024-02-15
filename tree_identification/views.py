@@ -241,8 +241,18 @@ def edit_tree(request, tree_id):
 def delete_tree(request, tree_id):
     tree = get_object_or_404(Tree, id=tree_id, user=request.user)
     if request.method == "POST":
-        tree.delete()
-        messages.success(request, "Tree deleted successfully!")
-        return redirect("my_trees")  # Redirect user to their trees
+        password = request.POST.get("confirm_password")
+
+        # Authenticate the user with the provided password
+        user = authenticate(username=request.user.username, password=password)
+        if user is not None:
+            # Password is correct, proceed with tree deletion
+            tree.delete()
+            messages.success(request, "Tree deleted successfully!")
+            return redirect("my_trees")  # Redirect user to their trees
+        else:
+            # Password is incorrect
+            messages.error(request, "Password is incorrect. Tree was not deleted.")
+            return redirect("tree_detail", tree_id=tree_id)
 
     return render(request, "confirm_delete.html", {"tree": tree})
