@@ -20,31 +20,38 @@
               class="p-3"
               style="background: rgba(255, 255, 255, 0.9); border-radius: 10px"
             >
-              <div class="container">
-                <h1 class="d-flex justify-content-center">
-                  {{ tree.common_name }}
-                </h1>
-                <!-- Centered Image -->
-                <div class="row">
-                  <div class="col d-flex justify-content-center">
-                    <img
-                      class="tree-image img-fluid"
-                      src="{{ tree.tree_image.url }}"
-                      alt="{{ tree.common_name }}"
-                    />
+              <!-- Scrollable Content Area -->
+              <div
+                class="scrollable-content"
+                style="max-height: 80vh; overflow-y: auto"
+              >
+                <div class="container">
+                  <h1 class="d-flex justify-content-center">
+                    {{ tree.common_name }}
+                  </h1>
+                  <!-- Centered Image -->
+                  <div class="row">
+                    <div class="col d-flex justify-content-center">
+                      <img
+                        class="tree-image img-fluid"
+                        src="{{ tree.tree_image.url }}"
+                        alt="{{ tree.common_name }}"
+                      />
+                    </div>
                   </div>
+                  <p><strong>Type: </strong><em>{{ tree.tree_type }}</em></p>
+                  <p><strong>Origin: </strong><em>{{ tree.origin }}</em></p>
+                  <p>
+                    <strong>Introduction: </strong
+                    ><em>{{ tree.introduction }}</em>
+                  </p>
+                  <p>
+                    <strong>Tree Habitat: </strong
+                    ><em>{{ tree.tree_habitat }}</em>
+                  </p>
                 </div>
-                <p><strong>Type: </strong><em>{{ tree.tree_type }}</em></p>
-                <p><strong>Origin: </strong><em>{{ tree.origin }}</em></p>
-                <p>
-                  <strong>Introduction: </strong
-                  ><em>{{ tree.introduction }}</em>
-                </p>
-                <p>
-                  <strong>Tree Habitat: </strong
-                  ><em>{{ tree.tree_habitat }}</em>
-                </p>
               </div>
+              <!-- End of Scrollable Content Area -->
               <div class="d-flex justify-content-center">
                 <a
                   href="{% url 'edit_tree' tree.id %}"
