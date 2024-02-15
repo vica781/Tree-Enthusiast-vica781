@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
 // Function to scroll back to top inside the scrollable content
 function topFunction() {
     let overlayContainer = document.querySelector('.scrollable-content');
@@ -59,8 +60,6 @@ function topFunction() {
         overlayContainer.scrollTop = 0;
     }
 }
-
-
 
 
 // Define topFunction globally if it's used in HTML
