@@ -127,6 +127,16 @@ footer {
         padding: 0 0.5rem 0 0.5rem; /* Some padding */
         border-radius: 50px; /* Rounded corners */
         font-size: 1.5rem; /* Increase font size */
-    }
-
+    }  
     
+    /* TREE DETAILS PAGE Modal */
+    /* Custom CSS to ensure the modal is at the top and visible */
+#deleteTreeModal {
+  z-index: 1050; /* Adjust if needed, higher than other page elements */
+}
+
+.modal-dialog {
+  margin-top: 50px; /* Adjust as needed to position the modal at the top */
+}
+
+
