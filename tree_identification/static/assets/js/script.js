@@ -35,23 +35,40 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 // My Trees viewing back-to-top button
-window.onscroll = function() {scrollFunction()};
+document.addEventListener("DOMContentLoaded", function () {
+    // Select the scrollable content
+    let overlayContainer = document.querySelector('.scrollable-content');
 
-function scrollFunction() {
-  // Check the scroll position of the overlay container
-  let overlayContainer = document.querySelector('.scrollable-content');
-  if (overlayContainer.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-    document.getElementById("myBtn").style.display = "block";
-  } else {
-    document.getElementById("myBtn").style.display = "none";
-  }
+    // Add event listener to the scrollable content
+    if (overlayContainer) {
+        overlayContainer.addEventListener("scroll", function () {
+            // Check if the scrollable content has been scrolled down by 20px
+            if (overlayContainer.scrollTop > 50) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        });
+    }
+});
+
+// Function to scroll back to top inside the scrollable content
+function topFunction() {
+    let overlayContainer = document.querySelector('.scrollable-content');
+    if (overlayContainer) {
+        overlayContainer.scrollTop = 0;
+    }
 }
 
+
+
+
+// Define topFunction globally if it's used in HTML
 function topFunction() {
-  // Scroll to the top of the overlay container
-  let overlayContainer = document.querySelector('.scrollable-content');
-  overlayContainer.scrollTop = 0;
-}  
+    let overlayContainer = document.querySelector('.scrollable-content');
+    overlayContainer.scrollTop = 0;
+}
+  
 
 // Password conformation and view/hide password (tree_detail.html)
 function toggleTreePassword() {
