@@ -21,11 +21,19 @@
               style="background: rgba(255, 255, 255, 0.9); border-radius: 10px"
             >
               <div class="container">
-                <h1>{{ tree.common_name }}</h1>
-                <img
-                  src="{{ tree.tree_image.url }}"
-                  alt="{{ tree.common_name }}"
-                />
+                <h1 class="d-flex justify-content-center">
+                  {{ tree.common_name }}
+                </h1>
+                <!-- Centered Image -->
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <img
+                      class="img-fluid"
+                      src="{{ tree.tree_image.url }}"
+                      alt="{{ tree.common_name }}"
+                    />
+                  </div>
+                </div>
                 <p><strong>Type: </strong><em>{{ tree.tree_type }}</em></p>
                 <p><strong>Origin: </strong><em>{{ tree.origin }}</em></p>
                 <p>
