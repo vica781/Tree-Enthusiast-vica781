@@ -43,6 +43,8 @@ urlpatterns = [
     path("add_tree/", views.add_tree, name="add_tree"),
     path("my_trees/", views.my_trees, name="my_trees"),
     path("tree/<int:tree_id>/", tree_detail, name="tree_detail"),
+    path("tree/edit/<int:tree_id>/", views.edit_tree, name="edit_tree"),
+    path("tree/delete/<int:tree_id>/", views.delete_tree, name="delete_tree"),
 ]
 
 # adapted from tutorial video:

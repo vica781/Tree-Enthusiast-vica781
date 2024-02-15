@@ -229,3 +229,20 @@ def tree_detail(request, tree_id):
         Tree, id=tree_id, user=request.user
     )  # Ensure the tree belongs to the logged-in user
     return render(request, "tree_detail.html", {"tree": tree})
+
+
+@login_required
+def edit_tree(request, tree_id):
+
+    pass
+
+
+@login_required
+def delete_tree(request, tree_id):
+    tree = get_object_or_404(Tree, id=tree_id, user=request.user)
+    if request.method == "POST":
+        tree.delete()
+        messages.success(request, "Tree deleted successfully!")
+        return redirect("my_trees")  # Redirect user to their trees
+
+    return render(request, "confirm_delete.html", {"tree": tree})

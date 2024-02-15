@@ -4,7 +4,7 @@
   <div class="row no-gutters">
     <div class="col-12">
       <img
-        src="{% static 'assets/images/background_images/hydrangea.webp' %}"
+        src="{% static 'assets/images/background_images/rowan.webp' %}"
         alt="Landing Image"
         class="img-fluid w-100"
         style="height: 100vh; object-fit: cover"
@@ -37,6 +37,20 @@
                 <p>
                   <strong>Tree Habitat: </strong><em>{{ tree.tree_habitat}}</em>
                 </p>
+              </div>
+              <!-- Bootstrap flex container -->
+              <div class="d-flex justify-content-center">
+                <!-- Edit Button -->
+                <a
+                  href="{% url 'edit_tree' tree.id %}"
+                  class="btn btn-primary mr-2"
+                  >Edit</a
+                >
+                <!-- Delete Button -->
+                <form action="{% url 'delete_tree' tree.id %}" method="post">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
               </div>
             </div>
           </div>
