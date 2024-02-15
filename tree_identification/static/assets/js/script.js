@@ -55,13 +55,13 @@ function topFunction() {
 
 // Password conformation and view/hide password (tree_detail.html)
 function toggleTreePassword() {
-  let passwordInput = document.getElementById("tree-confirm-password");
-  let toggleButton = document.getElementById("toggleTreePasswordButton");
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    toggleButton.textContent = "Hide Password";
-  } else {
-    passwordInput.type = "password";
-    toggleButton.textContent = "Show Password";
-  }
-}
+        let passwordInput = document.getElementById("tree-confirm-password");
+        let toggleButton = document.getElementById("toggleTreePasswordButton");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            toggleButton.textContent = "Hide Password";
+        } else {
+            passwordInput.type = "password";
+            toggleButton.textContent = "Show Password";
+        }
+    }

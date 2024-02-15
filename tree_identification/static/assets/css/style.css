@@ -130,13 +130,15 @@ footer {
     }  
     
     /* TREE DETAILS PAGE Modal */
-    /* Custom CSS to ensure the modal is at the top and visible */
+    /* Ensure the modal is at the top and visible */
 #deleteTreeModal {
   z-index: 1050; /* Adjust if needed, higher than other page elements */
 }
-
 .modal-dialog {
   margin-top: 50px; /* Adjust as needed to position the modal at the top */
 }
-
+#toggleTreePasswordButton {
+    border: 1px solid #b2bcc6;
+    border-radius: 5px;
+  }
 
