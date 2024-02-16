@@ -233,8 +233,15 @@ def tree_detail(request, tree_id):
 
 @login_required
 def edit_tree(request, tree_id):
-
-    pass
+    tree = get_object_or_404(Tree, id=tree_id, user=request.user)
+    if request.method == "POST":
+        form = TreeForm(request.POST, request.FILES, instance=tree)
+        if form.is_valid():
+            form.save()
+            return redirect("my_trees")
+    else:
+        form = TreeForm(instance=tree)
+    return render(request, "edit_tree.html", {"form": form})
 
 
 @login_required
