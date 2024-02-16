@@ -4,7 +4,7 @@ html, body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar-bg {
     background-color: #2e302e;
     overflow: hidden;
@@ -39,6 +39,9 @@ nav ul li a {
 .nav-item .nav-link:hover {
     color: #f8da17;
 }
+
+/* HOME PAGE */
+
 
 /* USER PROFILE PAGE */
 

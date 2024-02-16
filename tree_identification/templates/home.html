@@ -16,51 +16,59 @@
         style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
       >
         <div class="row">
-          <div class="col-lg-10 offset-lg-1 col-md-12">
+          <div class="col-lg-12 offset-lg-1 col-md-12">
             <div
-              class="p-4"
+              class="p-3"
               style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
             >
-              <!-- Adding the quote -->
+              <!-- Add the quote -->
               <blockquote class="blockquote text-center">
-                <p class="mb-0">
+                <p class="font-weight-bold mb-0">
                   "The tree which moves some to tears of joy is in the eyes of
                   others only a green thing that stands in the way."
                 </p>
-                <p class="blockquote-footer">William Blake</p>
+                <p class="blockquote-footer font-weight-bold">William Blake</p>
               </blockquote>
 
               <!-- Auto-layout Columns Under the Quote -->
               <div class="row text-center mt-4">
+                <!-- First Column -->
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                  <h5>A guide to identifying British trees</h5>
+                  <h5 class="text-success font-weight-bold">
+                    A guide to identifying British trees
+                  </h5>
                 </div>
+                <!-- Second Column -->
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                  <h5>
+                  <h5 class="text-info font-weight-bold">
                     Outdoor Therapy and Grounding Techniques for Mental Health
                   </h5>
                 </div>
+                <!-- Third Column -->
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                  <h5>A beginner's guide to forest bathing</h5>
+                  <h5 class="text-success font-weight-bold">
+                    A beginner's guide to forest bathing
+                  </h5>
                 </div>
+                <!-- Fourth Column -->
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                  <h5>Where to go forest bathing</h5>
+                  <h5 class="text-info font-weight-bold">
+                    Where to go forest bathing
+                  </h5>
                 </div>
               </div>
 
               <!-- Buttons Under the Columns -->
               <div class="row text-center mt-4">
                 <div class="col-12">
-                  {% if user.is_authenticated %} 
-                  user is authenticated 
-                  {% else %}
+                  {% if not user.is_authenticated %}
                   <a href="{% url 'login' %}" class="btn btn-primary mr-2"
                     >Login</a
                   >
                   <a href="{% url 'register' %}" class="btn btn-info"
                     >Sign Up</a
                   >
-                  {% endif %}
+                  {% else %} user is authenticated {% endif %}
                 </div>
               </div>
             </div>
