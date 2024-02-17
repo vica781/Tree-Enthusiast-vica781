@@ -1,0 +1,97 @@
+{% extends 'base_generic.html' %} {% load static %} {% block content %}
+
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <img
+        src="{% static 'assets/images/background_images/pine_needles.webp' %}"
+        alt="Landing Image"
+        class="img-fluid w-100"
+        style="height: 100vh; object-fit: cover"
+      />
+
+      <!-- Overlay Container -->
+      <div
+        class="container position-absolute"
+        style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+      >
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1 col-md-12">
+            <div
+              class="p-3"
+              style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+            >
+              <h1 class="text-center">Tree Identification Guide</h1>
+              <p class="text-center">
+                Estimating the total number of tree species worldwide is a
+                challenging task due to the vast diversity of ecosystems and the
+                ongoing discovery of new species. On state in 2023 it was
+                estimated that there are approximately 60,000 to over 73,000
+                different species of trees on the planet.
+                <br />
+                This number is a dynamic figure, subject to change as botanists
+                and researchers continue to explore remote areas and utilize
+                advances in genetic analysis to identify and classify new
+                species. Additionally, certain regions of the world, such as
+                tropical rainforests, are particularly rich in biodiversity, and
+                many species in these areas are yet to be documented.
+                <br />
+                It's important to note that the number of tree species can also
+                be influenced by factors such as deforestation, climate change,
+                and other environmental pressures, which can lead to the loss of
+                species or the emergence of new ones.
+                <br />
+                In the United Kingdom, the total number of tree species,
+                including native, naturalized, and non-native species, is quite
+                diverse, but the exact numbers can vary based on the criteria
+                used for classification. Here's a general breakdown:
+                <br />
+                Native Species: The UK has about 50 native tree species. These
+                are species that have naturally colonized the British Isles
+                since the last Ice Age and have not been introduced by humans.
+                <br />
+                Naturalized Species: Naturalized species are non-native species
+                that have been introduced (intentionally or unintentionally) and
+                have established self-sustaining populations in the wild. The
+                number of naturalized tree species in the UK is more challenging
+                to quantify precisely, as it can change over time with new
+                introductions and species adapting to the environment. There are
+                likely dozens of naturalized tree species.
+                <br />
+                Non-Native Species: The total number of non-native tree species
+                (including those that are not naturalized) in the UK is quite
+                high, as many species have been introduced for ornamental
+                purposes, forestry, or other uses. This number could be in the
+                hundreds, considering all the species grown in parks, gardens,
+                and arboretums, in addition to those that have naturalized.
+                <br />
+                Total Tree Species: Combining native, naturalized, and other
+                non-native species, the total number of tree species present in
+                the UK could easily be several hundred. This reflects the UK's
+                long history of plant introduction and cultivation.
+                <br />
+                It's important to note that these figures can vary depending on
+                the source and the criteria used for counting species. For
+                example, some counts might include only those species that are
+                commonly found, while others might list every species recorded,
+                including those that are very rare or have only been grown in
+                very controlled settings, like botanical gardens.
+              </p>
+              <div class="col-lg-12 col-md-6">
+                <!-- Scrollable Content Area -->
+                <div
+                  class="scrollable-content"
+                  style="max-height: 70vh; overflow-y: auto"
+                >
+                  <div class="p-3"></div>
+                  <!-- End of Scrollable Content Area -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

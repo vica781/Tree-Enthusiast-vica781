@@ -46,6 +46,9 @@ urlpatterns = [
     path("tree/<int:tree_id>/", views.tree_detail, name="tree_detail"),
     path("tree/edit/<int:tree_id>/", views.edit_tree, name="edit_tree"),
     path("tree/delete/<int:tree_id>/", views.delete_tree, name="delete_tree"),
+    path(
+        "identification_guide/", views.identification_guide, name="identification_guide"
+    ),
 ]
 
 # adapted from tutorial video:

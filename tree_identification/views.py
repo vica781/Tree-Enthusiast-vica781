@@ -263,3 +263,7 @@ def delete_tree(request, tree_id):
             return redirect("tree_detail", tree_id=tree_id)
 
     return render(request, "confirm_delete.html", {"tree": tree})
+
+
+def identification_guide(request):
+    return render(request, "identification_guide.html", {})
