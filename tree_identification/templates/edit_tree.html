@@ -30,6 +30,8 @@
           position: relative;
         "
       >
+        <h3>Edit Tree Information</h3>
+        <hr />
         <!-- Scrollable Content Area -->
         <div
           class="scrollable-content"
@@ -41,10 +43,7 @@
             enctype="multipart/form-data"
             class="form-horizontal"
           >
-            {% csrf_token %}
-            <h3>Edit Tree Information</h3>
-            <hr />
-            {% for field in form %}
+            {% csrf_token %} {% for field in form %}
             <div class="form-group">
               <label
                 for="{{ field.id_for_label }}"
