@@ -21,7 +21,7 @@
               class="p-3"
               style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
             >
-              <h1 class="text-center">Tree Identification Guide</h1>              
+              <h1 class="text-center">Tree Identification Guide</h1>            
                   
                   <div class="col-lg-12 col-md-6">
                     <!-- Scrollable Content Area -->
@@ -102,14 +102,19 @@
                       </div>
                       <!-- End of Scrollable Content Area -->
                     </div>
+                        <!-- Add Home and Add Tree buttons here -->
+                    <div class="text-center mt-3">
+                        <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+                        <a href="{% url 'add_tree' %}" class="btn btn-success">Add Tree</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div>          
         </div>
       </div>
-    </div>
-    {% endblock %}
+    </div>    
   </div>
 </div>
+{% endblock %}
