@@ -37,7 +37,7 @@
                       />
                       <div class="card-body">
                         <p class="card-text text-center">
-                          <a class="{% url 'tree_detail' tree_id=tree.id %}">
+                          <a href="{% url 'tree_detail' tree_id=tree.id %}">
                             <h5 class="text-center">{{ tree.common_name }}</h5>
                           </a>
                         </p>
@@ -54,9 +54,10 @@
                 <a href="{% url 'add_tree' %}" class="btn btn-success mr-2"
                   >Add Tree</a
                 >
-                <a href="{% url 'my_trees' %}" class="btn btn-primary"
+                <a href="{% url 'my_trees' %}" class="btn btn-primary mr-2"
                   >My Trees</a
                 >
+                <a href="{% url 'home' %}" class="btn btn-info"> Home </a>
               </div>
             </div>
           </div>
