@@ -53,7 +53,8 @@ urlpatterns = [
         name="identification_guide",
     ),
     path("search/", search_trees, name="search_trees"),
-]  # Close the square bracket here
+    path("tree/<int:tree_id>/", views.tree_detail, name="tree_detail"),
+]
 
 # adapted from tutorial video:
 # https://www.youtube.com/watch?v=FdVuKt_iuSI&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8

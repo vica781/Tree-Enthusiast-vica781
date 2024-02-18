@@ -36,7 +36,11 @@
                         src="{{ tree.tree_image.url }}"
                       />
                       <div class="card-body">
-                        <p class="card-text">{{ tree.common_name }}</p>
+                        <p class="card-text text-center">
+                          <a class="{% url 'tree_detail' tree_id=tree.id %}">
+                            <h5 class="text-center">{{ tree.common_name }}</h5>
+                          </a>
+                        </p>
                       </div>
                     </div>
                   </div>
