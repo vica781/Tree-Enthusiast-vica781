@@ -115,7 +115,7 @@ footer {
     
     /* Back-to-top button */
     #myBtn {
-        /* display: none;  */
+        display: none; 
         position: absolute; 
         bottom: 20px; 
         right: 57px; 

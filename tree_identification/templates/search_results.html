@@ -1,22 +1,65 @@
-{% extends 'base_generic.html' %} {% block content %}
-<div class="container">
-  <h2>Search Results</h2>
-  <div class="row">
-    {% for tree in trees %}
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <img
-          class="bd-placeholder-img card-img-top"
-          src="{{ tree.tree_image.url }}"
-        />
-        <div class="card-body">
-          <p class="card-text">{{ tree.common_name }}</p>
+{% extends 'base_generic.html' %} {% load static %} {% block content %}
+
+<!-- Background Image -->
+<div class="container-fluid p-0">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <img
+        src="{% static 'assets/images/background_images/tree_trunk_1.webp' %}"
+        alt="Tree Trunk Image"
+        class="img-fluid w-100"
+        style="height: 100vh; object-fit: cover"
+      />
+      <!-- Form Overlay -->
+      <div
+        class="container position-absolute"
+        style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+      >
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div
+              class="p-3"
+              style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+            >
+              <!-- Main Content SEARCH RESULTS -->
+              <div class="container">
+                <div class="d-flex justify-content-center align-items-center">
+                  <h3>Search Results</h3>
+                </div>
+                <hr />
+                <div class="row">
+                  {% for tree in trees %}
+                  <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                      <img
+                        class="bd-placeholder-img card-img-top"
+                        src="{{ tree.tree_image.url }}"
+                      />
+                      <div class="card-body">
+                        <p class="card-text">{{ tree.common_name }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  {% empty %}
+                  <p>No trees found.</p>
+                  {% endfor %}
+                </div>
+                <!-- Buttons -->
+                <div class="d-flex justify-content-center mt-4">
+                  <a href="{% url 'add_tree' %}" class="btn btn-success mr-2"
+                    >Add Tree</a
+                  >
+                  <a href="{% url 'my_trees' %}" class="btn btn-primary"
+                    >My Trees</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    {% empty %}
-    <p>No trees found.</p>
-    {% endfor %}
   </div>
 </div>
+
 {% endblock %}
