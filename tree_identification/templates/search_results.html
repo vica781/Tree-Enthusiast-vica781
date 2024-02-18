@@ -1,0 +1,22 @@
+{% extends 'base_generic.html' %} {% block content %}
+<div class="container">
+  <h2>Search Results</h2>
+  <div class="row">
+    {% for tree in trees %}
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img
+          class="bd-placeholder-img card-img-top"
+          src="{{ tree.tree_image.url }}"
+        />
+        <div class="card-body">
+          <p class="card-text">{{ tree.common_name }}</p>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    <p>No trees found.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

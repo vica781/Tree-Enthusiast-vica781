@@ -11,6 +11,7 @@ from .views import logout_user
 from .views import contact
 from tree_identification import views as user_views
 from .views import add_tree, my_trees, tree_detail, edit_tree, delete_tree
+from .views import search_trees
 
 
 urlpatterns = [
@@ -47,9 +48,12 @@ urlpatterns = [
     path("tree/edit/<int:tree_id>/", views.edit_tree, name="edit_tree"),
     path("tree/delete/<int:tree_id>/", views.delete_tree, name="delete_tree"),
     path(
-        "identification_guide/", views.identification_guide, name="identification_guide"
+        "identification_guide/",
+        views.identification_guide,
+        name="identification_guide",
     ),
-]
+    path("search/", search_trees, name="search_trees"),
+]  # Close the square bracket here
 
 # adapted from tutorial video:
 # https://www.youtube.com/watch?v=FdVuKt_iuSI&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8

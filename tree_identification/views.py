@@ -267,3 +267,12 @@ def delete_tree(request, tree_id):
 
 def identification_guide(request):
     return render(request, "identification_guide.html", {})
+
+
+def search_trees(request):
+    query = request.GET.get("q")
+    if query:
+        trees = Tree.objects.filter(common_name__icontains=query)
+    else:
+        trees = Tree.objects.none()
+    return render(request, "search_results.html", {"trees": trees})

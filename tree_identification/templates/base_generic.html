@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Three Enthusiast</title>
+    <title>Tree Enthusiast</title>
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <link
       rel="stylesheet"
@@ -13,7 +13,6 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <!-- Font Awesome 6.4.2 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -21,18 +20,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- Favicon -->
     <link
       rel="icon"
       href="{% static 'assets/images/favicon/oak-1.png' %}"
       type="image/png"
     />
   </head>
-
   <body>
     <header>
-      <!-- Navbar -->
       <nav class="navbar navbar-expand-md navbar-bg">
         <a class="navbar-brand" href="/">
           <img
@@ -50,15 +45,15 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"><i 
-            class="fa-solid fa-bars text-white"></i></span>
+          <span class="navbar-toggler-icon">
+            <i class="fa-solid fa-bars text-white"></i>
+          </span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <a href="/" class="navbar-brand">
             <h1 id="nav-title">Tree Enthusiast</h1>
           </a>
-
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'home' %}"
@@ -76,20 +71,33 @@
               <a class="nav-link me-1" href="{% url 'my_trees' %}">My Trees</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-1" href="#"
-                >Search</a
+              <form
+                class="form-inline my-2 my-lg-0"
+                action="{% url 'search_trees' %}"
+                method="get"
               >
+                <input
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Search Trees"
+                  aria-label="Search"
+                  name="q"
+                />
+                <button
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </form>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-1" href="#"
-                >Tree Map</a
-              >
+              <a class="nav-link me-1" href="#">Tree Map</a>
             </li>
             {% endif %}
           </ul>
           <ul class="my-2 my-lg-0 d-flex flex-row">
-            <!-- Authentication Links -->
-            {% if user.is_authenticated %}            
+            {% if user.is_authenticated %}
             <li class="nav-item nav-item-user">
               <a
                 class="nav-link mr-3"
@@ -101,7 +109,6 @@
               </a>
             </li>
             <li class="nav-item">
-              <!-- Trigger button for Logout Modal -->
               <a
                 class="btn btn-success nav-link"
                 data-toggle="modal"
@@ -139,106 +146,11 @@
     </div>
     {% endfor %} {% endif %}
 
-    <!-- Main Content Block -->
-    <main>{% block content %} {% endblock %}</main>
+    <main>{% block content %}{% endblock %}</main>
 
-    <!-- Footer -->
     <footer>
       <p>&copy; {{ current_year }} Tree Enthusiast</p>
     </footer>
-
-    <!-- Logout Confirmation Modal -->
-    <div
-      class="modal fade"
-      id="logoutModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="logoutModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">Are you sure you want to log out?</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <a href="{% url 'logout' %}" class="btn bg-success text-white"
-              >Logout</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-        <!-- Delete Profile Confirmation Modal -->
-    <div class="modal fade" id="deleteProfileModal" 
-    tabindex="-1" role="dialog" 
-    aria-labelledby="deleteProfileModalLabel" 
-    aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" 
-            id="deleteProfileModalLabel">Confirm Profile Deletion</h5>
-            <button type="button" 
-            class="close" 
-            data-dismiss="modal" 
-            aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <form action="{% url 'profile-delete' %}" method="post">
-            {% csrf_token %}
-            <div class="modal-body">
-              <p>Are you sure you want to delete your profile? 
-                <br>
-                This action cannot be undone.</p>
-              <!-- Password Confirmation Field with Toggle -->
-          <div class="form-group">
-            <label for="tree-confirm-password">Confirm Password:</label>
-            <input
-              type="password"
-              class="form-control"
-              id="tree-confirm-password"
-              name="confirm_password"
-              required
-            />
-            <button
-              type="button"
-              id="toggleTreePasswordButton"
-              onclick="toggleTreePassword()"
-            >
-              Show Password
-            </button>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Cancel
-          </button>
-          <button type="submit" class="btn btn-danger">Delete Tree</button>
-        </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
 
     <!-- Additional JavaScript files or scripts here -->
     <script
@@ -251,9 +163,8 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
-    
+
     <!-- Custom JavaScript -->
     {% block javascript %}{% endblock javascript %}
-    
   </body>
 </html>
