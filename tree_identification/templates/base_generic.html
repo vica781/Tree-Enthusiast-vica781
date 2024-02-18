@@ -79,7 +79,7 @@
                 <input
                   class="form-control mr-sm-2"
                   type="search"
-                  placeholder="Search Trees"
+                  placeholder="Find a Tree"
                   aria-label="Search"
                   name="q"
                 />
@@ -104,7 +104,18 @@
                 href="{% url 'profile' %}"
                 id="nav-username"
               >
+                {% if user.is_authenticated %}
+                <img
+                  src="{{ user.profile.image.url }}"
+                  alt="{{ user.username }}'s Profile Image"
+                  width="30"
+                  height="30"
+                  class="rounded-circle mr-1"
+                />
+                {% else %}
                 <i class="fa-solid fa-1.8x mr-2 fa-user text-white"></i>
+                {% endif %}
+
                 <span>{{ user.username }}</span>
               </a>
             </li>
