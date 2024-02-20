@@ -36,26 +36,16 @@ def home(request):
 
 
 def register_user(request):
-    # if the request is a POST request, then the user is trying to register
     if request.method == "POST":
-        # create a form with the POST data
         form = UserRegisterForm(request.POST)
         print(form)
-        # check if the form is valid
         if form.is_valid():
-            # save the user to the database
             form.save()
-            # get the username
             username = form.cleaned_data.get("username")
-            # Get the password
             password = form.cleaned_data.get("password1")
-            # Authenticate the user
             user = authenticate(username=username, password=password)
-            # Log the user in
             login(request, user)
-            # display a success message
             messages.success(request, f"Account created for {username}!")
-            # redirect to the home page
             return redirect("home")
         else:
             # Log form errors for debugging

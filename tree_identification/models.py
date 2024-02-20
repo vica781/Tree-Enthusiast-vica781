@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+import os
+from django.conf import settings
 
 
 # MODELS FOR THE USER AUTHENTICATION
@@ -22,6 +24,12 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} Profile"
+
+    def get_image_url(self):
+        if self.image and hasattr(self.image, "url"):
+            return self.image.url
+        else:
+            return os.path.join(settings.MEDIA_URL, "profile_pics/default.png")
 
 
 # Model to store Login form data

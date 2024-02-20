@@ -106,7 +106,11 @@
               >
                 {% if user.is_authenticated %}
                 <img
+                {% if user.profile.image %} 
                   src="{{ user.profile.image.url }}"
+                {% else %}
+                  src="{% static 'assets/images/profile_images/default.png' %}"
+                {% endif %}
                   alt="{{ user.username }}'s Profile Image"
                   width="30"
                   height="30"
