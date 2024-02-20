@@ -69,6 +69,20 @@ function topFunction() {
 }
   
 
+// Password confirmation and view/hide password (profile page)
+function toggleProfilePassword() {
+  let passwordInput = document.getElementById("profile-confirm-password");
+  let toggleButton = document.getElementById("toggleProfilePasswordButton");
+  if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleButton.textContent = "Hide Password";
+  } else {
+      passwordInput.type = "password";
+      toggleButton.textContent = "Show Password";
+  }
+}
+
+
 // Password conformation and view/hide password (tree_detail.html)
 function toggleTreePassword() {
         let passwordInput = document.getElementById("tree-confirm-password");

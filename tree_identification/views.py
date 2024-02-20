@@ -171,7 +171,7 @@ def profile_update(request):
 
 
 @login_required
-def profile_delete(request):
+def profile_delete(request, user_id):
     if request.method == "POST":
         # Retrieve the password from the form
         password = request.POST.get("confirm_password")
