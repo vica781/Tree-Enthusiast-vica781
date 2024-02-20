@@ -228,7 +228,10 @@ def edit_tree(request, tree_id):
         form = TreeForm(request.POST, request.FILES, instance=tree)
         if form.is_valid():
             form.save()
+            messages.success(request, "Tree information updated successfully!")
             return redirect("my_trees")
+        else:
+            messages.error(request, "Error updating tree information.")
     else:
         form = TreeForm(instance=tree)
     return render(request, "edit_tree.html", {"form": form})
