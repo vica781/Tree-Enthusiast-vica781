@@ -63,10 +63,14 @@ footer {
 
 
 /* USER PROFILE PAGE */
-.background-image {
+/* .background-image {
     height: 100vh;
     object-fit: cover;
-}
+} */
+#toggleProfilePasswordButton {
+    border: 1px solid #b2bcc6;
+    border-radius: 5px;
+  }
 
 .form-overlay {
     top: 50%;
@@ -103,7 +107,7 @@ footer {
     overflow: hidden;
     }    
     .card-img-top {
-        height: 150px; 
+        height: 350px; 
         object-fit: cover; 
         width: 100%;        
     } 
@@ -141,7 +145,7 @@ footer {
 #toggleTreePasswordButton {
     border: 1px solid #b2bcc6;
     border-radius: 5px;
-  }
+}  
   .tree-image {
   max-width: 300px;
   max-height: 300px;
