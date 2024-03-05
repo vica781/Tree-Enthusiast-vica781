@@ -3,7 +3,16 @@ html, body {
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
-
+/* GENERAL STYLES */
+.form-overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content-box {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
 /* NAVBAR */
 .navbar-bg {
     background-color: #2e302e;
@@ -39,14 +48,6 @@ nav ul li a {
 .nav-item .nav-link:hover {
     color: #f8da17;
 }
-
-/* HOME PAGE */
-
-
-/* USER PROFILE PAGE */
-
-
-
 /* FOOTER */
 footer {
     background-color: #333;
@@ -54,101 +55,107 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+/* APP's PAGES */
+/* HOME PAGE */
+
 /* REGISTER PAGE */
-/* Form */
 #togglePasswordButton {
     border: 1px solid #b2bcc6;
     border-radius: 5px;
-  }
-
-
+}
+/* LOGIN PAGE */
+#toggleLoginPasswordButton {
+    border: 1px solid #b2bcc6;
+    border-radius: 5px;
+}
 /* USER PROFILE PAGE */
-/* .background-image {
-    height: 100vh;
-    object-fit: cover;
-} */
 #toggleProfilePasswordButton {
     border: 1px solid #b2bcc6;
     border-radius: 5px;
-  }
-
-.form-overlay {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
+/* CONTACT PAGE */
 
-.content-box {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
+/* ADD TREE PAGE */
 
 /* MY TREES PAGE */
+.my_trees_bg_image {
+    /* background-image: url(../images/trees_bg.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+/* Overlay Container */
+.my_trees_container {
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);    
+}
+#my_trees_overlay {
+    background-color: rgba(255, 255, 255, 0.85); 
+    border-radius: 10px;
+    max-height: 80vh;
+}
+#my_trees_scrollable_content {
+    max-height: 60vh; 
+    overflow-y: auto; 
+    padding: 0 1rem 0 1rem; 
+}
+/* Make cards the same height */
 .card {
     min-height:  220px; 
-    margin-bottom: 20px;
-  }
-  
-  /* Make images responsive and maintain aspect ratio */
-  .card-img-top {
-    width:  100%;
-    height: auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Make images responsive and maintain aspect ratio */
+.card-img-top {
+    height: 350px; 
     object-fit: cover; 
-  }
-  
-  /* Optional: Add some spacing between cards */
-    .card-body {
-        padding: 0.5rem;
-    }   
-    .card-title {
+    width: 100%;        
+}   
+.card-title {
     height: 20px; 
     font-size: 1rem;
     text-align: center;
-    overflow: hidden;
-    }    
-    .card-img-top {
-        height: 350px; 
-        object-fit: cover; 
-        width: 100%;        
-    } 
-        .card {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: space-between; */
-    }
-    
-    /* Back-to-top button */
-    #myBtn {
-        display: none; 
-        position: absolute; 
-        bottom: 20px; 
-        right: 57px; 
-        z-index: 99; 
-        border: none; 
-        outline: none; 
-        background-color: #e89911; 
-        color: white; 
-        cursor: pointer; 
-        padding: 0 0.5rem 0 0.5rem; 
-        border-radius: 50px; 
-        font-size: 1.5rem; 
-    }  
-    
-    /* TREE DETAILS PAGE Modal */
-    /* Ensure the modal is at the top and visible */
+    /* overflow: hidden; */
+}  
+/* Back-to-top button */
+#myBtn {
+    display: none; 
+    position: absolute; 
+    bottom: 20px; 
+    right: 57px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #e89911; 
+    color: white; 
+    cursor: pointer; 
+    padding: 0 0.5rem 0 0.5rem; 
+    border-radius: 50px; 
+    font-size: 1.5rem; 
+} 
+
+/* TREE DETAILS PAGE */
+/* Ensure the modal is at the top and visible */
 #deleteTreeModal {
-  z-index: 1050; 
+    z-index: 1050; 
 }
 .modal-dialog {
-  margin-top: 50px; 
+    margin-top: 50px; 
 }
 #toggleTreePasswordButton {
     border: 1px solid #b2bcc6;
     border-radius: 5px;
 }  
-  .tree-image {
-  max-width: 300px;
-  max-height: 300px;
-  object-fit: contain;
+.tree-image {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
 }
-

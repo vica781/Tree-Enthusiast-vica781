@@ -39,10 +39,18 @@
               <input
                 type="password"
                 class="form-control"
-                id="password"
+                id="login-password"
                 name="password"
                 required
-              />
+              />              
+              <!-- Toggle Button -->
+              <button
+                type="button"
+                id="toggleLoginPasswordButton"
+                onclick="toggleLoginPassword()"
+              >
+                Show Password
+              </button>
             </div>
             <!-- Forgot Password Link -->
             <div class="mt-2">
@@ -69,4 +77,6 @@
   </div>
 </div>
 
+{% endblock %}{% block javascript %}
+<script src="{% static 'assets/js/script.js' %}"></script>
 {% endblock %}
