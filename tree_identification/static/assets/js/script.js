@@ -32,7 +32,50 @@ document.addEventListener("DOMContentLoaded", function () {
       passwordInput.type = "password";
       toggleButton.textContent = "Show Password";
     }
+  }
+
+
+// Password confirmation and view/hide password (profile page)
+function toggleProfilePassword() {
+  let passwordInput = document.getElementById("profile-confirm-password");
+  let toggleButton = document.getElementById("toggleProfilePasswordButton");
+  if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleButton.textContent = "Hide Password";
+  } else {
+      passwordInput.type = "password";
+      toggleButton.textContent = "Show Password";
+  }
 }
+
+
+// Password conformation and view/hide password (tree_detail.html)
+function toggleTreePassword() {
+        let passwordInput = document.getElementById("tree-confirm-password");
+        let toggleButton = document.getElementById("toggleTreePasswordButton");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            toggleButton.textContent = "Hide Password";
+        } else {
+            passwordInput.type = "password";
+            toggleButton.textContent = "Show Password";
+        }
+    }
+
+
+function toggleLoginPassword() {
+    let passwordInput = document.getElementById("login-password");
+    let toggleButton = document.getElementById("toggleLoginPasswordButton");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleButton.textContent = "Hide Password";
+    } else {
+        passwordInput.type = "password";
+        toggleButton.textContent = "Show Password";
+    }
+}
+
 
 // My Trees viewing back-to-top button
 document.addEventListener("DOMContentLoaded", function () {
@@ -67,31 +110,5 @@ function topFunction() {
     let overlayContainer = document.querySelector('.scrollable-content');
     overlayContainer.scrollTop = 0;
 }
-  
-
-// Password confirmation and view/hide password (profile page)
-function toggleProfilePassword() {
-  let passwordInput = document.getElementById("profile-confirm-password");
-  let toggleButton = document.getElementById("toggleProfilePasswordButton");
-  if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      toggleButton.textContent = "Hide Password";
-  } else {
-      passwordInput.type = "password";
-      toggleButton.textContent = "Show Password";
-  }
-}
 
 
-// Password conformation and view/hide password (tree_detail.html)
-function toggleTreePassword() {
-        let passwordInput = document.getElementById("tree-confirm-password");
-        let toggleButton = document.getElementById("toggleTreePasswordButton");
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            toggleButton.textContent = "Hide Password";
-        } else {
-            passwordInput.type = "password";
-            toggleButton.textContent = "Show Password";
-        }
-    }
