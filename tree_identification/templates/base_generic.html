@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tree Enthusiast</title>
+    <title>{% if page_title %}{{ page_title }} - {% endif %}Tree Enthusiast</title>
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <link
       rel="stylesheet"
@@ -56,12 +56,9 @@
           </a>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}"
-                >Home<span class="sr-only">(current)</span></a
+              <a class="nav-link" href="{% url 'browse_trees' %}"
+                >Browse Trees<span class="sr-only">(current)</span></a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
@@ -69,7 +66,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link me-1" href="{% url 'my_trees' %}">My Trees</a>
-            </li>
+            </li>            
+            {% endif %}
             <li class="nav-item">
               <form
                 class="form-inline my-2 my-lg-0"
@@ -91,11 +89,7 @@
                 </button>
               </form>
             </li>
-            <li class="nav-item">
-              <a class="nav-link me-1" href="#">Tree Map</a>
-            </li>
-            {% endif %}
-          </ul>
+          </ul>          
           <ul class="my-2 my-lg-0 d-flex flex-row">
             {% if user.is_authenticated %}
             <li class="nav-item nav-item-user">
@@ -106,11 +100,11 @@
               >
                 {% if user.is_authenticated %}
                 <img
-                {% if user.profile.image %} 
+                  {% if user.profile.image %}
                   src="{{ user.profile.image.url }}"
-                {% else %}
+                  {% else %}
                   src="{% static 'assets/images/profile_images/default.png' %}"
-                {% endif %}
+                  {% endif %}
                   alt="{{ user.username }}'s Profile Image"
                   width="30"
                   height="30"
@@ -161,11 +155,106 @@
     </div>
     {% endfor %} {% endif %}
 
-    <main>{% block content %}{% endblock %}</main>
+    <main class="mb-0">{% block content %}{% endblock %}</main>
 
-    <footer>
-      <p>&copy; {{ current_year }} Tree Enthusiast</p>
+    <footer class="footer mt-0 pt-2 bg-dark">
+      <div class="container">
+        <div class="row">
+          <!-- First column for About information -->
+          <div class="col-md-4">
+            <h5>About Tree Enthusiast</h5>
+            <p>
+              This app is dedicated to tree lovers everywhere. Explore, share,
+              and contribute to our vast tree database. Learn about various tree
+              species and connect with fellow enthusiasts.
+            </p>
+          </div>
+
+          <!-- Second column for Quick Links or Navigation -->
+          <div class="col-md-4 quick-links">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="{% url 'home' %}" aria-label="Link to Home Page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'add_tree' %}"
+                  aria-label="Link to Add Tree Page"
+                  >Add Tree</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{% url 'my_trees' %}"
+                  aria-label="Link to My Trees Collection Page"
+                  >My Trees</a
+                >
+              </li>              
+            </ul>
+          </div>
+
+          <!-- Third column for Contact & Social Media -->
+          <div class="col-md-4 social-media">
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="{% url 'contact' %}"
+                  class="text-primery"
+                  id="contact"
+                  aria-label="Link contact Page"
+                  ><h5>Contact Us</h5></a
+                >
+              </li>
+              <li>Email: info@treeenthusiast.com</li>
+              <li>Phone: 011-11111-111</li>              
+            </ul>
+            <div>
+              <h5>Follow Us</h5>
+              <a
+                href="https://www.facebook.com/"
+                class="btn btn-social-icon"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i
+                  class="fa-brands fa-facebook-square fa-xl"                  
+                ></i>
+              </a>
+              <a
+                href="https://www.twitter.com/"
+                class="btn btn-social-icon"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <i
+                  class="fa-brands fa-twitter fa-xl"                  
+                ></i>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                class="btn btn-social-icon"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <i
+                  class="fa-brands fa-instagram fa-xl"                  
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Additional row for copyright notice -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>&copy; {% now 'Y' %} Tree Enthusiast. For educational purposes.</p>
+            </div>
+        </div>
     </footer>
+
     <!-- Logout Modal -->
     <div
       class="modal fade"

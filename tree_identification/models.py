@@ -67,3 +67,16 @@ class Tree(models.Model):
 
     def __str__(self):
         return self.common_name
+
+    # Model to save messages to the user from the admin
+
+
+class Message(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField()
+    subject = models.CharField(max_length=255, blank=True)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Message from {self.name} - {self.subject}"

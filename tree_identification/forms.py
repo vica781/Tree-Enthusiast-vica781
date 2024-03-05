@@ -66,3 +66,31 @@ class TreeForm(forms.ModelForm):
             "tree_image",
             "tree_habitat",
         ]
+
+
+# Create a form for the contact page
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ["name", "email", "subject", "message"]
+        widgets = {
+            "name": forms.TextInput(attrs={"class": "form-control"}),
+            "email": forms.EmailInput(attrs={"class": "form-control"}),
+            "subject": forms.TextInput(attrs={"class": "form-control"}),
+            "message": forms.Textarea(attrs={"class": "form-control"}),
+        }
+
+        def __init__(self, *args: Any, **kwargs: Any) -> None:
+            super().__init__(*args, **kwargs)
+            self.fields["name"].widget.attrs.update({"class": "form-control"})
+            self.fields["email"].widget.attrs.update({"class": "form-control"})
+            self.fields["subject"].widget.attrs.update({"class": "form-control"})
+            self.fields["message"].widget.attrs.update({"class": "form-control"})
+            for field in self.fields:
+                self.fields[field].widget.attrs["class"] = "form-control"
+                self.fields[field].widget.attrs["placeholder"] = self.fields[
+                    field
+                ].label
+                self.fields[field].label = False
+                self.fields[field].help_text = ""
+                self.fields[field].required = True

@@ -4,17 +4,26 @@ from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import home
-from .views import register_user
-from .views import login_user
-from .views import logout_user
-from .views import contact
 from tree_identification import views as user_views
-from .views import add_tree, my_trees, tree_detail, edit_tree, delete_tree
-from .views import search_trees
+from .views import (
+    home,
+    register_user,
+    login_user,
+    logout_user,
+    contact,
+    add_tree,
+    my_trees,
+    tree_detail,
+    edit_tree,
+    delete_tree,
+    search_trees,
+    browse_trees,
+    contact_success,
+)
 
 
 urlpatterns = [
+    # path("admin/", admin.site.urls),
     path("", views.home, name="home"),
     path("register/", views.register_user, name="register"),
     path("login/", views.login_user, name="login"),
@@ -40,8 +49,6 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("profile/", views.profile_user, name="profile"),
     path("profile/update/", views.profile_update, name="profile-update"),
-    # path("profile/delete/", views.profile_delete, name="profile-delete"),
-    # path("profile/delete/", views.profile_delete, name="profile_delete"),
     path("profile/delete/<int:user_id>/", views.profile_delete, name="profile_delete"),
     path("check_username/", views.check_username, name="check_username"),
     path("add_tree/", views.add_tree, name="add_tree"),
@@ -55,7 +62,8 @@ urlpatterns = [
         name="identification_guide",
     ),
     path("search/", search_trees, name="search_trees"),
-    path("tree/<int:tree_id>/", views.tree_detail, name="tree_detail"),
+    path("browse_trees/", views.browse_trees, name="browse_trees"),
+    path("contact_success/", contact_success, name="contact_success"),
 ]
 
 # adapted from tutorial video:

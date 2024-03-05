@@ -11,7 +11,7 @@ from django.contrib.auth import (
 )  # authenticate is used to check if the user is valid
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Contact, Profile
+from .models import Contact, Profile, Message
 from .forms import ProfileUpdateForm, UserRegisterForm
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
@@ -20,6 +20,7 @@ from .models import Tree
 from .forms import TreeForm
 from django.shortcuts import get_object_or_404
 import logging
+from .forms import ContactForm
 
 
 # from django.contrib.auth import get_user_model
@@ -28,11 +29,18 @@ User = get_user_model()
 
 def home(request):
     context = {
-        "title": "Home Page",
+        "page_title": "Home",
         "content": "Welcome to the home page!",
         "date_posted": datetime.now(),
+        "current_year": datetime.now().year,
     }
     return render(request, "home.html", context)
+
+
+def browse_trees(request):
+    trees = Tree.objects.all()
+    context = {"page_title": "Browse Trees", "trees": trees}
+    return render(request, "browse_trees.html", context)
 
 
 def register_user(request):
@@ -57,7 +65,13 @@ def register_user(request):
         # create an empty form
         form = UserRegisterForm()
     # render the registration page
-    return render(request, "register.html", {"form": form})
+    return render(
+        request,
+        "register.html",
+        context={
+            "page_title": "Sign Up",
+        },
+    )
 
 
 def check_username(request):
@@ -88,7 +102,7 @@ def login_user(request):
             # redirect to the login page
             return redirect("login")
     # render the login page
-    return render(request, "login.html", {})
+    return render(request, "login.html", context={"page_title": "Login"})
 
 
 def logout_user(request):
@@ -118,11 +132,17 @@ def contact(request):
 
         messages.success(request, "Your message has been sent successfully!")
 
-    return render(request, "contact.html", {})
+    return render(
+        request,
+        "contact.html",
+        context={
+            "page_title": "Sign Up",
+        },
+    )
 
 
 def profile_user(request):
-    return render(request, "profile.html", {})
+    return render(request, "profile.html", context={"page_title": "Your Profile"})
 
 
 @login_required
@@ -204,21 +224,26 @@ def add_tree(request):
     else:
         form = TreeForm()
 
-    return render(request, "add_tree.html", {"form": form})
+    return render(
+        request, "add_tree.html", context={"page_title": "Add Tree", "form": form}
+    )
 
 
 @login_required
 def my_trees(request):
     trees = Tree.objects.filter(user=request.user)  # Fetch trees for the logged-in user
-    return render(request, "my_trees.html", {"trees": trees})
+    return render(
+        request, "my_trees.html", context={"page_title": "My Trees", "trees": trees}
+    )
 
 
-@login_required
 def tree_detail(request, tree_id):
-    tree = get_object_or_404(
-        Tree, id=tree_id, user=request.user
-    )  # Ensure the tree belongs to the logged-in user
-    return render(request, "tree_detail.html", {"tree": tree})
+    tree = get_object_or_404(Tree, id=tree_id)
+    return render(
+        request,
+        "tree_detail.html",
+        context={"page_title": "Tree Details", "tree": tree},
+    )
 
 
 @login_required
@@ -234,7 +259,9 @@ def edit_tree(request, tree_id):
             messages.error(request, "Error updating tree information.")
     else:
         form = TreeForm(instance=tree)
-    return render(request, "edit_tree.html", {"form": form})
+    return render(
+        request, "edit_tree.html", context={"page_title": "Edit Tree", "form": form}
+    )
 
 
 @login_required
@@ -259,7 +286,9 @@ def delete_tree(request, tree_id):
 
 
 def identification_guide(request):
-    return render(request, "identification_guide.html", {})
+    return render(
+        request, "identification_guide.html", context={"page_title": "Trees' Guide"}
+    )
 
 
 def search_trees(request):
@@ -268,4 +297,34 @@ def search_trees(request):
         trees = Tree.objects.filter(common_name__icontains=query)
     else:
         trees = Tree.objects.none()
-    return render(request, "search_results.html", {"trees": trees})
+    return render(
+        request,
+        "search_results.html",
+        context={"page_title": "Search Results", "trees": trees},
+    )
+
+
+def contact(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Create a new Message instance and save it to the database
+            Message.objects.create(
+                name=form.cleaned_data["name"],
+                email=form.cleaned_data["email"],
+                subject=form.cleaned_data.get(
+                    "subject", ""
+                ),  # 'subject' might be optional
+                message=form.cleaned_data["message"],
+            )
+            return redirect("contact_success")
+    else:
+        form = ContactForm()
+
+    return render(
+        request, "contact.html", context={"page_title": "Contact", "form": form}
+    )
+
+
+def contact_success(request):
+    return render(request, "contact_success.html", {})
