@@ -5,9 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% if page_title %}{{ page_title }} - {% endif %}Tree Enthusiast
-    </title>
+    <title>{% if page_title %}{{ page_title }} - {% endif %}Tree Enthusiast</title>
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <link
       rel="stylesheet"
@@ -30,7 +28,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-bg d-flex">
+      <nav class="navbar navbar-expand-md navbar-bg">
         <a class="navbar-brand" href="/">
           <img
             src="{% static 'assets/images/favicon/oak-1.png' %}"
@@ -68,7 +66,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link me-1" href="{% url 'my_trees' %}">My Trees</a>
-            </li>
+            </li>            
             {% endif %}
             <li class="nav-item">
               <form
@@ -91,7 +89,7 @@
                 </button>
               </form>
             </li>
-          </ul>
+          </ul>          
           <ul class="my-2 my-lg-0 d-flex flex-row">
             {% if user.is_authenticated %}
             <li class="nav-item nav-item-user">
@@ -102,18 +100,11 @@
               >
                 {% if user.is_authenticated %}
                 <img
-                  {%
-                  if
-                  user.profile.image
-                  %}
+                  {% if user.profile.image %}
                   src="{{ user.profile.image.url }}"
-                  {%
-                  else
-                  %}
+                  {% else %}
                   src="{% static 'assets/images/profile_images/default.png' %}"
-                  {%
-                  endif
-                  %}
+                  {% endif %}
                   alt="{{ user.username }}'s Profile Image"
                   width="30"
                   height="30"
@@ -201,7 +192,7 @@
                   aria-label="Link to My Trees Collection Page"
                   >My Trees</a
                 >
-              </li>
+              </li>              
             </ul>
           </div>
 
@@ -211,16 +202,14 @@
               <li>
                 <a
                   href="{% url 'contact' %}"
-                  class="text-primary"
+                  class="text-primery"
                   id="contact"
                   aria-label="Link contact Page"
+                  ><h5>Contact Us</h5></a
                 >
-                  <h5>Contact Us</h5>
-                </a>
               </li>
-
               <li>Email: info@treeenthusiast.com</li>
-              <li>Phone: 011-11111-111</li>
+              <li>Phone: 011-11111-111</li>              
             </ul>
             <div>
               <h5>Follow Us</h5>
@@ -230,7 +219,9 @@
                 target="_blank"
                 aria-label="Facebook"
               >
-                <i class="fa-brands fa-facebook-square fa-xl text-white"></i>
+                <i
+                  class="fa-brands fa-facebook-square fa-xl"                  
+                ></i>
               </a>
               <a
                 href="https://www.twitter.com/"
@@ -238,7 +229,9 @@
                 target="_blank"
                 aria-label="Twitter"
               >
-                <i class="fa-brands fa-twitter fa-xl text-white"></i>
+                <i
+                  class="fa-brands fa-twitter fa-xl"                  
+                ></i>
               </a>
               <a
                 href="https://www.instagram.com/"
@@ -246,18 +239,20 @@
                 target="_blank"
                 aria-label="Instagram"
               >
-                <i class="fa-brands fa-instagram fa-xl text-white"></i>
+                <i
+                  class="fa-brands fa-instagram fa-xl"                  
+                ></i>
               </a>
             </div>
           </div>
         </div>
       </div>
       <!-- Additional row for copyright notice -->
-      <div class="row">
-        <div class="col-12 text-center">
-          <p>&copy; {% now 'Y' %} Tree Enthusiast. For educational purposes.</p>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>&copy; {% now 'Y' %} Tree Enthusiast. For educational purposes.</p>
+            </div>
         </div>
-      </div>
     </footer>
 
     <!-- Logout Modal -->

@@ -6,7 +6,8 @@
       <img
         src="{% static 'assets/images/background_images/sea_buckthorn.webp' %}"
         alt="Landing Image"
-        class="img-fluid w-100 my_trees_bg_image"        
+        class="img-fluid w-100"
+        style="height: 100vh; object-fit: cover"
       />
 
       <!-- Overlay Container -->
@@ -89,3 +90,4 @@
 {% endblock %} {% block javascript %}
 <script src="{% static 'assets/js/script.js' %}"></script>
 {% endblock javascript %}
+
