@@ -5,7 +5,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% if page_title %}{{ page_title }} - {% endif %}Tree Enthusiast</title>
+    <title>
+      {% if page_title %}{{ page_title }} - {% endif %}Tree Enthusiast
+    </title>
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/base_generic.css' %}" />
     <link
@@ -67,7 +69,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link me-1" href="{% url 'my_trees' %}">My Trees</a>
-            </li>            
+            </li>
             {% endif %}
             <li class="nav-item">
               <form
@@ -90,7 +92,7 @@
                 </button>
               </form>
             </li>
-          </ul>          
+          </ul>
           <ul class="my-2 my-lg-0 d-flex flex-row">
             {% if user.is_authenticated %}
             <li class="nav-item nav-item-user">
@@ -101,11 +103,18 @@
               >
                 {% if user.is_authenticated %}
                 <img
-                  {% if user.profile.image %}
+                  {%
+                  if
+                  user.profile.image
+                  %}
                   src="{{ user.profile.image.url }}"
-                  {% else %}
+                  {%
+                  else
+                  %}
                   src="{% static 'assets/images/profile_images/default.png' %}"
-                  {% endif %}
+                  {%
+                  endif
+                  %}
                   alt="{{ user.username }}'s Profile Image"
                   width="30"
                   height="30"
@@ -159,12 +168,12 @@
     <main class="mb-0">{% block content %}{% endblock %}</main>
 
     <footer class="footer mt-0 pt-2 bg-dark">
-      <div class="container">
+      <div class="footer-container">
         <div class="row">
           <!-- First column for About information -->
           <div class="col-md-4">
-            <h5>About Tree Enthusiast</h5>
-            <p>
+            <h5 class="footer-headings">About Tree Enthusiast</h5>
+            <p class="footer-paragraph">
               This app is dedicated to tree lovers everywhere. Explore, share,
               and contribute to our vast tree database. Learn about various tree
               species and connect with fellow enthusiasts.
@@ -173,11 +182,13 @@
 
           <!-- Second column for Quick Links or Navigation -->
           <div class="col-md-4 quick-links">
-            <h5>Quick Links</h5>
+            <h5 class="footer-headings">Quick Links</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="{% url 'home' %}" aria-label="Link to Home Page"
-                class="yellow-on-hover"
+                <a
+                  href="{% url 'home' %}"
+                  aria-label="Link to Home Page"
+                  class="footer-links yellow-on-hover"
                   >Home</a
                 >
               </li>
@@ -185,7 +196,7 @@
                 <a
                   href="{% url 'add_tree' %}"
                   aria-label="Link to Add Tree Page"
-                  class="yellow-on-hover"
+                  class="footer-links yellow-on-hover"
                   >Add Tree</a
                 >
               </li>
@@ -193,10 +204,10 @@
                 <a
                   href="{% url 'my_trees' %}"
                   aria-label="Link to My Trees Collection Page"
-                  class="yellow-on-hover"
+                  class="footer-links yellow-on-hover"
                   >My Trees</a
                 >
-              </li>              
+              </li>
             </ul>
           </div>
 
@@ -209,14 +220,16 @@
                   class="text-primery"
                   id="contact"
                   aria-label="Link contact Page"
-                  ><h5 class="yellow-on-hover">Contact Us</h5></a
+                  ><h5 class="footer-headings yellow-on-hover">
+                    Contact Us
+                  </h5></a
                 >
               </li>
-              <li>Email: info@treeenthusiast.com</li>
-              <li>Phone: 011-11111-111</li>              
+              <li class="footer-li">Email: info@treeenthusiast.com</li>
+              <li class="footer-li">Phone: 011-11111-111</li>
             </ul>
             <div>
-              <h5>Follow Us</h5>
+              <h5 class="footer-headings">Follow Us</h5>
               <a
                 href="https://www.facebook.com/"
                 class="btn btn-social-icon"
@@ -224,7 +237,7 @@
                 aria-label="Facebook"
               >
                 <i
-                  class="fa-brands fa-facebook-square fa-xl text-white yellow-on-hover"                  
+                  class="fa-brands fa-facebook-square text-white footer-socials yellow-on-hover"
                 ></i>
               </a>
               <a
@@ -234,7 +247,7 @@
                 aria-label="Twitter"
               >
                 <i
-                  class="fa-brands fa-twitter fa-xl text-white yellow-on-hover"                  
+                  class="fa-brands fa-twitter text-white footer-socials yellow-on-hover"
                 ></i>
               </a>
               <a
@@ -244,7 +257,7 @@
                 aria-label="Instagram"
               >
                 <i
-                  class="fa-brands fa-instagram fa-xl text-white yellow-on-hover"                  
+                  class="fa-brands fa-instagram text-white footer-socials yellow-on-hover"
                 ></i>
               </a>
             </div>
@@ -252,11 +265,13 @@
         </div>
       </div>
       <!-- Additional row for copyright notice -->
-        <div class="row">
-            <div class="col-12 text-center">
-                <p>&copy; {% now 'Y' %} Tree Enthusiast. For educational purposes.</p>
-            </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="footer-paragraph">
+            &copy; {% now 'Y' %} Tree Enthusiast. For educational purposes.
+          </p>
         </div>
+      </div>
     </footer>
 
     <!-- Logout Modal -->
