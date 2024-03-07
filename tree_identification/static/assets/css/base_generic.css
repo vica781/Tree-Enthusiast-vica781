@@ -4,7 +4,6 @@ html, body {
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
-
 .form-overlay {
     top: 50%;
     left: 50%;
@@ -58,7 +57,7 @@ nav ul li a {
 }
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 1rem;

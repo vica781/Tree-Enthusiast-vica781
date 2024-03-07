@@ -34,10 +34,10 @@
               {% csrf_token %}
               <img
                 class="rounded_circle account-img d-block mx-auto mb-3"
-                src="{{ user.profile.image.url }}"
+                src="{{ MEDIA_URL }}{{ user.profile.image }}" 
                 alt="Profile Picture"
                 width="200px"
-                height="200px"
+                height="200px" 
               />
               <p class="text-secondary">
                 <strong>Email:</strong> {{ user.email }}

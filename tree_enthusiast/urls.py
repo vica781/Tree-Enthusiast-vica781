@@ -20,6 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     # path('', base_generic_views.base_generic, name='base_generic'),
     path('', include('tree_identification.urls')),
-    path('admin/', admin.site.urls),
-            
+    path('admin/', admin.site.urls),            
 ]

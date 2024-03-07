@@ -103,18 +103,11 @@
               >
                 {% if user.is_authenticated %}
                 <img
-                  {%
-                  if
-                  user.profile.image
-                  %}
+                  {% if user.profile.image %}
                   src="{{ user.profile.image.url }}"
-                  {%
-                  else
-                  %}
+                  {% else %}
                   src="{% static 'assets/images/profile_images/default.png' %}"
-                  {%
-                  endif
-                  %}
+                  {% endif %}
                   alt="{{ user.username }}'s Profile Image"
                   width="30"
                   height="30"
@@ -217,8 +210,7 @@
               <li>
                 <a
                   href="{% url 'contact' %}"
-                  class="text-primery"
-                  id="contact"
+                  class="text-primery yellow-on-hover"
                   aria-label="Link contact Page"
                   ><h5 class="footer-headings yellow-on-hover">
                     Contact Us

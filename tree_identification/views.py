@@ -151,6 +151,7 @@ def profile_update(request):
     profile, created = Profile.objects.get_or_create(user=user)
     if request.method == "POST":
         form = ProfileUpdateForm(request.POST, request.FILES, instance=user.profile)
+        
 
         # Check if the form is valid
         if form.is_valid():

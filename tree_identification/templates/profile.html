@@ -4,20 +4,17 @@
   <!-- Background Image -->
   <img
     src="{% static 'assets/images/background_images/userprofile-page-img.png' %}"
-    alt="Login Page Background"
-    class="img-fluid w-100"
+    alt="Profile Page Background"
+    class="img-fluid w-100 profile-pg-bg-img"
     style="height: 100vh; object-fit: cover"
   />
 
   <!-- Form Overlay -->
-  <div
-    class="container position-absolute"
-    style="top: 50%; left: 35%; transform: translate(-50%, -50%)"
-  >
+  <div class="col-sm-3 col-md-4 col-lg-8 position-absolute profile-overlay">
     <div class="row">
-      <div class="col-md-6 offset-md-6">
+      <div class="col-sm-3 col-md-4 col-lg-8 position-absolute profile-overlay">
         <div
-          class="p-4 shadow-lg rounded-lg"
+          class="p-4 col-12 col-md-8 col-lg-10 mx-auto mt-5 mb-5"
           style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
         >
           <!-- Header Section -->
@@ -33,20 +30,21 @@
             <div class="media">
               <img
                 class="rounded_circle mr-3 account-img"
-                src="{% if user.profile.image.url %}
-                {{ user.profile.image.url }}{% else %}{% static 'assets/images/profile_images/default.png' %}{% endif %}"
+                {% if user.profile.image.url %}
+                src="{{ user.profile.image.url }}" 
+                {% else %} 
+                src="{% static 'assets/images/profile_images/default.png' %}" 
+                {% endif %}
                 alt="default profile picture"
-                width="200px"
-                height="200px"
               />
-              <div class="media-body ml-4">
-                <p class="text-secondary mt-5">
+              <div class="col-12 media-body">
+                <p class="text-secondary mr-2 mt-4">
                   <strong>First Name:</strong> {{ user.first_name }}
                 </p>
-                <p class="text-secondary">
+                <p class="text-secondary mr-2">
                   <strong>Last Name:</strong> {{ user.last_name }}
                 </p>
-                <p class="text-secondary">
+                <p class="text-secondary mr-2">
                   <strong>Email:</strong> {{ user.email }}
                 </p>
               </div>
@@ -57,13 +55,15 @@
 
           <!-- Footer Section -->
           <div class="text-center">
-            <a href="{% url 'profile-update' %}" class="btn btn-primary"
+            <a
+              href="{% url 'profile-update' %}"
+              class="btn btn-primary mr-2 mb-2"
               >Update Profile</a
             >
             <!-- Trigger/Delete Profile Button -->
             <button
               type="button"
-              class="btn btn-danger"
+              class="btn btn-danger mb-2"
               data-toggle="modal"
               data-target="#deleteProfileModal"
             >
