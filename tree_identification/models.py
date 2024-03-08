@@ -32,16 +32,6 @@ class Profile(models.Model):
             return os.path.join(settings.MEDIA_URL, "profile_pics/default.png")
 
 
-# Model to store Login form data
-class Login(models.Model):
-    username = models.CharField(max_length=100)
-    password = models.CharField(max_length=200, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"Message from {self.username}"
-
-
 # Model to get the user for password confirmation
 class PasswordResetConfirmView(models.Model):
     uidb64 = models.CharField(max_length=100)

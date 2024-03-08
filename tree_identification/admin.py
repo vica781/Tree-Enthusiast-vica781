@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django.db import models
-from .models import Profile, Tree, Message, Contact, Login, PasswordResetConfirmView
+from .models import Profile, Tree, Message, Contact, PasswordResetConfirmView
 
 
 admin.site.register(Profile)
