@@ -124,6 +124,7 @@
 } 
 
 /* ---------------------------- TREE DETAILS PAGE --------------------------- */
+
 /* Ensure the modal is at the top and visible */
 #deleteTreeModal {
     z-index: 1050; 
@@ -135,11 +136,11 @@
     border: 1px solid #b2bcc6;
     border-radius: 5px;
 }  
-/* .tree-image {
-    max-width: 300px;
-    max-height: 300px;
+.tree-image {
+    max-width: 200px;
+    max-height: 200px;
     object-fit: contain;
-} */
+}
 /* ============================ MEDIA QUERIES =============================== */
 @media screen and (max-width: 768px) {
     .account-img {
@@ -148,5 +149,8 @@
         object-fit: cover; 
         border-radius: 50%; 
         align-items: center;
+    }
+    .tree-detail-name {
+        font-size: 1.6rem;
     }
 }

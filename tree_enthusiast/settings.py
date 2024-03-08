@@ -21,6 +21,8 @@ if os.path.exists("env.py"):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# TEMPLATES_DIR = BASE_DIR / "tree_identification/templates"
+TEMPLATES_DIR = os.path.join(BASE_DIR, "tree_identification/templates")
 
 
 # Quick-start development settings - unsuitable for production
@@ -49,7 +51,9 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "cloudinary-storage",
     "django.contrib.staticfiles",
+    "cloudinary",
     "tree_identification",
 ]
 
@@ -68,7 +72,8 @@ ROOT_URLCONF = "tree_enthusiast.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "tree_identification/templates")],
+        # "DIRS": [os.path.join(BASE_DIR, "tree_identification/templates")],
+        "DIRS": [TEMPLATES_DIR],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -134,10 +139,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATICFILES_STORAGE = "cloudinary_storage.storage.StaticHashedCloudinaryStorage"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 MEDIA_URL = "/media/"
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
 
 # STATIC_ROOT= BASE_DIR / 'staticfiles'
 

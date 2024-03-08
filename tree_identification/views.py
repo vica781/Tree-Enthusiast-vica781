@@ -138,7 +138,7 @@ def contact(request):
         },
     )
 
-
+@login_required
 def profile_user(request):
     return render(request, "profile.html", context={"page_title": "Your Profile"})
 
