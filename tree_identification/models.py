@@ -32,16 +32,6 @@ class Profile(models.Model):
             return os.path.join(settings.MEDIA_URL, "profile_pics/default.png")
 
 
-# Model to get the user for password confirmation
-class PasswordResetConfirmView(models.Model):
-    uidb64 = models.CharField(max_length=100)
-    token = models.CharField(max_length=200, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"Message from {self.uidb64}"
-
-
 # MODELS FOR THE TREE IDENTIFICATION
 # Model to represent the tree data
 class Tree(models.Model):
