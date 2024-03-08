@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from .models import Profile
 from django.core.exceptions import ValidationError
 from django.contrib.auth.hashers import check_password
-from .models import Contact, Tree
+from .models import Message, Tree
 
 
 class UserRegisterForm(UserCreationForm):
@@ -69,9 +69,9 @@ class TreeForm(forms.ModelForm):
 
 
 # Create a form for the contact page
-class ContactForm(forms.ModelForm):
+class MessageForm(forms.ModelForm):
     class Meta:
-        model = Contact
+        model = Message
         fields = ["name", "email", "subject", "message"]
         widgets = {
             "name": forms.TextInput(attrs={"class": "form-control"}),

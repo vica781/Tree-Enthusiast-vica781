@@ -11,8 +11,8 @@ from django.contrib.auth import (
 )  # authenticate is used to check if the user is valid
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Contact, Profile, Message
-from .forms import ProfileUpdateForm, UserRegisterForm
+from .models import Profile, Message
+from .forms import ProfileUpdateForm, UserRegisterForm, MessageForm
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
@@ -20,8 +20,6 @@ from .models import Tree
 from .forms import TreeForm
 from django.shortcuts import get_object_or_404
 import logging
-from .forms import ContactForm
-
 
 # from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -119,7 +117,7 @@ def contact(request):
         message = request.POST.get("message")
 
         # Save the message in the database
-        Contact.objects.create(name=name, email=email, subject=subject, message=message)
+        Message.objects.create(name=name, email=email, subject=subject, message=message)
 
         # Send confirmation email
         send_mail(
@@ -307,7 +305,7 @@ def search_trees(request):
 
 def contact(request):
     if request.method == "POST":
-        form = ContactForm(request.POST)
+        form = MessageForm(request.POST)
         if form.is_valid():
             # Create a new Message instance and save it to the database
             Message.objects.create(
@@ -320,7 +318,7 @@ def contact(request):
             )
             return redirect("contact_success")
     else:
-        form = ContactForm()
+        form = MessageForm()
 
     return render(
         request, "contact.html", context={"page_title": "Contact", "form": form}
