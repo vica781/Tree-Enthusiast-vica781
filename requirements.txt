@@ -1,5 +1,6 @@
 asgiref==3.7.2
 django-cloudinary-storage
+cloudinary
 dj-database-url==2.1.0
 Django==4.2.9
 django-crispy-forms==2.1
