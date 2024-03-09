@@ -7,7 +7,6 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth.hashers import check_password
 from .models import Message, Tree
 
-
 class UserRegisterForm(UserCreationForm):
     # add `email` field to the form
     # because it is not included in the default UserCreationForm
@@ -38,7 +37,6 @@ class UserRegisterForm(UserCreationForm):
             raise ValidationError("The current password is incorrect.")
 
 
-# Create a form for updating the user profile
 class ProfileUpdateForm(forms.ModelForm):
     email = forms.EmailField()
     current_password = forms.CharField(widget=forms.PasswordInput(), required=True)
@@ -47,11 +45,29 @@ class ProfileUpdateForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ["image"]
+        fields = ["image", "email"]
+
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        user = self.instance.user
+        if User.objects.filter(email=email).exclude(username=user.username).exists():
+            raise forms.ValidationError("This email address is already in use.")
+        return email
 
     def clean(self):
-        # Add validation for passwords
         cleaned_data = super().clean()
+        new_password = cleaned_data.get("new_password")
+        confirm_new_password = cleaned_data.get("confirm_new_password")
+        current_password = cleaned_data.get("current_password")
+
+        # Check if the current password is correct
+        if not self.instance.user.check_password(current_password):
+            raise forms.ValidationError("The current password is incorrect.")
+
+        # Validate new password and its confirmation
+        if new_password and new_password != confirm_new_password:
+            raise forms.ValidationError("The new passwords do not match.")
+
         return cleaned_data
 
 

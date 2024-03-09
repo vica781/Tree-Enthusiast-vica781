@@ -13,7 +13,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .models import Profile, Message
 from .forms import ProfileUpdateForm, UserRegisterForm, MessageForm
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from .models import Tree
@@ -143,38 +143,44 @@ def profile_user(request):
     return render(request, "profile.html", context={"page_title": "Your Profile"})
 
 
+from django.contrib.auth import update_session_auth_hash
+
+
 @login_required
 def profile_update(request):
     user = request.user
     profile, created = Profile.objects.get_or_create(user=user)
+
     if request.method == "POST":
-        form = ProfileUpdateForm(request.POST, request.FILES, instance=user.profile)
-        
+        form = ProfileUpdateForm(
+            request.POST, request.FILES, instance=profile, initial={"email": user.email}
+        )
 
-        # Check if the form is valid
         if form.is_valid():
-            # Check the current password if it's provided
-            current_password = form.cleaned_data.get("current_password")
-            if not user.check_password(current_password):
-                messages.error(request, "The current password is incorrect.")
-                return render(
-                    request, "profile_update.html", {"form": form}
-                )  # Re-render the page with the form
+            # Handle Email Update
+            new_email = form.cleaned_data.get("email")
+            if new_email and new_email != user.email:
+                user.email = new_email
+                user.save()
 
-            # Check if there are changes in the form
-            if form.has_changed():
-                # Perform the update
-                form.save()
-                messages.success(request, "Your profile has been updated successfully.")
-            else:
-                # No changes were made
-                messages.info(request, "No changes were detected in your profile.")
-            return redirect("profile")  # Redirect to the profile view
+            # Handle Password Update
+            new_password = form.cleaned_data.get("new_password")
+            if new_password:
+                user.set_password(new_password)
+                user.save()
+                update_session_auth_hash(
+                    request, user
+                )  # Prevents user from being logged out.
+
+            # Save profile (for image and other profile-related updates)
+            form.save()
+
+            messages.success(request, "Your profile has been updated successfully.")
+            return redirect("profile")
         else:
-            # Form is not valid
             messages.error(request, "Please correct the error below.")
     else:
-        form = ProfileUpdateForm(instance=user.profile)
+        form = ProfileUpdateForm(instance=profile, initial={"email": user.email})
 
     return render(request, "profile_update.html", {"form": form})
 
