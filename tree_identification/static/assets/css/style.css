@@ -1,17 +1,17 @@
-/* APP's PAGES */
-/* HOME PAGE */
+/* ============================= APP's PAGES =============================== */
+/* ------------------------------ HOME PAGE -------------------------------- */
 
-/* REGISTER PAGE */
+/* ---------------------------- REGISTER PAGE ------------------------------ */
 #togglePasswordButton {
     border: 1px solid #b2bcc6;
     border-radius: 5px;
 }
-/* LOGIN PAGE */
+/* ------------------------------ LOGIN PAGE ------------------------------- */
 #toggleLoginPasswordButton {
     border: 1px solid #b2bcc6;
     border-radius: 5px;
 }
-/* --------------------------- USER PROFILE PAGE ---------------------------- */
+/* --------------------------- USER PROFILE PAGE --------------------------- */
 .profile-pg-bg-img {
     height: 100vh; 
     object-fit: cover    
@@ -40,31 +40,31 @@
 .media-body {
     padding: 3rem;
 }
+/* --------------------- USER'S PROFILE UPDATE PAGE ------------------------ */
+
 /* ---------------------------- CONTACT PAGE ------------------------------- */
 
 /* ---------------------------- ADD TREE PAGE ------------------------------ */
-.add-tree-landing-image {
+.add-tree-bg-image {
+    height: 100vh; 
+    width: 100%; 
+    object-fit: cover; 
+}
+.add-tree-form-container {
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;  
+}
+/* .add-tree-landing-image {
     height: auto; 
     width: 100%;
     object-fit: cover;
-}
+} */
 .add-tree-overlay-container {
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);    
 }
-.add-tree-content-box {
-    background: rgba(255, 255, 255, 0.85); 
-    border-radius: 10px; 
-    /* max-height: 80vh;  */
-    overflow-y: auto; 
-    /* padding: 0 1rem 0 1rem;  */
-}
-.add-tree-scrollable-content {
-    max-height: 70vh; 
-    overflow-y: auto; 
-    /* padding: 0 1rem 0 1rem;  */
-}
+
 /* -------------------------- MY TREES PAGE -------------------------------- */
 .my_trees_bg_image {
     background-size: cover;
@@ -167,4 +167,9 @@
         padding: 5px 10px; 
         margin: 2px; 
     }
+    .add-tree-scrollable-content {
+    max-height: 50vh; 
+    overflow-y: auto;
+    }    
 }
+

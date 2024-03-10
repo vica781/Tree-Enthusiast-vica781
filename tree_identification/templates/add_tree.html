@@ -7,33 +7,30 @@
       <img
         src="{% static 'assets/images/background_images/juniper.webp' %}"
         alt="Landing Image"
-        class="img-fluid w-100"
+        class="img-fluid w-100 add-tree-bg-image"
         style="height: 100vh; object-fit: cover"
       />
 
       <!-- Overlay Container -->
       <div
-        class="container position-absolute"
-        style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+        class="container position-absolute add-tree-overlay-container"        
       >
         <div class="row">
           <div class="col-lg-10 offset-lg-1 col-md-12">
             <div
-              class="p-3"
-              style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+              class="p-3 mb-0 add-tree-form-container"              
             >
               <!-- MAIN FORM Add Tree -->
               <div class="col-lg-12 col-md-6">
-                <div class="d-flex justify-content-center align-items-center">
+                <div class="text-center d-flex justify-content-center align-items-center">
                   <h3>Information about the tree:</h3>
                 </div>
                 <hr />
                 <!-- Scrollable Content Area -->
                 <div
-                  class="scrollable-content"
-                  style="max-height: 60vh; overflow-y: auto"
+                  class="scrollable-content add-tree-scrollable-content"
                 >
-                  <div class="p-3">
+                  <div class="p-3 mb-0">
                     <form
                       method="post"
                       action="{% url 'add_tree' %}"
