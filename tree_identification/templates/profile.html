@@ -14,56 +14,58 @@
     <div class="row">
       <div class="col-sm-3 col-md-4 col-lg-8 position-absolute profile-overlay">
         <div
-          class="p-4 col-12 col-md-8 col-lg-10 mx-auto mt-5 mb-5"
-          style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+          class="p-4 col-12 col-md-8 col-lg-10 mx-auto mt-5 mb-5 profile-overlay-container"
         >
           <!-- Header Section -->
           <div class="header-section profile-header">
-            <h2 class="account-heading text-center">
+            <h2 class="profile-account-heading text-center justify-content-center">
               Welcome, {{ user.username }}!
             </h2>
             <hr />
           </div>
 
+          <!-- Image Section -->
+          <div class="media text-center">
+            <img
+              class="rounded-circle account-img d-block mx-auto mb-3"
+              {% if user.profile.image.url %}
+              src="{{ user.profile.image.url }}" 
+              {% else %} 
+              src="{% static 'assets/images/profile_images/default.png' %}" 
+              {% endif %}
+              alt="default profile picture"              
+            />
+          </div>
+
           <!-- Main Section -->
-          <div class="main-section">
-            <div class="media">
-              <img
-                class="rounded_circle mr-3 account-img"
-                {% if user.profile.image.url %}
-                src="{{ user.profile.image.url }}" 
-                {% else %} 
-                src="{% static 'assets/images/profile_images/default.png' %}" 
-                {% endif %}
-                alt="default profile picture"
-              />
-              <div class="col-12 media-body">
-                <p class="text-secondary mr-2 mt-4">
-                  <strong>First Name:</strong> {{ user.first_name }}
-                </p>
-                <p class="text-secondary mr-2">
-                  <strong>Last Name:</strong> {{ user.last_name }}
-                </p>
-                <p class="text-secondary mr-2">
-                  <strong>Email:</strong> {{ user.email }}
-                </p>
-              </div>
+          <div class="main-section d-flex text-center">
+            <div class="col-12">
+              <p class="text-secondary mr-2 mt-4">
+                <strong>First Name:</strong> {{ user.first_name }}
+              </p>
+              <p class="text-secondary mr-2">
+                <strong>Last Name:</strong> {{ user.last_name }}
+              </p>
+              <p class="text-secondary mr-2">
+                <strong>Email:</strong> {{ user.email }}
+              </p>
             </div>
           </div>
 
           <hr />
 
           <!-- Footer Section -->
-          <div class="text-center">
+          <!-- Buttons -->
+          <div class="d-flex justify-content-center mt-2 profile-footer-btns">
             <a
               href="{% url 'profile-update' %}"
-              class="btn btn-primary mr-2 mb-2"
+              class="btn btn-primary mr-2 mb-2 profile-btn"
               >Update Profile</a
             >
             <!-- Trigger/Delete Profile Button -->
             <button
               type="button"
-              class="btn btn-danger mb-2"
+              class="btn btn-danger mb-2 profile-btn"
               data-toggle="modal"
               data-target="#deleteProfileModal"
             >
