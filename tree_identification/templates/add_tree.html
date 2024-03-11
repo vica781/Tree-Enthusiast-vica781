@@ -8,6 +8,7 @@
         src="{% static 'assets/images/background_images/juniper.webp' %}"
         alt="Landing Image"
         class="img-fluid w-100 add-tree-bg-image"
+        style="height: 100vh; object-fit: cover"
       />
 
       <!-- Overlay Container -->
@@ -114,7 +115,7 @@
                 <button type="submit" class="btn btn-success mr-2 add-tree-btns">
                   Add Tree
                 </button>
-                <a href="{% url 'my_trees' %}" class="btn btn-primary">
+                <a href="{% url 'my_trees' %}" class="btn btn-primary add-tree-btns">
                   My Trees
                 </a>
               </div>

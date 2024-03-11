@@ -47,7 +47,7 @@
     transform: translate(-50%, -50%);
 }
 .profile-update-form-container {
-    background: rgba(255, 255, 255, 0.8); 
+    background: rgba(255, 255, 255, 0.9); 
     border-radius: 10px; 
 }
 .profile-account-img {
@@ -70,15 +70,10 @@
     background: rgba(255, 255, 255, 0.8); 
     border-radius: 10px;  
 }
-/* .add-tree-landing-image {
-    height: auto; 
-    width: 100%;
-    object-fit: cover;
-} */
 .add-tree-overlay-container {
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* -------------------------- MY TREES PAGE -------------------------------- */
@@ -146,7 +141,19 @@
 } 
 
 /* ---------------------------- TREE DETAILS PAGE --------------------------- */
-
+.tree-dtls-overlay-container {
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.tree-dtls-form-container {
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;    
+}
+.tree-dtls-overlay {
+    max-height: 70vh;
+    overflow-y: auto;    
+}
 /* Ensure the modal is at the top and visible */
 #deleteTreeModal {
     z-index: 1050; 
@@ -165,15 +172,13 @@
 }
 /* ============================ MEDIA QUERIES =============================== */
 @media screen and (max-width: 768px) {
+    /* ________________________ User's Profile ____________________________ */
     .account-img {
         height: 120px; 
         width: 120px; 
         object-fit: cover; 
         border-radius: 50%; 
         align-items: center;
-    }
-    .tree-detail-name {
-        font-size: 1.6rem;
     }
     .profile-account-heading {
         font-size: 1.5rem;
@@ -183,33 +188,64 @@
         padding: 5px 10px; 
         margin: 2px; 
     }
-    .add-tree-scrollable-content {
-    max-height: 50vh; 
-    overflow-y: auto;    
+    /* _________________________ Profile Update ___________________________ */
+    .profile-account-img {
+        height: 120px;
+        width: 120px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     .profile-update-overlay-container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .profile-update-scrollable-content {
-    max-height: 60vh;
-    overflow-y: auto;
+        max-height: 60vh;
+        overflow-y: auto;
     }
     .profile-update-heading {
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     }
     .profile-update-btns .btn {
     font-size: 0.85rem;
-    }
-    .profile-account-img {
-    height: 120px;
-    width: 120px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    }
+    }    
     .scrollable-content.profile-update-scrollable-content {
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-  }
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+    /* _____________________________ Add Tree _____________________________ */
+    .add-tree-scrollable-content {
+        max-height: 50vh; 
+        overflow-y: auto;    
+    }
+    .add-tree-overlay-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .add-tree-btns .btn {
+        font-size: 0.85rem;
+        padding: 5px 10px; 
+        margin: 2px; 
+    }
+    /* ___________________________ Tree Details ___________________________ */
+    .tree-detail-heading {
+        font-size: 1.8rem;
+    }
+    .tree-details-scrollable-content {
+        max-height: 50vh; 
+        overflow-y: auto;    
+    }
+    .scrollable-content.tree-details-scrollable-content {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+    .tree-dtls-text {
+        font-size: 0.85rem;
+    }
+    .tree-dtls-btns .btn {
+        font-size: 0.85rem;
+        padding: 5px 10px; 
+        margin: 2px; 
+    }           
 }
