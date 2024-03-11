@@ -29,7 +29,6 @@ class Tree(models.Model):
     tree_type = models.CharField(max_length=200, null=True, blank=True)
     origin = models.CharField(max_length=200, null=True, blank=True)
     introduction = models.TextField(max_length=800, null=True, blank=True)
-    # tree_image = models.ImageField(upload_to="tree_images/")
     tree_image = CloudinaryField("image")
     tree_habitat = models.CharField(max_length=300, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

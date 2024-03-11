@@ -12,7 +12,7 @@
     border-radius: 5px;
 }
 /* --------------------------- USER PROFILE PAGE --------------------------- */
-.profile-pg-bg-img {
+.add-tree-bg-img {
     height: 100vh; 
     object-fit: cover    
 }
@@ -32,8 +32,8 @@
     border-radius: 5px;
 }
 .account-img {
-    height: 280px; 
-    width: 280px; 
+    height: 250px; 
+    width: 250px; 
     object-fit: cover; 
     border-radius: 50%; 
 }
@@ -41,7 +41,23 @@
     padding: 3rem;
 }
 /* --------------------- USER'S PROFILE UPDATE PAGE ------------------------ */
-
+.profile-update-overlay-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.profile-update-form-container {
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+}
+.profile-account-img {
+    height: 250px; 
+    width: 250px; 
+    border-radius: 50%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* ---------------------------- CONTACT PAGE ------------------------------- */
 
 /* ---------------------------- ADD TREE PAGE ------------------------------ */
@@ -169,7 +185,31 @@
     }
     .add-tree-scrollable-content {
     max-height: 50vh; 
+    overflow-y: auto;    
+    }
+    .profile-update-overlay-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .profile-update-scrollable-content {
+    max-height: 60vh;
     overflow-y: auto;
-    }    
+    }
+    .profile-update-heading {
+    font-size: 1.5rem;
+    }
+    .profile-update-btns .btn {
+    font-size: 0.85rem;
+    }
+    .profile-account-img {
+    height: 120px;
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .scrollable-content.profile-update-scrollable-content {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
 }
-
