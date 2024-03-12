@@ -104,30 +104,92 @@ function topFunction() {
     }
 }
 
-// Function to improve the user's notification when updating the profile
-document.getElementById('updateProfileForm').addEventListener('submit', function(event) {
-  let emailField = document.getElementById('emailField');
-  let currentPasswordField = document.getElementById('currentPasswordField');
-  let valid = true;
+// Profile Update Form Validation
+document.addEventListener("DOMContentLoaded", function () {
+    let emailInput = document.getElementById("emailField");
+    let updateProfileForm = document.getElementById('updateProfileForm');
 
-  // Reset error messages
-  document.getElementById('emailError').textContent = '';
-  document.getElementById('currentPasswordError').textContent = '';
+    emailInput.addEventListener("change", function () {
+        checkEmailAvailability(this.value);
+    });
 
-  // Simple email regex - for demonstration purposes only
-  let emailRegex = /\S+@\S+\.\S+/;
-  if (!emailRegex.test(emailField.value)) {
-    document.getElementById('emailError').textContent = 'Please enter a valid email address.';
-    valid = false;
-  }
+    updateProfileForm.addEventListener('submit', function(event) {
+        // Perform all form validations
+        let valid = performValidations();
 
-  // Check if the current password field is not empty and meets length requirement
-  if (currentPasswordField.value.length < 8) {
-    document.getElementById('currentPasswordError').textContent = 'Your current password must be at least 8 characters.';
-    valid = false;
-  }
+        // Check email availability asynchronously
+        checkEmailAvailability(emailInput.value, function(isAvailable) {
+            if (!isAvailable) {
+                valid = false;
+            }
 
-  if (!valid) {
-    event.preventDefault(); // Prevent form from submitting
-  }
+            // If any validation fails, prevent form submission
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    });
 });
+
+function performValidations() {
+    let emailField = document.getElementById('emailField');
+    let currentPasswordField = document.getElementById('currentPasswordField');
+    let newPasswordField = document.getElementById('newPasswordField');
+    let confirmNewPasswordField = document.getElementById('confirmNewPasswordField');
+    let valid = true;
+
+    // Reset error messages
+    document.getElementById('emailError').textContent = '';
+    document.getElementById('currentPasswordError').textContent = '';
+    document.getElementById('newPasswordError').textContent = '';
+
+    // Email regex validation
+    let emailRegex = /\S+@\S+\.\S+/;
+    if (!emailRegex.test(emailField.value)) {
+        document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+        valid = false;
+    }
+
+    // Current password length check
+    if (currentPasswordField.value.length < 8) {
+        document.getElementById('currentPasswordError').textContent = 'Your current password must be at least 8 characters.';
+        valid = false;
+    }
+
+    // New password length check
+    if (newPasswordField.value.length > 0 && newPasswordField.value.length < 8) {
+        document.getElementById('newPasswordError').textContent = 'New password must be at least 8 characters.';
+        valid = false;
+    }
+
+    // Password match check
+    if (newPasswordField.value !== confirmNewPasswordField.value) {
+        document.getElementById('newPasswordError').textContent = 'New passwords do not match.';
+        valid = false;
+    }
+
+    return valid;
+}
+
+function checkEmailAvailability(email, callback) {
+    fetch("/check_email/?email=" + email)
+        .then(response => response.json())
+        .then(data => {
+            let emailError = document.getElementById('emailError');
+            if (data.is_taken) {
+                emailError.textContent = 'This email is already taken.';
+                if (callback) callback(false);
+            } else {
+                emailError.textContent = '';
+                if (callback) callback(true);
+            }
+        })
+        .catch(() => {
+            document.getElementById('emailCheckError').textContent = 'An error occurred while checking the email.';
+            if (callback) callback(false);
+        });
+      }
+
+
+
+

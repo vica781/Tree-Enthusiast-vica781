@@ -51,6 +51,7 @@ urlpatterns = [
     path("profile/update/", views.profile_update, name="profile-update"),
     path("profile/delete/<int:user_id>/", views.profile_delete, name="profile_delete"),
     path("check_username/", views.check_username, name="check_username"),
+    path("check_email/", views.check_email, name="check_email"),
     path("add_tree/", views.add_tree, name="add_tree"),
     path("my_trees/", views.my_trees, name="my_trees"),
     path("tree/<int:tree_id>/", views.tree_detail, name="tree_detail"),

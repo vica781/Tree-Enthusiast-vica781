@@ -78,6 +78,15 @@ def check_username(request):
     return JsonResponse(response)
 
 
+def check_email(request):
+    email = request.GET.get("email", None)
+    response = {
+        "is_taken": User.objects.filter(email__iexact=email).exists()
+        and request.user.email != email
+    }
+    return JsonResponse(response)
+
+
 def login_user(request):
     if request.method == "POST":
         # get the username and password from the POST data
