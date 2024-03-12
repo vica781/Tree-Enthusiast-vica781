@@ -156,6 +156,15 @@ def profile_update(request):
             request.POST, request.FILES, instance=profile, initial={"email": user.email}
         )
 
+        # Get the 'current_password' from the form
+        current_password = request.POST.get("current_password")
+
+        # Now manually check if the current password is correct
+        if not user.check_password(current_password):
+            # If the password is incorrect, add a custom error message
+            messages.error(request, "The current password you entered is incorrect.")
+            return render(request, "profile_update.html", {"form": form})
+
         if form.is_valid():
             # Handle Email Update
             new_email = form.cleaned_data.get("email")
@@ -178,7 +187,8 @@ def profile_update(request):
             messages.success(request, "Your profile has been updated successfully.")
             return redirect("profile")
         else:
-            messages.error(request, "Please correct the error below.")
+            # If form is not valid, render the form with errors
+            return render(request, "profile_update.html", {"form": form})
     else:
         form = ProfileUpdateForm(instance=profile, initial={"email": user.email})
 

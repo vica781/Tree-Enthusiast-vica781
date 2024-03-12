@@ -104,11 +104,30 @@ function topFunction() {
     }
 }
 
+// Function to improve the user's notification when updating the profile
+document.getElementById('updateProfileForm').addEventListener('submit', function(event) {
+  let emailField = document.getElementById('emailField');
+  let currentPasswordField = document.getElementById('currentPasswordField');
+  let valid = true;
 
-// Define topFunction globally if it's used in HTML
-function topFunction() {
-    let overlayContainer = document.querySelector('.scrollable-content');
-    overlayContainer.scrollTop = 0;
-}
+  // Reset error messages
+  document.getElementById('emailError').textContent = '';
+  document.getElementById('currentPasswordError').textContent = '';
 
+  // Simple email regex - for demonstration purposes only
+  let emailRegex = /\S+@\S+\.\S+/;
+  if (!emailRegex.test(emailField.value)) {
+    document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+    valid = false;
+  }
 
+  // Check if the current password field is not empty and meets length requirement
+  if (currentPasswordField.value.length < 8) {
+    document.getElementById('currentPasswordError').textContent = 'Your current password must be at least 8 characters.';
+    valid = false;
+  }
+
+  if (!valid) {
+    event.preventDefault(); // Prevent form from submitting
+  }
+});

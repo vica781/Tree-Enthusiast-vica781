@@ -51,8 +51,9 @@
     border-radius: 10px; 
 }
 .profile-account-img {
-    height: 250px; 
-    width: 250px; 
+    height: 200px; 
+    width: 200px; 
+    object-fit: cover; 
     border-radius: 50%; 
     display: block;
     margin-left: auto;
@@ -190,8 +191,10 @@
     }
     /* _________________________ Profile Update ___________________________ */
     .profile-account-img {
-        height: 120px;
-        width: 120px;
+        height: 120px; 
+        width: 120px; 
+        object-fit: cover; 
+        border-radius: 50%; 
         display: block;
         margin-left: auto;
         margin-right: auto;
