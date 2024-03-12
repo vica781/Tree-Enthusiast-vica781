@@ -44,32 +44,40 @@ def browse_trees(request):
 def register_user(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
-        print(form)
         if form.is_valid():
+            # Saving the form (and thus the user)
             form.save()
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=password)
-            login(request, user)
-            messages.success(request, f"Account created for {username}!")
-            return redirect("home")
+            if user:
+                login(request, user)
+                messages.success(request, f"Account created for {username}!")
+                return redirect("home")
+            else:
+                messages.error(
+                    request,
+                    "Account creation was successful but automatic login failed.",
+                )
         else:
-            # Log form errors for debugging
-            print("Form errors:", form.errors)
-            messages.error(request, "Invalid data!")
+            # Check specifically for an email error
+            email_error = form.errors.get("email", None)
+            if email_error:
+                # If there's an email error, just add the custom message once
+                messages.error(
+                    request,
+                    "The email you entered is already taken, please choose another one.",
+                )
+            else:
+                # Add a general error message for any other form errors
+                messages.error(
+                    request, "Invalid data! Please correct the errors below."
+                )
     else:
-        # if the request is not a POST request,
-        # then the user is trying to access the registration page
-        # create an empty form
         form = UserRegisterForm()
-    # render the registration page
-    return render(
-        request,
-        "register.html",
-        context={
-            "page_title": "Sign Up",
-        },
-    )
+
+    context = {"page_title": "Sign Up", "form": form}
+    return render(request, "register.html", context)
 
 
 def check_username(request):

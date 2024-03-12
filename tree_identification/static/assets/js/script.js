@@ -172,24 +172,21 @@ function performValidations() {
 }
 
 function checkEmailAvailability(email, callback) {
-    fetch("/check_email/?email=" + email)
-        .then(response => response.json())
-        .then(data => {
-            let emailError = document.getElementById('emailError');
-            if (data.is_taken) {
-                emailError.textContent = 'This email is already taken.';
-                if (callback) callback(false);
-            } else {
-                emailError.textContent = '';
-                if (callback) callback(true);
-            }
-        })
-        .catch(() => {
-            document.getElementById('emailCheckError').textContent = 'An error occurred while checking the email.';
-            if (callback) callback(false);
-        });
+  fetch("/check_email/?email=" + email)
+    .then(response => response.json())
+    .then(data => {
+      let emailError = document.getElementById('emailError');
+      if (data.is_taken) {
+        emailError.textContent = 'This email is already taken.';
+        if (callback) callback(false);
+      } else {
+        emailError.textContent = '';
+        if (callback) callback(true);
       }
-
-
-
+    })
+    .catch(() => {
+      document.getElementById('emailCheckError').textContent = 'An error occurred while checking the email.';
+      if (callback) callback(false);
+    });
+}
 

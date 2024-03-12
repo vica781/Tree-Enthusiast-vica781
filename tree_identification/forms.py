@@ -7,12 +7,10 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth.hashers import check_password
 from .models import Message, Tree
 
+
 class UserRegisterForm(UserCreationForm):
-    # add `email` field to the form
-    # because it is not included in the default UserCreationForm
     email = forms.EmailField(widget=forms.EmailInput(attrs={"class": "form-control"}))
 
-    # fields that will be shown are username, email, password1, password2
     class Meta:
         model = User
         fields = (
@@ -26,15 +24,15 @@ class UserRegisterForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super(UserRegisterForm, self).__init__(*args, **kwargs)
-
         self.fields["username"].widget.attrs["class"] = "form-control"
         self.fields["password1"].widget.attrs["class"] = "form-control"
         self.fields["password2"].widget.attrs["class"] = "form-control"
 
-    def clean_current_password(self):
-        current_password = self.cleaned_data.get("current_password")
-        if not check_password(current_password, self.instance.user.password):
-            raise ValidationError("The current password is incorrect.")
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        if User.objects.filter(email=email).exists():
+            raise ValidationError("This email is already taken.")
+        return email
 
 
 class ProfileUpdateForm(forms.ModelForm):
