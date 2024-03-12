@@ -60,14 +60,13 @@
                       </div>
                       <div class="form-group">
                         <label for="origin">Origin:</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="origin"
-                          name="origin"
-                          placeholder="Is it native, non-native or naturalised species?"
-                        />
-                      </div>
+                        <select class="form-control" id="origin" name="origin">
+                          <option value="">--Select Origin--</option>
+                          <option value="native">Native</option>
+                          <option value="non-native">Non-Native</option>
+                          <option value="naturalised">Naturalised</option>
+                        </select>
+                      </div>                      
                       <div class="form-group">
                         <label for="tree_name">Introduction:</label>
                         <textarea
