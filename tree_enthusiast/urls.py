@@ -13,13 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# urls.py (tree_enthusiast)
 
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handler404, handler500, handler403, handler405
+from .views import handler_404, handler_500, handler_403, handler_405
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -31,11 +30,13 @@ urlpatterns = [
 
 # Static and media settings for development
 if settings.DEBUG:
+    from django.conf.urls.static import static
+
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # Custom error handlers
-handler404 = "tree_enthusiast.views.handler404"
-handler500 = "tree_enthusiast.views.handler500"
-handler403 = "tree_enthusiast.views.handler403"
-handler405 = "tree_enthusiast.views.handler405"
+handler404 = handler_404
+handler500 = handler_500
+handler403 = handler_403
+handler405 = handler_405

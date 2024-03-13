@@ -243,19 +243,21 @@ def add_tree(request):
     if request.method == "POST":
         form = TreeForm(request.POST, request.FILES)
         if form.is_valid():
-            tree = form.save(commit=False)
-            tree.user = request.user
-            tree.save()
-            logger.debug(f"Tree saved: {tree}")
-            messages.success(request, "Tree added successfully!")
-            return redirect("home")
+            try:
+                tree = form.save(commit=False)
+                tree.user = request.user
+                tree.save()
+                logger.debug(f"Tree saved: {tree}")
+                messages.success(request, "Tree added successfully!")
+                return redirect("home")
+            except Exception as e:
+                logger.error(f"Error saving tree: {e}")
+                messages.error(request, f"Error saving tree: {e}")
         else:
             logger.warning(f"Form invalid: {form.errors}")
-            # Consider adding a message here for form invalidity
             messages.error(request, "There was an error with your submission.")
     else:
         form = TreeForm()
-
     return render(
         request, "add_tree.html", context={"page_title": "Add Tree", "form": form}
     )
