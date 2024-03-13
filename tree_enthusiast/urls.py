@@ -13,12 +13,29 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# urls.py (tree_enthusiast)
+
 from django.contrib import admin
 from django.urls import path, include
-
+from django.conf import settings
+from django.conf.urls.static import static
+from .views import handler404, handler500, handler403, handler405
 
 urlpatterns = [
-    # path('', base_generic_views.base_generic, name='base_generic'),
-    path('', include('tree_identification.urls')),
-    path('admin/', admin.site.urls),            
+    path("admin/", admin.site.urls),
+    path("accounts/", include("allauth.urls")),
+    # app's URL configuration 
+    path("", include("tree_identification.urls")),
+    # paths for other apps     
 ]
+
+# Static and media settings for development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+# Custom error handlers
+handler404 = "tree_enthusiast.views.handler404"
+handler500 = "tree_enthusiast.views.handler500"
+handler403 = "tree_enthusiast.views.handler403"
+handler405 = "tree_enthusiast.views.handler405"

@@ -1,0 +1,38 @@
+{% extends 'base_generic.html' %} {% load static %} {% block content %}
+
+<div class="position-relative">
+  <!-- Background Image -->
+  <img
+    src="{% static 'assets/images/error_pages/500.webp' %}"
+    alt="404 error page Background"
+    class="img-fluid w-100"
+    style="height: 100vh; object-fit: cover"
+  />
+
+  <!-- Form Overlay -->
+  <div
+    class="container position-absolute"
+    style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+  >
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <div
+          class="p-4"
+          style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
+        >
+          <h3 class="text-center mb-4">Internal Server Mischief</h3>
+        </div>
+        <hr />
+        <p>
+          Our digital ecosystem is currently undergoing an unexpected storm.
+          We're working to restore the natural order of things. In the meantime,
+          why not head back to our homepage? It's flourishing with opportunities
+          and ready to welcome you back.
+        </p>
+        <link rel="stylesheet" href="{% url 'home' %}" />Lead me home<link />
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
