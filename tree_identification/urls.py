@@ -21,9 +21,8 @@ from .views import (
     contact_success,
 )
 
-
 urlpatterns = [
-    # path("admin/", admin.site.urls),
+    path("admin/", admin.site.urls),
     path("", views.home, name="home"),
     path("register/", views.register_user, name="register"),
     path("login/", views.login_user, name="login"),
@@ -45,29 +44,28 @@ urlpatterns = [
         auth_views.PasswordResetCompleteView.as_view(),
         name="password_reset_complete",
     ),
-    path("logout/", logout_user, name="logout"),
+    path("logout/", views.logout_user, name="logout"),
     path("contact/", views.contact, name="contact"),
     path("profile/", views.profile_user, name="profile"),
     path("profile/update/", views.profile_update, name="profile-update"),
     path("profile/delete/<int:user_id>/", views.profile_delete, name="profile_delete"),
     path("check_username/", views.check_username, name="check_username"),
     path("check_email/", views.check_email, name="check_email"),
-    path("add_tree/", views.add_tree, name="add_tree"),
+    # Updated tree paths
+    path("tree/add/", views.add_or_edit_tree, name="add_tree"),
+    path("tree/edit/<int:tree_id>/", views.add_or_edit_tree, name="edit_tree"),
     path("my_trees/", views.my_trees, name="my_trees"),
     path("tree/<int:tree_id>/", views.tree_detail, name="tree_detail"),
-    path("tree/edit/<int:tree_id>/", views.edit_tree, name="edit_tree"),
     path("tree/delete/<int:tree_id>/", views.delete_tree, name="delete_tree"),
     path(
-        "identification_guide/",
-        views.identification_guide,
-        name="identification_guide",
+        "identification_guide/", views.identification_guide, name="identification_guide"
     ),
-    path("search/", search_trees, name="search_trees"),
+    path("search/", views.search_trees, name="search_trees"),
     path("browse_trees/", views.browse_trees, name="browse_trees"),
-    path("contact_success/", contact_success, name="contact_success"),
+    path("contact_success/", views.contact_success, name="contact_success"),
 ]
 
-# adapted from tutorial video:
-# https://www.youtube.com/watch?v=FdVuKt_iuSI&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=8
+# Include these if you're using Django's static and media file serving in development
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

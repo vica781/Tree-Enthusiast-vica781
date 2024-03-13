@@ -262,23 +262,6 @@ def add_tree(request):
 
 
 @login_required
-def my_trees(request):
-    trees = Tree.objects.filter(user=request.user)  # Fetch trees for the logged-in user
-    return render(
-        request, "my_trees.html", context={"page_title": "My Trees", "trees": trees}
-    )
-
-
-def tree_detail(request, tree_id):
-    tree = get_object_or_404(Tree, id=tree_id)
-    return render(
-        request,
-        "tree_detail.html",
-        context={"page_title": "Tree Details", "tree": tree},
-    )
-
-
-@login_required
 def edit_tree(request, tree_id):
     tree = get_object_or_404(Tree, id=tree_id, user=request.user)
     if request.method == "POST":
@@ -293,6 +276,55 @@ def edit_tree(request, tree_id):
         form = TreeForm(instance=tree)
     return render(
         request, "edit_tree.html", context={"page_title": "Edit Tree", "form": form}
+    )
+
+
+@login_required
+def add_or_edit_tree(request, tree_id=None):
+    if tree_id:
+        tree = get_object_or_404(Tree, id=tree_id, user=request.user)
+        form = TreeForm(request.POST or None, request.FILES or None, instance=tree)
+        page_title = "Edit Tree"
+    else:
+        tree = None
+        form = TreeForm(request.POST or None, request.FILES or None)
+        page_title = "Add Tree"
+
+    if request.method == "POST" and form.is_valid():
+        new_tree = form.save(commit=False)
+        new_tree.user = request.user
+        new_tree.save()
+        messages.success(
+            request,
+            (
+                "Tree information updated successfully!"
+                if tree_id
+                else "Tree added successfully!"
+            ),
+        )
+        return redirect("my_trees")
+
+    return render(
+        request,
+        "add_edit_tree_form.html",
+        {"form": form, "tree": tree, "page_title": page_title},
+    )
+
+
+@login_required
+def my_trees(request):
+    trees = Tree.objects.filter(user=request.user)  # Fetch trees for the logged-in user
+    return render(
+        request, "my_trees.html", context={"page_title": "My Trees", "trees": trees}
+    )
+
+
+def tree_detail(request, tree_id):
+    tree = get_object_or_404(Tree, id=tree_id)
+    return render(
+        request,
+        "tree_detail.html",
+        context={"page_title": "Tree Details", "tree": tree},
     )
 
 
