@@ -1,5 +1,111 @@
-{% extends 'base_generic.html' %} {% load static %} {% block content %}
-
+{% extends 'base_generic.html' %} {% load static %} {% block navbar %}
+<nav class="navbar navbar-expand-md navbar-bg">
+  <a class="navbar-brand" href="/">
+    <img
+      src="{% static 'assets/images/favicon/oak-1.png' %}"
+      class="d-inline-block align-top"
+      alt="Logo of an oak tree with a forest background"
+    />
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarsExampleDefault"
+    aria-controls="navbarsExampleDefault"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon">
+      <i class="fa-solid fa-bars text-white"></i>
+    </span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <a href="/" class="navbar-brand">
+      <h1 id="nav-title">Tree Enthusiast</h1>
+    </a>
+  </div>
+</nav>
+{% endblock navbar %} {% block footer %}
+<footer class="footer mt-0 pt-2 bg-dark">
+  <div class="footer-container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="footer-headings">About Tree Enthusiast</h5>
+        <p class="footer-paragraph">
+          This app is dedicated to tree lovers everywhere. Explore, share, and
+          contribute to our vast tree database. Learn about various tree species
+          and connect with fellow enthusiasts.
+        </p>
+      </div>
+      <div class="col-md-4 quick-links">
+        <h5 class="footer-headings">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="{% url 'home' %}" class="footer-links yellow-on-hover"
+              >Home</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 social-media">
+        <ul class="list-unstyled">
+          <li>
+            <a
+              href="{% url 'contact' %}"
+              class="text-primery yellow-on-hover"
+              aria-label="Link contact Page"
+              ><h5 class="footer-headings yellow-on-hover">Contact Us</h5></a
+            >
+          </li>
+          <li class="footer-li">Email: info@treeenthusiast.com</li>
+          <li class="footer-li">Phone: 011-11111-111</li>
+        </ul>
+        <div>
+          <h5 class="footer-headings">Follow Us</h5>
+          <a
+            href="https://www.facebook.com/"
+            class="btn btn-social-icon"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <i
+              class="fa-brands fa-facebook-square text-white footer-socials yellow-on-hover"
+            ></i>
+          </a>
+          <a
+            href="https://www.twitter.com/"
+            class="btn btn-social-icon"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <i
+              class="fa-brands fa-twitter text-white footer-socials yellow-on-hover"
+            ></i>
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            class="btn btn-social-icon"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i
+              class="fa-brands fa-instagram text-white footer-socials yellow-on-hover"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="footer-paragraph">
+          &copy; {% now 'Y' %} Tree Enthusiast. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock footer %} {% block content %}
 <div class="position-relative">
   <!-- Background Image -->
   <img
@@ -15,24 +121,26 @@
     style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
   >
     <div class="row">
-      <div class="col-md-4 offset-md-4">
+      <div class="col-md-6 offset-md-3">
         <div
           class="p-4"
           style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
         >
           <h3 class="text-center mb-4">Internal Server Mischief</h3>
+          <hr />
+          <p>
+            Our digital ecosystem is currently undergoing an unexpected storm.
+            We're working to restore the natural order of things.
+            <br />
+            <br />
+            In the meantime, why not head back to our homepage? It's flourishing
+            with opportunities and ready to welcome you back.
+            <br />
+            <a href="{% url 'home' %}">Lead me Home</a>
+          </p>
         </div>
-        <hr />
-        <p>
-          Our digital ecosystem is currently undergoing an unexpected storm.
-          We're working to restore the natural order of things. In the meantime,
-          why not head back to our homepage? It's flourishing with opportunities
-          and ready to welcome you back.
-        </p>
-        <link rel="stylesheet" href="{% url 'home' %}" />Lead me home<link />
       </div>
     </div>
   </div>
 </div>
-
 {% endblock %}

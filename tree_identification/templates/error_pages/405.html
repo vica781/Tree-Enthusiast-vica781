@@ -15,23 +15,25 @@
     style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
   >
     <div class="row">
-      <div class="col-md-4 offset-md-4">
+      <div class="col-md-6 offset-md-3">
         <div
           class="p-4"
           style="background: rgba(255, 255, 255, 0.8); border-radius: 10px"
         >
           <h3 class="text-center mb-4">Method Not Allowed</h3>
-        </div>
-        <hr />
+          <hr />
         <p>
           The forest whispers of many ways to roam its paths, but it seems
           you've found one that is not yet trodden. The ancient trees guard it
-          well, and we must respect their old ways. Fear not, for there are
-          plenty of other trails to explore. Let's find one that welcomes your
-          steps.
+          well, and we must respect their old ways. 
+          <br>
+          <br>
+          Fear not, for there are plenty of other trails to explore. 
+          Let's find one that welcomes your steps.
+          <br>
+          <a href="{% url 'home' %}">Return to the Main Path</a>
         </p>
-        <link rel="stylesheet" href="{% url 'home' %}" />Return to the Main
-        Path<link />
+        </div>        
       </div>
     </div>
   </div>
