@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 
 def handler_404(request, exception):
-    return render(request, "error_pages/404.html", {}, status=404)
+    context = {"page_title": "404 Page Not Found" }
+    return render(request, "error_pages/404.html", context, status=404)
 
 
 def handler_500(request):
