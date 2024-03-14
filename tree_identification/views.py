@@ -24,6 +24,9 @@ import logging
 # from django.contrib.auth import get_user_model
 User = get_user_model()
 
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
 
 def home(request):
     context = {
@@ -236,49 +239,49 @@ def profile_delete(request, user_id):
             return redirect("profile")
 
 
-@login_required
-def add_tree(request):
-    logger = logging.getLogger(__name__)
-    logger.debug("Add tree view called")
-    if request.method == "POST":
-        form = TreeForm(request.POST, request.FILES)
-        if form.is_valid():
-            try:
-                tree = form.save(commit=False)
-                tree.user = request.user
-                tree.save()
-                logger.debug(f"Tree saved: {tree}")
-                messages.success(request, "Tree added successfully!")
-                return redirect("home")
-            except Exception as e:
-                logger.error(f"Error saving tree: {e}")
-                messages.error(request, f"Error saving tree: {e}")
-        else:
-            logger.warning(f"Form invalid: {form.errors}")
-            messages.error(request, "There was an error with your submission.")
-    else:
-        form = TreeForm()
-    return render(
-        request, "add_tree.html", context={"page_title": "Add Tree", "form": form}
-    )
+# @login_required
+# def add_tree(request):
+#     logger = logging.getLogger(__name__)
+#     logger.debug("Add tree view called")
+#     if request.method == "POST":
+#         form = TreeForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             try:
+#                 tree = form.save(commit=False)
+#                 tree.user = request.user
+#                 tree.save()
+#                 logger.debug(f"Tree saved: {tree}")
+#                 messages.success(request, "Tree added successfully!")
+#                 return redirect("home")
+#             except Exception as e:
+#                 logger.error(f"Error saving tree: {e}")
+#                 messages.error(request, f"Error saving tree: {e}")
+#         else:
+#             logger.warning(f"Form invalid: {form.errors}")
+#             messages.error(request, "There was an error with your submission.")
+#     else:
+#         form = TreeForm()
+#     return render(
+#         request, "add_tree.html", context={"page_title": "Add Tree", "form": form}
+#     )
 
 
-@login_required
-def edit_tree(request, tree_id):
-    tree = get_object_or_404(Tree, id=tree_id, user=request.user)
-    if request.method == "POST":
-        form = TreeForm(request.POST, request.FILES, instance=tree)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Tree information updated successfully!")
-            return redirect("my_trees")
-        else:
-            messages.error(request, "Error updating tree information.")
-    else:
-        form = TreeForm(instance=tree)
-    return render(
-        request, "edit_tree.html", context={"page_title": "Edit Tree", "form": form}
-    )
+# @login_required
+# def edit_tree(request, tree_id):
+#     tree = get_object_or_404(Tree, id=tree_id, user=request.user)
+#     if request.method == "POST":
+#         form = TreeForm(request.POST, request.FILES, instance=tree)
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, "Tree information updated successfully!")
+#             return redirect("my_trees")
+#         else:
+#             messages.error(request, "Error updating tree information.")
+#     else:
+#         form = TreeForm(instance=tree)
+#     return render(
+#         request, "edit_tree.html", context={"page_title": "Edit Tree", "form": form}
+#     )
 
 
 @login_required
@@ -292,19 +295,36 @@ def add_or_edit_tree(request, tree_id=None):
         form = TreeForm(request.POST or None, request.FILES or None)
         page_title = "Add Tree"
 
-    if request.method == "POST" and form.is_valid():
-        new_tree = form.save(commit=False)
-        new_tree.user = request.user
-        new_tree.save()
-        messages.success(
-            request,
-            (
-                "Tree information updated successfully!"
-                if tree_id
-                else "Tree added successfully!"
-            ),
-        )
-        return redirect("my_trees")
+    if request.method == "POST":
+        logger.debug(f"Request POST data: {request.POST}")
+        # If you want to log file data
+        if request.FILES:
+            logger.debug(f"Request FILES data: {request.FILES}")
+        if form.is_valid():
+            try:
+                new_tree = form.save(commit=False)
+                new_tree.user = request.user
+                # Before saving, you can log the new_tree object to see its fields
+                logger.debug(f"New Tree object: {new_tree}")
+                new_tree.save()
+                messages.success(
+                    request,
+                    (
+                        "Tree information updated successfully!"
+                        if tree_id
+                        else "Tree added successfully!"
+                    ),
+                )
+                return redirect("my_trees")
+            except Exception as e:
+                logger.error(f"Error in add_or_edit_tree: {e}")
+                messages.error(request, f"Error saving tree: {e}")
+        else:
+            logger.warning(f"Form invalid: {form.errors}")
+            messages.error(request, "There was an error with your submission.")
+    else:
+        # Log if the request method is not POST
+        logger.debug("add_or_edit_tree view called with non-POST request")
 
     return render(
         request,
