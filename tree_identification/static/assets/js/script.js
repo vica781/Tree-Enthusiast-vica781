@@ -190,3 +190,19 @@ function checkEmailAvailability(email, callback) {
     });
 }
 
+// Add an Event Listener to the textateas for cursor position
+document.addEventListener("DOMContentLoaded", function () {
+  let textAreas = document.querySelectorAll('textarea');
+  textAreas.forEach(textarea => {
+    textarea.addEventListener('focus', function() {
+      this.value = this.value.trim(); // Remove whitespace if any
+      this.setSelectionRange(0, 0);
+    });
+  });
+});
+
+// Add an Event Listener to the textareas for cursor position
+function moveCursorToStart(textarea) {
+        textarea.setSelectionRange(0, 0);
+        textarea.scrollTop = 0; // For multi-line textareas, ensures scrolling to the top.
+    }

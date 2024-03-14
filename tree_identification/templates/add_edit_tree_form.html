@@ -98,7 +98,8 @@
                                                       name="introduction"
                                                       maxlength="800"
                                                       rows="3"
-                                                      placeholder="Enter a short description of the tree">
+                                                      placeholder="Enter a short description of the tree"
+                                                      onfocus="moveCursorToStart(this)">
                                                 {{ tree.introduction|default_if_none:'' }}
                                             </textarea>
                                             <small class="form-text text-muted">
@@ -113,7 +114,8 @@
                                                       name="tree_habitat"
                                                       maxlength="300"
                                                       rows="2"
-                                                      placeholder="Where can it be found?">
+                                                      placeholder="Where can it be found?"
+                                                      onfocus="moveCursorToStart(this)">
                                                 {{ tree.tree_habitat|default_if_none:'' }}
                                             </textarea>
                                             <small class="form-text text-muted">
