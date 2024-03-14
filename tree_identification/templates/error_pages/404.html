@@ -1,16 +1,16 @@
 {% extends 'base_generic.html' %} {% load static %} {% block content %}
 
-<!-- <div class="position-relative"> -->
+<div class="position-relative">
   <!-- Background Image -->
-  <!-- <img
-    src="{% static 'assets/images/error_pages/404.webp' %}"
+  <img
+    src="{% static 'assets/images/error_pages/404_page.webp' %}"
     alt="404 error page Background"
     class="img-fluid w-100"
     style="height: 100vh; object-fit: cover"
-  /> -->
+  />
 
   <!-- Form Overlay -->
-  <!-- <div
+  <div
     class="container position-absolute"
     style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
   >
@@ -22,16 +22,16 @@
         >
           <h3 class="text-center mb-4">Path Not Found</h3>
         </div>
-        <hr /> -->
+        <hr />
         <p>
           Oops! Looks like this path in the digital woods doesn't lead
           anywhere... But don't worry, the journey isn't over. Let's take you
           back to the beginning where new adventures await!
         </p>
-        <!-- <link rel="stylesheet" href="{% url 'home' %}">Head back Home<link/>
+        <link rel="stylesheet" href="{% url 'home' %}">Head back Home<link/>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 {% endblock %}
