@@ -35,12 +35,26 @@
   * [Acknowledgements](#acknowledgements)
 
 ## Introduction
-This website "Books for Life" is a fourth Portfolio Project of the Code Institute's Full Stack Web Development course. It is a Full Stack developed website. The website is built using Django 4.1 and Python 3.8. The database is hosted on ElephantSQL and the static files are hosted on Cloudinary. The website is deployed on Heroku.
-The website is a platform for book lovers to share their favourite books with other book lovers. It is a place where book lovers can find new books to read and share their own book recommendations. 
-The idea for the website came to me in summer of 2023 when my dear friend Grace passed away. A decade ago she gave me a bookmark with the title "50 Books to Read Before You Die". She loved to read and share that love with others, generously and effortlessly. Therefore, this site is a tribute to her memory.
+This website "Books for Life" is a fourth Portfolio Project of the Code Institute's Full Stack Web Development course. It is a Full Stack developed website. The website is built using Django 4.2.9, Bootstrap 4.6 and Python 3.11. The database is hosted on ElephantSQL and the static files are hosted on Cloudinary. The website is deployed on Heroku.
+<br>
 
 
-![50 Books to Read Before You Die](./docs/images/50_books_bookmark.jpg)
+
+Embark on a botanical journey with the Tree Enthusiast App, a comprehensive tool designed for those who find joy and wonder in the embrace of nature's arboreal splendor. As William Blake poetically reflected, "The tree which moves some to tears of joy is in the eyes of others only a green thing that stands in the way." Our app aims to dissolve this barrier, revealing the true beauty of trees to every enthusiast.
+
+#### Key Features:
+
+***Discover and Browse:*** Explore a diverse collection of trees at your leisure. Our extensive database provides a wealth of information, allowing you to satisfy your arboreal curiosity.  
+***Search for Specific Trees:*** Looking for information on a particular tree? Our robust search function makes it easy to find the details you need.  
+***Printable Identification Guides:*** Take the knowledge with you on your adventures with handy guides that can be printed and brought along on your treks through nature.  
+***Community Contributions:*** Registered users can become an integral part of our community by adding their tree discoveries to our collective repository, complete with their notes and insights.  
+***Personal Collection Management:*** Curate your own personal collection of trees within the app. View, edit, and manage your contributions and see how they fit into the broader tapestry of communal knowledge.  
+***Guided Forest Experiences:*** Connect deeper with nature through our guides on forest bathing and grounding techniques, bringing mental health and mindfulness to the forefront of your outdoor explorations.
+<br>
+The Tree Enthusiast App is not just a tool but a companion for your green escapades. It's a celebration of the trees around us, fostering a community that cherishes and preserves the natural world. Whether you are charting the woods for new specimens or simply enjoying the serenity of a forest bath, the Tree Enthusiast App enriches your experience and deepens your connection to the earth's towering guardians.
+<br>
+Join us and turn every green encounter into a moment of learning, sharing, and personal growth. With the Tree Enthusiast App, every tree is a story waiting to be told, and every forest a chapter yet to be explored.
+
 ## User Stories
 
 1. As a ***new user***, I want to ***be able to register for an account on the "Books for Life" website***, so that I can ***log in with username or email, and password***.
