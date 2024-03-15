@@ -72,8 +72,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] User can register using their full name, email, and password through a registration form on the platform.
 - [x] The user receives messages upon both successful and unsuccessful registration attempts.
 
-***
-
 ##### TASKS
 _A single unit of work broken down from the defined user story_
 
@@ -95,8 +93,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 4: The system should display an error message for incorrect login credentials.
 - [x] Criteria 5: There should be an option for users to reset their password if forgotten.
 - [x] Criteria 6: The login page should provide a clear option for users to navigate to the registration page if they do not have an account.
-
-***
 
 ##### TASKS
 _A single unit of work broken down from the defined user story_
@@ -123,8 +119,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 4: The user should be informed about sucsess of login out.
 - [x] Criteria 5: The system should confirm the user's intention to log out to prevent accidental logouts.
 
-***
-
 ##### TASKS
 _A single unit of work broken down from the defined user story_
 
@@ -146,8 +140,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 1: The contact page is easily accessible from any page on the website, including while adding or viewing tree information, ideally within one or two clicks.
 - [x] Criteria 2: The contact page includes method of contact suitable for different types of inquiries, such as technical support or feedback.
 - [x] Criteria 3: The contact form on the page is simple and intuitive, requiring only essential information, and it provides clear confirmation once a message is successfully sent.
-
-***
 
 ##### TASKS
 _A single unit of work broken down from the defined user story_
@@ -180,8 +172,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 3. ***Account Security:***
 - [x] Criteria 9: Users can change their password from their profile settings.
 - [x] Criteria 10: The process for changing the password includes current password verification for security.
-
-***
 
 ##### TASKS
 _A single unit of work broken down from the defined user story_
@@ -228,8 +218,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 9: Upon confirming deletion, the user is logged out and their profile is permanently deleted. 
 - [x] Criteria 10: The user receives a notification confirming the successful deletion of their profile.
 
-***
-
 ##### TASKS
 _A single unit of work broken down from the defined user story_
 
@@ -267,8 +255,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 6: Appropriate validation messages should be displayed in case of form errors.
 - [x] Criteria 7: The tree information should be viewable in the 'My Trees' section of the website.
 
-***
-
 ##### TASKS
 _A single unit of work broken down from the defined user story_
 
@@ -295,8 +281,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 5: The user should receive a success message upon successful addition of the tree.
 - [x] Criteria 6: Appropriate validation messages should be displayed in case of form errors.
 - [x] Criteria 7: The tree information should be viewable in the 'My Trees' section of the website.
-
-***
 
 ##### TASKS
 _A single unit of work broken down from the defined user story_
@@ -326,8 +310,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 7: Any errors or validation issues during the update process should be communicated to the user.
 - [x] Criteria 8: The updated information should be reflected in the 'My Trees' collection and the tree's detail view.
 
-***
-
 ##### TASKS
 _A single unit of work broken down from the defined user story_
 
@@ -355,8 +337,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 5: Upon confirming the deletion, the tree should be permanently removed from the user's collection.
 - [x] Criteria 6: The user should receive a success message confirming the tree's removal.
 - [x] Criteria 7: The deletion action should not affect other trees in the collection.
-
-***
 
 ##### TASKS
 _A single unit of work broken down from the defined user story_
@@ -387,8 +367,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 7: The search feature should provide results promptly and accurately.
 - [x] Criteria 8: The search results should be presented in a user-friendly manner, allowing easy navigation to detailed tree pages.
 
-***
-
 ##### TASKS
 _A single unit of work broken down from the defined user story_
 
@@ -417,8 +395,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 6: The interface for browsing trees should be intuitive and engaging, encouraging visitors to explore the tree collection.
 - [x] Criteria 7: The feature should ensure a seamless transition from viewing to registration or login for new users.
 
-***
-
 ##### TASKS
 _A single unit of work broken down from the defined user story_
 
@@ -444,8 +420,6 @@ _A set of predefined requirements that must be met to meet the user story needs 
 - [x] Criteria 2: The search results page should display all matching trees with relevant details like images and common names.
 - [x] Criteria 3: 'Edit' and 'Delete' options should be visible and functional only next to the trees that the logged-in user has added.
 - [x] Criteria 4: For trees not added by the user, buttons for 'My Trees', 'Add Tree', and 'Home' should be available for easy navigation. 
-
-***
 
 ##### TASKS
 _A single unit of work broken down from the defined user story_
