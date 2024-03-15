@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 from .views import handler_404, handler_500, handler_403, handler_405
 
 urlpatterns = [
+    # admin's URL configuration
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
     # app's URL configuration 

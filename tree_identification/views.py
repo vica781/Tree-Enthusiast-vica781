@@ -21,6 +21,9 @@ from .forms import TreeForm
 from django.shortcuts import get_object_or_404
 import logging
 
+from django.core.exceptions import PermissionDenied
+from django.views.decorators.http import require_GET
+
 # from django.contrib.auth import get_user_model
 User = get_user_model()
 
@@ -157,6 +160,7 @@ def contact(request):
             "page_title": "Sign Up",
         },
     )
+
 
 @login_required
 def profile_user(request):
@@ -369,3 +373,30 @@ def contact(request):
 
 def contact_success(request):
     return render(request, "contact_success.html", {})
+
+
+# Testing/Error Handling (REMEMBER TO REMOVE IN PRODUCTION!!!)
+def trigger_403(request):
+    # You can add any condition here, or just directly raise PermissionDenied
+    raise PermissionDenied
+
+
+@require_GET
+def trigger_405(request):
+    # This view only allows GET requests
+    return render(request, "some_template.html")
+
+
+def trigger_500(request):
+    # Define the context if needed
+    context = {
+        "page_title": "500 Internal Server Error",
+    }
+    return render(request, "error_pages/500.html", context, status=500)
+
+
+# def handler_403(request, exception):
+#     context = {
+#         "page_title": "403 Forbidden",        
+#     }
+#     return render(request, "error_pages/403.html", context, status=403)

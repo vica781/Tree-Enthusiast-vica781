@@ -5,11 +5,10 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from tree_identification import views as user_views
+from .views import trigger_500, trigger_403
 
 
 urlpatterns = [
-    # Admin
-    # path("admin/", admin.site.urls),
     # Authentication
     path("login/", views.login_user, name="login"),
     path("logout/", views.logout_user, name="logout"),
@@ -54,6 +53,9 @@ urlpatterns = [
     path(
         "identification_guide/", views.identification_guide, name="identification_guide"
     ),
+    # Testing/Error Handling (REMEMBER TO REMOVE IN PRODUCTION!!!)
+    path("trigger-403/", views.trigger_403, name="trigger-403"),
+    path("trigger-405/", views.trigger_405, name="trigger-405"),
     # Home Page
     path("", views.home, name="home"),
 ]
