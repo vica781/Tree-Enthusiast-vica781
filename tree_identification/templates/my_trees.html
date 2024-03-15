@@ -37,25 +37,19 @@
                       <!-- New Card Layout for Trees -->
                       <div class="row">
                         {% for tree in trees %}
-                        <div class="col-md-3">
-                          <a
-                            id="tree_info"
-                            href="{% url 'tree_detail' tree.id %}"
-                          >
-                            <!-- Link to the detail page -->
-                            <div class="card">
-                              <img
-                                src="{{ tree.tree_image.url }}"
-                                class="card-img-top img-fluid px-2 pt-2"
-                                alt="{{ tree.common_name }}"
-                              />
-                              <div class="card-body">
-                                <h5 class="card-title my-0 py-0">
-                                  {{ tree.common_name }}
-                                </h5>                                
-                              </div>
+                        <div class="col-md-4">
+                          <div class="card shadow-sm my-trees-card">
+                            <img class="bd-placeholder-img img-fluid pt-2 px-2"
+                            style="max-height: 200px; object-fit: contain"
+                            src="{{ tree.tree_image.url }}" 
+                            alt="{{ tree.common_name }}">
+                            <div class="card-body">
+                              <a href="{% url 'tree_detail' tree.id %}"
+                              class="stretched-link">
+                              <h5 class="card-title">{{ tree.common_name }}</h5>
+                              </a>
                             </div>
-                          </a>
+                          </div>                        
                         </div>
                         {% empty %}
                         <div class="col-12">

@@ -21,9 +21,6 @@ from .forms import TreeForm
 from django.shortcuts import get_object_or_404
 import logging
 
-from django.core.exceptions import PermissionDenied
-from django.views.decorators.http import require_GET
-
 # from django.contrib.auth import get_user_model
 User = get_user_model()
 

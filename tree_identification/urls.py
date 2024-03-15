@@ -5,8 +5,6 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from tree_identification import views as user_views
-from .views import trigger_500, trigger_403
-
 
 urlpatterns = [
     # Authentication
