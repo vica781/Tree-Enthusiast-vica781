@@ -38,8 +38,6 @@
 This website "Books for Life" is a fourth Portfolio Project of the Code Institute's Full Stack Web Development course. It is a Full Stack developed website. The website is built using Django 4.2.9, Bootstrap 4.6 and Python 3.11. The database is hosted on ElephantSQL and the static files are hosted on Cloudinary. The website is deployed on Heroku.
 <br>
 
-
-
 Embark on a botanical journey with the Tree Enthusiast App, a comprehensive tool designed for those who find joy and wonder in the embrace of nature's arboreal splendor. As William Blake poetically reflected, "The tree which moves some to tears of joy is in the eyes of others only a green thing that stands in the way." Our app aims to dissolve this barrier, revealing the true beauty of trees to every enthusiast.
 
 #### Key Features:
@@ -241,7 +239,6 @@ _A single unit of work broken down from the defined user story_
 
 <font size="5"><b>7.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
 
-
 ***
 
 ##### ACCEPTANCE CRITERIA
@@ -438,44 +435,45 @@ _A single unit of work broken down from the defined user story_
 
 ## UX
 
-### Development Planes
+### Refined Development Plan for Tree Enthusiast App
 
 #### Strategy
-- **Objective:** Create a user-centric site that encourages users to share and explore book recommendations, fostering a sense of community among book enthusiasts.
-- **User Research:** Conduct surveys and user interviews to understand the needs, preferences, and pain points of both new and experienced book lovers.
-- **Competitor Analysis:** Analyse similar platforms to identify gaps and opportunities in the market.
-- **Persona Creation:** Develop user personas representing various types of users, including new users, registered users, and bibliophiles.
-- **Goals:** Define measurable goals, such as increasing user engagement, time spent on the platform, and user-generated content.
+- **Objective:** Craft a multi-faceted platform that serves as a hub for tree identification, educational growth, and mental wellness through nature, catering to the needs of a diverse community of tree enthusiasts and those seeking solace in nature.
+- **User Research:** Expand surveys and user interviews to encompass individuals seeking outdoor-related mental wellness in addition to tree identification knowledge.
+- **Competitor Analysis:** Examine other platforms that provide not just botanical information but also those that delve into the therapeutic aspects of nature.
+- **Persona Creation:** Include personas such as nature therapy seekers, educators in botany and mental health professionals who recommend nature as therapy.
+- **Goals:** Enrich goals to include the broadening of the app's resource base, fostering collaboration with mental health and environmental organizations, and creating a comprehensive guide to forest therapy techniques.
 
-##### Target Audience
-**Roles:**
-- New Users (unregistered)
-- Registered Users
-- Bibliophiles (Book Lovers)
-- Administrators
+### Target Audience
 
-**Demographics:**
-- Desire to learn
-- Desire to read more
-- Book Lovers (Bibliophiles) 
-- Self-learning individuals
-- All ages
+#### Roles:
+- Beginners in Tree Identification
+- Nature Therapy Participants
+- Environmental Educators and Mental Health Professionals
+- App Administrators, Content Creators, and Moderators
 
-**Psychographics:**
-- Personality & Attitudes:
-- Curious
-- Eager to learn
-- Bibliophile
+#### Demographics:
+- Broad spectrum, from school-age children to seniors
+- Individuals seeking therapeutic experiences through nature
+- Professionals and volunteers in environmental and mental health sectors
 
-**Values:**
-- Knowledge
-- Self-improvement
-- Community
+### Psychographics:
 
-**Lifestyles:**
-- Interest in books
-- Creative
-- Knowledgeable
+#### Personality & Attitudes:
+- Inquisitive about nature's diversity
+- Advocates for mental health and well-being
+- Believers in ecotherapy and the healing power of nature
+
+### Values:
+- Nature conservation and biodiversity
+- Mental wellness and holistic health
+- Education and the sharing of expertise
+
+### Lifestyles:
+- Outdoor enthusiasts and hikers
+- Individuals practicing mindfulness and relaxation techniques
+- Educators and therapists incorporating nature into their practice
+
 
 ##### User and Client Needs
 |User Needs|Client Needs|
