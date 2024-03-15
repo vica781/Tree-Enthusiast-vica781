@@ -105,12 +105,6 @@
     padding: 0 1rem 0 1rem; 
 }
 /* Make cards the same height */
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 350px; /* Adjust as needed */
-}
 .my-trees-card {
     height: 250px; 
     width: 100%; 
@@ -121,6 +115,11 @@
     height: 200px; 
     width: 100%; 
     object-fit: cover;
+    object-fit: contain
+}
+.bd-placeholder-img {
+    max-height: 200px; 
+    object-fit: contain;
 }
 /* Card body adjustments */
 .card-body {
@@ -129,7 +128,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.card-title {
+.card-title-tree-name {
     height: 20px; 
     font-size: 1rem;
     text-align: center;
@@ -265,5 +264,49 @@
         font-size: 0.85rem;
         padding: 5px 10px; 
         margin: 2px; 
-    }           
+    } 
+    /* ___________________________ My Trees ___________________________ */
+    .card-title-tree-name {
+        font-size: .8rem;
+        text-align: center;
+    } 
+    .my-trees-card-title {
+        font-size: 1.3rem;
+    }    
+    .my-trees-card {
+        height: 160px; 
+        width: 100%; 
+        margin-bottom: 1.5rem;    
+    }
+    /* Tree image adjustments */
+    .tree-card-image {
+        height: 110px; 
+        width: 100%; 
+        object-fit: cover;
+        object-fit: contain
+    }
+    .bd-placeholder-img {
+        max-height: 110px; 
+        object-fit: contain;
+    }
+    .my-trees-btns .btn {
+        font-size: 0.8rem;
+        padding: 5px 10px; 
+        margin: 2px;              
+    }
+/* ___________________________ Browse Trees ___________________________ */
+    .browse-trees-card-title {
+        font-size: 1.3rem;
+    }
+    .browse-trees-btns {
+        font-size: 0.7rem;
+        padding: 5px 10px; 
+        margin: 2px; 
+    }
+    .card-title-brs-trs-name {
+        font-size: .75rem;
+        text-align: center;
+    }
 }
+
+    
