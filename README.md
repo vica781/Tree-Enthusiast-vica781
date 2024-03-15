@@ -1,17 +1,17 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 <h1>
     <a href="https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com/">
-        <img src="./media/oak-logo.png" alt="Tree Enthusiast logo" width="60" height="58" style="vertical-align:middle">
+        <img src="./media/docs_images/oak-logo.png" alt="Tree Enthusiast logo" width="105" height="100" style="vertical-align:middle">
     </a>
     TREE ENTHUSIAST
 </h1>
 
 
-[![Am I Responsive Mockup](./docs/images/amiresponsive.png)](https://books-4-life-2d26bdf04dec.herokuapp.com/)
+[![Am I Responsive Mockup](./media/docs_images/am_I_responsive.png)](https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com/)
 
 ## Table of Contents
 
-[Books4Life](#books-for-life)
+[Tree Enthusiast](#tree-enthusiast)
   * [Table of Contents](#table-of-contents)
   * [Introduction](#introduction)
   * [User Stories](#user-stories)
