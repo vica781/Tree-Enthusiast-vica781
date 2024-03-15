@@ -59,7 +59,9 @@ Join us and turn every green encounter into a moment of learning, sharing, and p
 
 ## User Stories
 
-<font size="4.5"><b>1.</b> As a <b>new user</b>, I want to <b>be able to register on the platform</b>, so that I can <b>login and get access</b>.</font>
+***
+
+<font size="5"><b>1.</b> As a <b>new user</b>, I want to <b>be able to register on the platform</b>, so that I can <b>login and get access</b>.</font>
 
 
 ***
@@ -78,7 +80,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Design and implement the registration form with front-end validation for full name, email, and password fields.
 - [x] Redirect registered user to a landing page.
 
-<font size="4.5"><b>2.</b> As a <b>user</b>, I want to <b>log in to my account</b>, so that I can <b>access personalized features and secure my account information</b>.</font>
+***
+
+<font size="5"><b>2.</b> As a <b>user</b>, I want to <b>log in to my account</b>, so that I can <b>access personalized features and secure my account information</b>.</font>
 
 ***
 
@@ -104,7 +108,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 5: Create a password reset feature.
 - [x] Task 6: Add a prompt on the login page that directs users to the registration page, with text such as "Don't have an account?" and link "Register here."
 
-<font size="4.5"><b>3.</b> As a <b>user</b>, I want to <b>be able to securely log out of my account</b>, so that I can <b>ensure my account is safe when I'm not using it.</b></font>
+***
+
+<font size="5"><b>3.</b> As a <b>user</b>, I want to <b>be able to securely log out of my account</b>, so that I can <b>ensure my account is safe when I'm not using it.</b></font>
 
 ***
 
@@ -128,7 +134,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 4: Create a logout confirmation prompt.
 - [x] Task 5: Create a message to let user know that they successfully logged out.
 
-<font size="4.5"><b>4.</b> As a <b>user/tree enthusiast</b>, I want to <b>easily access and use the contact page on the website</b>, so that I can <b>reach out for support or share feedback about my experiences with adding and viewing tree information.</b></font>
+***
+
+<font size="5"><b>4.</b> As a <b>user/tree enthusiast</b>, I want to <b>easily access and use the contact page on the website</b>, so that I can <b>reach out for support or share feedback about my experiences with adding and viewing tree information.</b></font>
 
 ***
 
@@ -148,7 +156,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 2: Develop and integrate the contact page with contact option, including a user-friendly form with space for a message.
 - [x] Task 3: Set up backend support for form submission, ensuring reliable delivery of user messages and automatic confirmation responses to the user.
 
-<font size="4.5"><b>5.</b> As a <b>registered user</b>, I want to <b>easily manage my account and personalize my profile</b>, so that I can <b>enhance my user experience and maintain my account security.</b></font>
+***
+
+<font size="5"><b>5.</b> As a <b>registered user</b>, I want to <b>easily manage my account and personalize my profile</b>, so that I can <b>enhance my user experience and maintain my account security.</b></font>
 
 ***
 
@@ -193,7 +203,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 10: Develop a secure password change feature within the profile settings.
 - [x] Task 11: Implement current password verification before allowing password changes.
 
-<font size="4.5"><b>6.</b> As a <b>registered user</b>, I want to <b>delete my profile securely and with clear confirmation steps</b>, so that I can <b>ensure that my decision is intentional and informed, and be reassured of successful deletion.</b></font>
+***
+
+<font size="5"><b>6.</b> As a <b>registered user</b>, I want to <b>delete my profile securely and with clear confirmation steps</b>, so that I can <b>ensure that my decision is intentional and informed, and be reassured of successful deletion.</b></font>
 
 ***
 
@@ -237,7 +249,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 9: Implement the deletion process, including user logout and data removal upon confirmation. 
 - [x] Task 10: Create a notification system to confirm successful profile deletion to the user.
 
-<font size="4.5"><b>7.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
+***
+
+<font size="5"><b>7.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
 
 
 ***
@@ -265,7 +279,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 5: Integrate the newly added tree data into the 'My Trees' section for the user.
 - [x] Task 6: Conduct testing to ensure all acceptance criteria are met. 
 
-<font size="4.5"><b>8.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
+***
+
+<font size="5"><b>8.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
 
 ***
 
@@ -292,7 +308,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 5: Integrate the newly added tree data into the 'My Trees' section for the user.
 - [x] Task 6: Conduct testing to ensure all acceptance criteria are met. 
 
-<font size="4.5"><b>9.</b> As a <b>registered and logged-in user</b>, I want to <b>edit the information of trees I have added</b>, so that I can <b>update or correct their details as needed.</b></font>
+***
+
+<font size="5"><b>9.</b> As a <b>registered and logged-in user</b>, I want to <b>edit the information of trees I have added</b>, so that I can <b>update or correct their details as needed.</b></font>
 
 ***
 
@@ -321,7 +339,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 6: Ensure that the updates are immediately visible in the tree's detail view and in the 'My Trees' collection.
 - [x] Task 7: Test the editing feature for functionality and user-friendliness.
 
-<font size="4.5"><b>10.</b> As a <b>registered and logged-in user</b>, I want to <b>have the ability to delete trees from my collection</b>, so that I can <b>remove outdated or incorrect tree entries.</b></font>
+***
+
+<font size="5"><b>10.</b> As a <b>registered and logged-in user</b>, I want to <b>have the ability to delete trees from my collection</b>, so that I can <b>remove outdated or incorrect tree entries.</b></font>
 
 ***
 
@@ -349,7 +369,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 6: Ensure the website's user interface is updated immediately to reflect the deletion.
 - [x] Task 7: Test the feature to ensure it works as intended and is secure.
 
-<font size="4.5"><b>11.</b> As a <b>user of the Tree Enthusiast website</b>, I want to <b>search for trees using their common names</b>, so that I can <b>quickly find specific trees and learn more about them.</b></font>
+***
+
+<font size="5"><b>11.</b> As a <b>user of the Tree Enthusiast website</b>, I want to <b>search for trees using their common names</b>, so that I can <b>quickly find specific trees and learn more about them.</b></font>
 
 ***
 
@@ -378,7 +400,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 6: Test the search functionality with various common names to ensure accuracy and speed.
 - [x] Task 7: Ensure the search results layout is responsive and user-friendly.
 
-<font size="4.5"><b>12.</b> As a <b>visitor to the Tree Enthusiast website</b>, I want to <b>access a 'Browse Trees' feature</b>, so that I can <b>view all trees listed in the database in a user-friendly format</b>, and if interested, be prompted to 'Login' or 'Sign Up' for further interactions. As a <b>registered and logged-in user</b>, I should be able to <b>edit or delete trees I have added</b>, or access 'Add Tree', 'My Trees', or 'Home' when viewing tree details.</font>
+***
+
+<font size="5"><b>12.</b> As a <b>visitor to the Tree Enthusiast website</b>, I want to <b>access a 'Browse Trees' feature</b>, so that I can <b>view all trees listed in the database in a user-friendly format</b>, and if interested, be prompted to 'Login' or 'Sign Up' for further interactions. As a <b>registered and logged-in user</b>, I should be able to <b>edit or delete trees I have added</b>, or access 'Add Tree', 'My Trees', or 'Home' when viewing tree details.</font>
 
 ***
 
@@ -407,7 +431,9 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 7: Ensure the site's performance and speed are optimized for handling numerous tree entries.
 - [x] Task 8: Test the feature thoroughly for different user scenarios and make adjustments based on feedback.
 
-<font size="4.5"><b>13.</b> As a <b>registered and logged-in user</b> of the Tree Enthusiast website, I want to <b>search and view trees with a specific common name added by any user</b>, while being able to <b>edit and delete only the trees that I have added</b>, and have access to 'My Trees', 'Add Tree', and 'Home' buttons when viewing trees added by others, so that I can <b>manage my contributions and navigate the site effectively without affecting other users' entries.</b></font>
+***
+
+<font size="5"><b>13.</b> As a <b>registered and logged-in user</b> of the Tree Enthusiast website, I want to <b>search and view trees with a specific common name added by any user</b>, while being able to <b>edit and delete only the trees that I have added</b>, and have access to 'My Trees', 'Add Tree', and 'Home' buttons when viewing trees added by others, so that I can <b>manage my contributions and navigate the site effectively without affecting other users' entries.</b></font>
 
 ***
 
