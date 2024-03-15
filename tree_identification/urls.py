@@ -53,9 +53,6 @@ urlpatterns = [
     path(
         "identification_guide/", views.identification_guide, name="identification_guide"
     ),
-    # Testing/Error Handling (REMEMBER TO REMOVE IN PRODUCTION!!!)
-    path("trigger-403/", views.trigger_403, name="trigger-403"),
-    path("trigger-405/", views.trigger_405, name="trigger-405"),
     # Home Page
     path("", views.home, name="home"),
 ]
