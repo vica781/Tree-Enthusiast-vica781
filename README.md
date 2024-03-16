@@ -492,7 +492,7 @@ _A single unit of work broken down from the defined user story_
 
 [Back to top ⇧](#table-of-contents)
 
-#### User and Client Needs
+### User and Client Needs
 
 ***
 
@@ -507,7 +507,7 @@ _A single unit of work broken down from the defined user story_
 | Share Tree Information             | Social Media Integration     |
 | Accessible Navigation              | User Engagement              |
 
-#### Importance/Viability Tables
+### Importance/Viability Tables
 
 ***
 
@@ -542,61 +542,119 @@ _A single unit of work broken down from the defined user story_
 
 [Back to top ⇧](#table-of-contents)
 
-#### SCOPE
-- **Features:** user registration, profile management, book addition, editing and deletion, liking books, viewing user-added books, a favourites page, contact form, and book search.
-- **Content:** Book Review will contain book titles, authors, images, and descriptions (short and full).
-- **User Flow:** The user will be able to register for an account, log in, add books, edit books, delete books, like books, view their books, view their favourites, and contact the admin.
+## SCOPE
 
-- **Technical Requirements:** Front-End: HTML, CSS, Javascript, Bootstrap 5, Font Awesome; Back-End: Python, Django 4.1, PostgreSQL For deployment, the project will be hosted on Heroku, with static files stored on Cloudinary and the database hosted on ElephantSQL.The whole project will be version controlled using Git and GitHub.
-Milestones: The whole project is broken down into smaller milestones, which are then broken down into tasks. The project will be managed using Github Project.The three milestones are: MVP Release, User Profile Issues, Project Refinement.
+***
 
-##### Content Requirements
-- Content (text, images, videos) that user will need.
-- The User will be looking for:
-    - Customisable Account
-    - Custom username/password
-    - Add/Modify/Delete Book Details
-    - View list of Favourite Books
-- Easy and Intuitive Navigation
-- Pleasant Theme (typography, imagery, colour palette)
-- Book Detail Page:
-    - Title
-    - Author
-    - Image URL
-    - Description
-    - Likes
-- Searchable Book Database
-- Contact Form
-- Favourite Books Page
-- User Added Books Page
-- User Profile Page
+### Features:
+- User registration
+- Profile management
+- Tree collection browsing
+- Individual tree detail viewing
+- Tree addition, editing, and deletion
+- Comment functionality
+- Like/dislike functionality
+- Personal tree collection access
+- Contact form
+- Tree search
 
-##### Functionality Requirements
-The user will be able to:
-- Register for an account
-- Log in to their account
-- Log out of their account
-- Add a book to the database:
-    - Title
-    - Author
-    - Image URL
-    - Short Description
-    - Full Description
-- Edit a book in the database
-- Delete a book from the database
-- Like a book
-- View list of their favourite books
-- View list of their added books
-- View all books
-- Search for books
-- View book details
-- Contact the admin
-- View their profile
-- Customise their profile
-- Delete their profile
-- View a custom 404 page
+### Content:
+- Tree Enthusiast will contain:
+  - Tree names
+  - Types
+  - Origins
+  - Images
+  - Descriptions
+  - Habitat information
+  - User contributions
+
+### User Flow:
+- Unregistered visitors can:
+  - Browse and search the tree collection
+  - View tree details
+- Registered users can:
+  - Log in
+  - Add trees to the collection
+  - Manage their personal tree collection
+  - Edit and delete tree information they have added
+  - Utilize like/dislike and comment functionalities on tree details
 
 [Back to top ⇧](#table-of-contents)
+
+### Technical Requirements:
+- **Front-End:**
+  - HTML
+  - CSS
+  - JavaScript
+  - Bootstrap 4.6
+  - Font Awesome
+- **Back-End:**
+  - Python
+  - Django 4.x
+  - PostgreSQL
+- **Deployment:**
+  - Hosted on a platform like Heroku
+  - Static and media files stored on Cloudinary
+  - Database hosted on ElephantSQL
+- **Version Control:**
+  - Git
+  - GitHub
+
+### Milestones:
+- Divided into phases:
+  - Initial release
+  - Feature additions
+  - Final refinements
+- Managed using Github Projects
+
+[Back to top ⇧](#table-of-contents)
+
+## Content Requirements
+
+- Customisable user accounts with the ability to add, modify, and delete tree details.
+- Intuitive navigation with a user-friendly theme (typography, imagery, color palette).
+- **Tree Detail Page to include:**
+  - Common Name
+  - Tree Type
+  - Origin
+  - Image
+  - Description
+  - Habitat Information
+  - Likes/Dislikes
+  - Comments
+- Searchable tree database
+- Contact form for user inquiries
+- Personal tree collection page for users to manage their added trees
+- User profile page to view and edit profile details
+
+[Back to top ⇧](#table-of-contents)
+
+## Functionality Requirements
+
+- Users will be able to:
+  - Register and create a personalized account
+  - Log in to and out of their account
+  - Browse the entire tree collection without registration
+  - Search for trees within the database
+  - View detailed information about each tree
+  - Add new trees to the database with details such as name, type, image, description, and habitat information
+  - Edit and delete their own tree entries
+  - Like/dislike trees and view the total number of likes/dislikes
+  - Comment on tree details for interaction with other users
+  - Access and manage their personal collection of added trees
+  - Contact the admin through a form for support or inquiries
+  - Customize their user profile, including uploading a profile picture and editing profile details
+  - Delete their user profile
+  - Encounter a custom 404 page when attempting to visit a nonexistent page
+
+[Back to top ⇧](#table-of-contents)
+
+
+
+
+
+
+
 
 #### STRUCTURE
 - **Interaction Design:** The user will be able to interact with the website using a mouse and keyboard.
