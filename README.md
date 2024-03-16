@@ -37,10 +37,9 @@
 ## Introduction
 This website "Books for Life" is a fourth Portfolio Project of the Code Institute's Full Stack Web Development course. It is a Full Stack developed website. The website is built using Django 4.2.9, Bootstrap 4.6 and Python 3.11. The database is hosted on ElephantSQL and the static files are hosted on Cloudinary. The website is deployed on Heroku.
 <br>
-
 Embark on a botanical journey with the Tree Enthusiast App, a comprehensive tool designed for those who find joy and wonder in the embrace of nature's arboreal splendor. As William Blake poetically reflected, "The tree which moves some to tears of joy is in the eyes of others only a green thing that stands in the way." Our app aims to dissolve this barrier, revealing the true beauty of trees to every enthusiast.
 
-#### Key Features:
+### Key Features:
 
 ***Discover and Browse:*** Explore a diverse collection of trees at your leisure. Our extensive database provides a wealth of information, allowing you to satisfy your arboreal curiosity.  
 ***Search for Specific Trees:*** Looking for information on a particular tree? Our robust search function makes it easy to find the details you need.  
@@ -55,12 +54,13 @@ The Tree Enthusiast App is not just a tool but a companion for your green escapa
 <br>
 Join us and turn every green encounter into a moment of learning, sharing, and personal growth. With the Tree Enthusiast App, every tree is a story waiting to be told, and every forest a chapter yet to be explored.
 
+[Back to top ⇧](#table-of-contents)
+
 ## User Stories
 
 ***
 
 <font size="5"><b>1.</b> As a <b>new user</b>, I want to <b>be able to register on the platform</b>, so that I can <b>login and get access</b>.</font>
-
 
 ***
 
@@ -101,6 +101,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 4: Implement user feedback for login success or failure.
 - [x] Task 5: Create a password reset feature.
 - [x] Task 6: Add a prompt on the login page that directs users to the registration page, with text such as "Don't have an account?" and link "Register here."
+
+[Back to top ⇧](#table-of-contents)
 
 ***
 
@@ -145,6 +147,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 1: Design and implement an easily noticeable and accessible link to the contact page, ensuring it is available during all major user activities, such as account creation and tree data entry.
 - [x] Task 2: Develop and integrate the contact page with contact option, including a user-friendly form with space for a message.
 - [x] Task 3: Set up backend support for form submission, ensuring reliable delivery of user messages and automatic confirmation responses to the user.
+
+[Back to top ⇧](#table-of-contents)
 
 ***
 
@@ -191,6 +195,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 10: Develop a secure password change feature within the profile settings.
 - [x] Task 11: Implement current password verification before allowing password changes.
 
+[Back to top ⇧](#table-of-contents)
+
 ***
 
 <font size="5"><b>6.</b> As a <b>registered user</b>, I want to <b>delete my profile securely and with clear confirmation steps</b>, so that I can <b>ensure that my decision is intentional and informed, and be reassured of successful deletion.</b></font>
@@ -235,6 +241,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 9: Implement the deletion process, including user logout and data removal upon confirmation. 
 - [x] Task 10: Create a notification system to confirm successful profile deletion to the user.
 
+[Back to top ⇧](#table-of-contents)
+
 ***
 
 <font size="5"><b>7.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
@@ -262,6 +270,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 5: Integrate the newly added tree data into the 'My Trees' section for the user.
 - [x] Task 6: Conduct testing to ensure all acceptance criteria are met. 
 
+[Back to top ⇧](#table-of-contents)
+
 ***
 
 <font size="5"><b>8.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
@@ -288,6 +298,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 4: Develop a user feedback system to confirm successful addition of a tree or inform of any errors.
 - [x] Task 5: Integrate the newly added tree data into the 'My Trees' section for the user.
 - [x] Task 6: Conduct testing to ensure all acceptance criteria are met. 
+
+[Back to top ⇧](#table-of-contents)
 
 ***
 
@@ -318,6 +330,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 6: Ensure that the updates are immediately visible in the tree's detail view and in the 'My Trees' collection.
 - [x] Task 7: Test the editing feature for functionality and user-friendliness.
 
+[Back to top ⇧](#table-of-contents)
+
 ***
 
 <font size="5"><b>10.</b> As a <b>registered and logged-in user</b>, I want to <b>have the ability to delete trees from my collection</b>, so that I can <b>remove outdated or incorrect tree entries.</b></font>
@@ -345,6 +359,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 5: Provide clear success messages based on the deletion outcome.
 - [x] Task 6: Ensure the website's user interface is updated immediately to reflect the deletion.
 - [x] Task 7: Test the feature to ensure it works as intended and is secure.
+
+[Back to top ⇧](#table-of-contents)
 
 ***
 
@@ -375,6 +391,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 6: Test the search functionality with various common names to ensure accuracy and speed.
 - [x] Task 7: Ensure the search results layout is responsive and user-friendly.
 
+[Back to top ⇧](#table-of-contents)
+
 ***
 
 <font size="5"><b>12.</b> As a <b>visitor to the Tree Enthusiast website</b>, I want to <b>access a 'Browse Trees' feature</b>, so that I can <b>view all trees listed in the database in a user-friendly format</b>, and if interested, be prompted to 'Login' or 'Sign Up' for further interactions. As a <b>registered and logged-in user</b>, I should be able to <b>edit or delete trees I have added</b>, or access 'Add Tree', 'My Trees', or 'Home' when viewing tree details.</font>
@@ -404,6 +422,8 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 7: Ensure the site's performance and speed are optimized for handling numerous tree entries.
 - [x] Task 8: Test the feature thoroughly for different user scenarios and make adjustments based on feedback.
 
+[Back to top ⇧](#table-of-contents)
+
 ***
 
 <font size="5"><b>13.</b> As a <b>registered and logged-in user</b> of the Tree Enthusiast website, I want to <b>search and view trees with a specific common name added by any user</b>, while being able to <b>edit and delete only the trees that I have added</b>, and have access to 'My Trees', 'Add Tree', and 'Home' buttons when viewing trees added by others, so that I can <b>manage my contributions and navigate the site effectively without affecting other users' entries.</b></font>
@@ -425,12 +445,6 @@ _A single unit of work broken down from the defined user story_
 - [x] Task 2: Ensure 'My Trees', 'Add Tree', and 'Home' buttons are displayed when viewing trees added by other users.
 - [x] Task 3: Conduct testing to ensure proper functionality and security across different user scenarios.
 
-
-
-
-
-
-
 [Back to top ⇧](#table-of-contents)
 
 ## UX
@@ -443,6 +457,8 @@ _A single unit of work broken down from the defined user story_
 - **Competitor Analysis:** Examine other platforms that provide not just botanical information but also those that delve into the therapeutic aspects of nature.
 - **Persona Creation:** Include personas such as nature therapy seekers, educators in botany and mental health professionals who recommend nature as therapy.
 - **Goals:** Enrich goals to include the broadening of the app's resource base, fostering collaboration with mental health and environmental organizations, and creating a comprehensive guide to forest therapy techniques.
+
+[Back to top ⇧](#table-of-contents)
 
 ### Target Audience
 
@@ -474,22 +490,55 @@ _A single unit of work broken down from the defined user story_
 - Individuals practicing mindfulness and relaxation techniques
 - Educators and therapists incorporating nature into their practice
 
+[Back to top ⇧](#table-of-contents)
 
-##### User and Client Needs
-|User Needs|Client Needs|
-|:---|:---|
-|Register/Login to account|Provide a Book Database|
-|Search for books|Log into administrator account for defensive design|
-|View Book Details|Use website themselves|
-|View Favourite Books||
-|Get in Contact with Admin||
+#### User and Client Needs
 
-##### Importance/Viability Tables
-![User Management](./docs/images/vt_user_management.png)
+***
 
-![Books Management](./docs/images/vt_books_management.png)
+| User Needs                         | Client Needs                 |
+|------------------------------------|------------------------------|
+| Register/Login to account          | Manage User Accounts         |
+| Search for trees                   | Provide a Tree Database      |
+| View Tree Details                  | Ensure Data Accuracy         |
+| Add/Edit Own Tree Entries          | Accessible Tree Editing Tool |
+| View Personal Tree Collection      | User Activity Insights       |
+| Get in Contact with Admin          | Customer Support Management  |
+| Share Tree Information             | Social Media Integration     |
+| Accessible Navigation              | User Engagement              |
 
-![Other Features](./docs/images/vt_other_features.png)
+#### Importance/Viability Tables
+
+***
+
+##### User Management Table
+| Feature             | Importance | Viability | Notes                                       |
+|---------------------|------------|-----------|---------------------------------------------|
+| Register            | 5          | 5         | Allows users to create a new account.       |
+| Log In              | 5          | 5         | Allows users to access their accounts.      |
+| Log Out             | 5          | 5         | Allows users to securely exit their accounts. |
+| Edit Profile        | 4          | 4         | Registered users can update personal information. |
+| View User Profile   | 4          | 5         | Users can view their own and others' profiles. |
+| Delete Profile      | 3          | 4         | Allows users to remove their account from the app. |
+
+##### Tree Management Table
+| Feature              | Importance | Viability | Notes                                       |
+|----------------------|------------|-----------|---------------------------------------------|
+| Add Tree Details     | 5          | 5         | Registered users can add new tree entries.  |
+| Edit Tree Details    | 4          | 5         | Users can edit trees they've added.         |
+| Delete Tree Record   | 4          | 4         | Users can delete trees they've added.       |
+| Search Tree Records  | 5          | 5         | All visitors can search the tree database.  |
+| Browse Tree Records  | 5          | 5         | All visitors can browse the tree collection.|
+| View Individual Tree Details | 5  | 5         | All visitors can view tree details.         |
+| Like/Dislike Tree    | 4          | 3         | Registered users can like or dislike trees. |
+| Comment on Tree      | 4          | 3         | Registered users can comment on tree details.|
+
+##### Other Features Table
+| Feature                 | Importance | Viability | Notes                                    |
+|-------------------------|------------|-----------|------------------------------------------|
+| Welcoming Page          | 5          | 5         | First page visitors see, unregistered and registered. |
+| Contact Page            | 3          | 5         | Allows users to contact admins.          |
+| Social Media Integration| 3          | 4         | Lets users share trees on social media.  |
 
 [Back to top ⇧](#table-of-contents)
 
