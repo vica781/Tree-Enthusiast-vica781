@@ -683,16 +683,31 @@ _A single unit of work broken down from the defined user story_
 
 
 **Information Architecture and Navigation**
-<!-- TODO: Make a Diagram -->
-Unfortunately, there wasn't time to make the diagram that would reflect the final structure of the website. The diagram would be similar to the one below, but with updated pages and functionalities. That one is, unfortunatelly, done by hand and even more unfortunatelly, it's done by **my** hand.
 
-![Information Architecture and Navigation 1](./docs/images/diagram_1.jpg)
+The information architecture and navigation diagram for the Tree Enthusiast web application, depicted in the attachment, was crafted using the [Lucid app](https://www.lucidchart.com). The diagram serves as a testament to the CRUD (Create, Read, Update, Delete) functionality embedded within the application's framework.
 
-![Information Architecture and Navigation 2](./docs/images/diagram_2.jpg)
+Starting at the homepage, users are greeted with the option to delve into guided forest experiences. A decision node promptly distinguishes the pathways for visitors, who can choose to sign up or log in, and registered users, who have the facility to directly log into their accounts. The user profile is strategically placed as a central node that branches out into three distinct actions embodying the CRUD principles: viewing (Read), editing (Update), and deleting (Delete) their profile, which is indicative of the personalized experience the application offers.
+
+The trees collection forms the heart of the Tree Enthusiast, showcasing an interactive array where visitors can browse (Read) and search for trees. Here, registered users are granted the capabilities to expand the collection by adding (Create) new trees, as well as curating their personal 'My Trees' collection through edit (Update) and delete (Delete) functions. This not only highlights the CRUD operations but also underscores user engagement and content management within the application.
+
+Further enhancing the user interface, a contact route anchors the flowchart, extending users the courtesy to connect with the site administration or engage via social media, fostering a community-centric environment.
+
+This meticulously constructed flowchart delineates the user journey within the Tree Enthusiast app, seamlessly integrating CRUD operations for an optimized user experience. It underscores the ease of navigation and intuitive interaction with the app's features, thereby ensuring a user-centric digital environment. 
+<br>
+<br>
+For more details on the technologies used in the development of the Tree Enthusiast application, please refer to the '[Technologies Used](#technologies-used)' section or return to the '[Table of Contents](#table-of-contents)'.
+
+![Information Architecture and Navigation 1](./media/docs_images/architecture-and-navigation-diagram.png)
 
 [Back to top ⇧](#table-of-contents)
+
+
+
+
+
+
 #### SKELETON
-help me
+
 - **Wireframes:** The wireframes were created using Balsamiq. The wireframes were created for desktop, tablet, and mobile devices. The wireframes were created for the following pages: Home, Register, Login, Profile, Add Book, Edit Book, Delete Book, Book Details, Favourites, User Added Books, Contact, and 404.
 
 [Link to Wireframes](./docs/wireframes/initial_wireframes_balsamiq.pdf)
@@ -700,6 +715,10 @@ help me
 _N.B. The wireframes were created before the project was started. The final project will abundantly differ from the wireframes._
 
 [Back to top ⇧](#table-of-contents)
+
+
+
+
 
 #### SURFACE
 
