@@ -37,14 +37,14 @@
 ## Introduction
 This website "Books for Life" is a fourth Portfolio Project of the Code Institute's Full Stack Web Development course. It is a Full Stack developed website. The website is built using Django 4.2.9, Bootstrap 4.6 and Python 3.11. The database is hosted on ElephantSQL and the static files are hosted on Cloudinary. The website is deployed on Heroku.
 <br>
-Embark on a botanical journey with the Tree Enthusiast App, a comprehensive tool designed for those who find joy and wonder in the embrace of nature's arboreal splendor. As William Blake poetically reflected, "The tree which moves some to tears of joy is in the eyes of others only a green thing that stands in the way." Our app aims to dissolve this barrier, revealing the true beauty of trees to every enthusiast.
+Embark on a botanical journey with the Tree Enthusiast App, a tool designed for those who find joy and wonder in the embrace of nature's arboreal splendor. As William Blake poetically reflected, "The tree which moves some to tears of joy is in the eyes of others only a green thing that stands in the way." This app aims to dissolve this barrier, revealing the true beauty of trees to every enthusiast.
 
 ### Key Features:
 
-***Discover and Browse:*** Explore a diverse collection of trees at your leisure. Our extensive database provides a wealth of information, allowing you to satisfy your arboreal curiosity.  
-***Search for Specific Trees:*** Looking for information on a particular tree? Our robust search function makes it easy to find the details you need.  
+***Discover and Browse:*** Explore a diverse collection of trees at your leisure. The extensive database provides a wealth of information, allowing you to satisfy your arboreal curiosity.  
+***Search for Specific Trees:*** Looking for information on a particular tree? App's search function makes it easy to find the details you need.  
 ***Printable Identification Guides:*** Take the knowledge with you on your adventures with handy guides that can be printed and brought along on your treks through nature.  
-***Community Contributions:*** Registered users can become an integral part of our community by adding their tree discoveries to our collective repository, complete with their notes and insights.  
+***Community Contributions:*** Registered users can become an integral part of our community by adding their tree discoveries to the app's collective repository, complete with their notes and insights.  
 ***Personal Collection Management:*** Curate your own personal collection of trees within the app. View, edit, and manage your contributions and see how they fit into the broader tapestry of communal knowledge.  
 ***Guided Forest Experiences:*** Connect deeper with nature through our guides on forest bathing and grounding techniques, bringing mental health and mindfulness to the forefront of your outdoor explorations.
 <br>
@@ -52,7 +52,7 @@ Embark on a botanical journey with the Tree Enthusiast App, a comprehensive tool
 The Tree Enthusiast App is not just a tool but a companion for your green escapades. It's a celebration of the trees around us, fostering a community that cherishes and preserves the natural world. Whether you are charting the woods for new specimens or simply enjoying the serenity of a forest bath, the Tree Enthusiast App enriches your experience and deepens your connection to the earth's towering guardians.
 <br>
 <br>
-Join us and turn every green encounter into a moment of learning, sharing, and personal growth. With the Tree Enthusiast App, every tree is a story waiting to be told, and every forest a chapter yet to be explored.
+Join the comunity and turn every green encounter into a moment of learning, sharing, and personal growth. With the Tree Enthusiast App, every tree is a story waiting to be told, and every forest a chapter yet to be explored.
 
 [Back to top ⇧](#table-of-contents)
 
@@ -544,8 +544,6 @@ _A single unit of work broken down from the defined user story_
 
 ## SCOPE
 
-***
-
 ### Features:
 - User registration
 - Profile management
@@ -649,6 +647,32 @@ _A single unit of work broken down from the defined user story_
 
 [Back to top ⇧](#table-of-contents)
 
+## STRUCTURE
+
+### Interaction Design:
+- Users will interact with the Tree Enthusiast app through a combination of mouse clicks and keyboard inputs.
+- Touchscreen-friendly features for mobile and tablet users.
+- Interactive elements such as buttons, forms, and search field will provide visual feedback to facilitate user interaction.
+
+### Information Architecture:
+- Information will be hierarchically structured, emphasizing ease of access to key features like tree browsing, searching, and user profile management.
+- Key information such as tree details will be prominently displayed.
+
+### Navigation:
+- Navigation will be straightforward and user-friendly, with a consistent and prominently placed navigation bar across the website.
+- A responsive design to ensure seamless navigation on various devices, including desktops, tablets, and smartphones.
+- Access to main features like 'Browse Trees', 'My Trees', and 'Add Tree' will be available from the main menu, with additional options accessible from related screens/forms.
+
+### Information Design:
+- Information will be presented in a clear, concise, and engaging manner.
+- Information such as tree descriptions and habitat details will be organized into readable segments for ease of understanding.
+
+### Interface Design:
+- A clean and minimalist interface that highlights the app's features without overwhelming the user.
+- Responsive design principles to ensure the interface is optimized for a variety of screen sizes and resolutions.
+- Consistency in design elements such as color schemes, typography, and button styles across different pages for a cohesive user experience.
+
+[Back to top ⇧](#table-of-contents)
 
 
 
@@ -656,12 +680,7 @@ _A single unit of work broken down from the defined user story_
 
 
 
-#### STRUCTURE
-- **Interaction Design:** The user will be able to interact with the website using a mouse and keyboard.
-- **Information Architecture:** The information will be structured in a way that is easy to navigate and understand. The information will be organised into logical groups and categories, with the most important information being the most prominent.
-- **Navigation:** The navigation will be intuitive and easy to use. The navigation will be consistent across the website, with the navigation bar being the primary means of navigation. The navigation will be responsive and will adapt to different screen sizes.
-- **Information Design:** The information will be presented in a way that is easy to understand and digest. The information will be presented in a way that is visually appealing and engaging.
-- **Interface Design:** The interface will be clean and simple. The interface will be responsive and will adapt to different screen sizes. The interface will be consistent across the website.
+
 
 **Information Architecture and Navigation**
 <!-- TODO: Make a Diagram -->
