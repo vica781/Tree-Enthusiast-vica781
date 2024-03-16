@@ -674,15 +674,7 @@ _A single unit of work broken down from the defined user story_
 
 [Back to top ⇧](#table-of-contents)
 
-
-
-
-
-
-
-
-
-**Information Architecture and Navigation**
+### **Information Architecture and Navigation:**
 
 The information architecture and navigation diagram for the Tree Enthusiast web application, depicted in the attachment, was crafted using the [Lucid app](https://www.lucidchart.com). The diagram serves as a testament to the CRUD (Create, Read, Update, Delete) functionality embedded within the application's framework.
 
@@ -695,7 +687,7 @@ Further enhancing the user interface, a contact route anchors the flowchart, ext
 This meticulously constructed flowchart delineates the user journey within the Tree Enthusiast app, seamlessly integrating CRUD operations for an optimized user experience. It underscores the ease of navigation and intuitive interaction with the app's features, thereby ensuring a user-centric digital environment. 
 <br>
 <br>
-For more details on the technologies used in the development of the Tree Enthusiast application, please refer to the '[Technologies Used](#technologies-used)' section or return to the '[Table of Contents](#table-of-contents)'.
+For more details on the technologies used in the development of the Tree Enthusiast application, please refer to the [Technologies Used](#technologies-used) section or return to the [Table of Contents](#table-of-contents).
 
 ![Information Architecture and Navigation 1](./media/docs_images/architecture-and-navigation-diagram.png)
 
@@ -720,14 +712,36 @@ _N.B. The wireframes were created before the project was started. The final proj
 
 
 
-#### SURFACE
+#### **SURFACE**
 
-##### Colour Scheme
-[Sunny Bay Bridge color combination](https://www.canva.com/colors/color-palettes/sunny-bay-bridge/)
+##### Imagery and Colour Scheme
 
-![colour scheme](./docs/images/colour_scheme.png)
+The selection of images for the Tree Enthusiast app is a meticulous process that seeks to reinforce the application’s purpose of connecting nature lovers and providing a tranquil user experience. Each image is deliberately chosen for its visual appeal and its ability to evoke a sense of calm and serenity, mirroring the tranquility one might find in a forest. The images were created with DALL-E 3, a neural network that generates images from text descriptions.
 
-This colour scheme is used throughout the website. To it the standard Bootstrap colours are added. It is a nice and clean colour scheme that is easy on the eyes and doesn't disctract the user from the content.
+![The selection of images for the Tree Enthusiast app](./media/docs_images/color-scheme-bg-imgs.png) 
+
+The overarching green palette, highlighted by the lush forest backgrounds, sets a thematic continuity that aligns with the app’s core subject—trees. This choice of imagery not only brings users closer to the subject matter but also serves as a constant visual reinforcement of the app’s theme. The incorporation of detailed macro photography, such as close-ups of sea buckthorn and vibrant foliage, further immerses users in the natural world, fostering a deeper connection with the content.
+
+![The overlay, navbar and footer font colour](./media/docs_images/color-scheme-home.png)
+
+The overlay colors on different screens and image cards are carefully chosen to not overpower the underlying images, ensuring that the content remains the focal point. These overlays utilize a subtle opacity that allows for legibility of text while maintaining the integrity of the images behind them. This delicate balance between visibility and aesthetics enhances user engagement without distracting from the app’s verdant imagery.
+
+![The overlay, navbar and footer font colour](./media/docs_images/color-sceme-my_trees.png)
+
+In addition, the color of the font used in the navigation bar and the footer is optimized for readability against the variable backgrounds. The choice of a light-colored font on a darker background ensures legibility across diverse images, whether the backdrop is the dense green of a forest or the vivid oranges of sea buckthorn berries.
+
+![Favicon/App's Logo and prfile images](./media/docs_images/favicon-prof-imgs.png)
+
+Favicons and profile images featuring silhouettes of trees and leaves reinforce the botanical focus of the app. They serve as a visual shorthand for the app’s purpose, providing a consistent and recognizable branding across various user interfaces.
+
+Overall, the design choices made in the Tree Enthusiast app are reflective of an intentional strategy to harmonize the visual elements with the user interface. By employing a consistent and nature-inspired color scheme, the app creates an immersive experience that is both visually cohesive and user-friendly. The seamless integration of imagery and interface elements contributes to a user experience that is both aesthetically pleasing and functionally intuitive, allowing users to navigate the app with ease while remaining engaged with its content.
+
+[Back to top ⇧](#table-of-contents)
+
+
+
+
+
 
 ##### Typography
 
