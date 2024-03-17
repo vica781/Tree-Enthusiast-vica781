@@ -982,7 +982,16 @@ Each error page maintains the app's theme, reflecting the natural and peaceful e
     - As a local IDE.
 - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
     - For testing and debugging.
-- [Mozilla Firefox](https://www.mozilla.org/en
+- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- [Microsoft Edge](https://www.microsoft.com/en-us/edge)
+- [Google Chrome](https://www.google.com/chrome/)
+    - Browsers used for testing and debugging.
+
+#### Additional Tools
+- [Am I Responsive](http://ami.responsivedesign.is/)
+    - For creating mockup images.
+- [EmailJS](https://www.emailjs.com/)
+    - For implementing email functionality.
 
 [Back to top ⇧](#table-of-contents)
 
@@ -1063,6 +1072,8 @@ If you don't have a Cloudinary account already, you will need to [Sign Up for Fr
 The address of the server will appear in the terminal window.
 Add /admin to the address to access the Django admin panel using your superuser credentials.
 
+[Back to top ⇧](#table-of-contents)
+
 ### Heroku Deployment
 
 Sign up to [Heroku](https://heroku.com/) for free if you don't already have an account.
@@ -1125,6 +1136,8 @@ Under Deployment Method, choose GitHub and search for your repository and click 
 
 14. Now whenever you push your commits to GitHub, Heroku will rebuild the application.
 
+[Back to top ⇧](#table-of-contents)
+
 ### Forking the GitHub Repository
 The project can be forked in order to make a copy of the original repository and propose changes to the project owner using Pull Requests.
 That can be done by following these steps:
@@ -1136,55 +1149,36 @@ You can now propose changes to the Repository by creating a Pull Request.
 ### Live deployment
 The web site is deployed on Heroku and can be found [here](https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com/).
 
-
 [Back to top ⇧](#table-of-contents)
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 ## Credits
 
 ### Code
-- Navbar code was adapted from [Bootstrap](https://getbootstrap.com/docs/5.0/examples/navbars/).
-- The code for the contact form was adapted from [EmailJS](https://www.emailjs.com/).
-- The code for the custom 404 page was adapted from [Django Docs](https://docs.djangoproject.com/en/3.2/ref/views/#error-views).
+- The Navbar code was adapted from [Bootstrap](https://getbootstrap.com/docs/5.0/examples/navbars/).
+- The contact form functionality was inspired by [EmailJS](https://www.emailjs.com/).
+- Custom 404 and other error pages were developed with guidance from [Django Docs](https://docs.djangoproject.com/en/3.2/ref/views/#error-views).
+- The text animations on the Homepage were adapted from Alvaro Trigo's blog on [CSS text animations](https://alvarotrigo.com/blog/css-text-animations/) and a [CodePen example by Andy Sanchez](https://codepen.io/andysanchez-dev/pen/GYPevV*/).
+- Footer social media links were adapted from [MDBootstrap](https://mdbootstrap.com/docs/standard/navigation/footer/).
+- The implementation of Password Validators was guided by [Django documentation](https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators) and related [Django ticket discussions](https://code.djangoproject.com/ticket/28163).
+- Substantial learning and understanding were also gained from Corey Schafer's Python and Django tutorials on [his YouTube channel](https://www.youtube.com/@coreyms).
+- For general development and troubleshooting, resources such as Code Institute's course materials, [Stack Overflow](https://stackoverflow.com/), [Django documentation](https://docs.djangoproject.com/en/3.2/), and John Elder's [Codemy](https://codemy.com/) were frequently referenced.
 
-- The code for the text animations on the Homepage:
-    - Main title:
-    "Flip Text Animation" adapted from [https://alvarotrigo.com/blog/css-text-animations/](https://alvarotrigo.com/blog/css-text-animations/)
-    - Second title:
-    [https://codepen.io/andysanchez-dev/pen/GYPevV*/](https://codepen.io/andysanchez-dev/pen/GYPevV*/)
-- The code for the footer social media links was adapted from:
-[https://mdbootstrap.com/docs/standard/navigation/footer/](https://mdbootstrap.com/docs/standard/navigation/footer/)
+[Back to top ⇧](#table-of-contents)
 
-- The code for the Password Validators was adapted from:
-[https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators](https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators) and
-[https://code.djangoproject.com/ticket/28163](https://code.djangoproject.com/ticket/28163)
 
-For the rest of the code, the developer relied on Code Institute's course material,
-the [stackoverflow](https://stackoverflow.com/), [Django documentation](https://docs.djangoproject.com/en/3.2/), and John Elder's [Codemy](https://codemy.com/).
-
-### Content
-- The content of the website was written by the developer.
-
-### Media
-- The images used in the website were obtained from [Unsplash](https://unsplash.com/).
-- The site logo was created using [favicon.io](https://favicon.io/).
-- The mockup image at the beginning of this file was created using [Am I Responsive](http://ami.responsivedesign.is/).
-- The Shakespeare image and the default book image of a monk were generated by [DALL-E 2](https://openai.com/dall-e-2).
+#### Additional Tools and Resources
+- [ColourSpace](https://mycolor.space/) was used for color palette analysis and creation.
+- [Peek Screen Recorder](https://apps.microsoft.com/detail/xp8cd3d3q50ms2?hl=en-gb&gl=GB) for recording screen activities.
+- [Convertio](https://convertio.co/) for file and image conversions.
+- [DALL-E 3](https://openai.com/dall-e-3) for creating logos, favicons, background images, and profile images.
+- Snipping Tool for capturing and editing images.
+- Paint and 3D Paint for basic image editing.
+- [removebg](https://www.remove.bg/upload) for removing image backgrounds.
 
 ### Acknowledgements
-- Seun Owonikoko, my mentor, for her guidance and support. Without her, this project wouldn't be possible or remotely as interesting.
-- Rebecca Tracey-Timoney, our cohort lead, for her wise guidance and all the material she shared with me. All similarities between this project and her material are _**not coincidental**_.
-- Code Institute's Slack community for their support and feedback.
-- Code Institute's Tutor Support for their support and feedback (I don't want to give names. I hope that's ok with you, Rebecca :-)).
-- My dear colleagues and friends from the Code Institute's Full Stack Web Development, especially Sirinya, Victoria, Richard, Lauren, Ho, for their support and testing services.
-- My friends: Boris, Zeljka and Dragan for helping me with the testing.
+- A heartfelt thank you goes to my mentor, Brian Macharia, for his guidance, patience, and invaluable insights throughout this journey.
+- Special appreciation is extended to my friend and fellow Code Institute group member, Tomislav Dukez, for his support and collaborative spirit that enriched this project.
+- Immense gratitude to my family, especially my sons Tim and Ilya, for their understanding, encouragement, and the joy they bring, which have been the driving force behind my efforts.
+- Lastly, I extend my thanks to the wider online developer community. Their shared knowledge and resources have been instrumental in the success of this project.
+
+[Back to top ⇧](#table-of-contents)
