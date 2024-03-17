@@ -810,94 +810,214 @@ To visualize the relationships and structure, diagrams can be created using tool
 ## Features
 
 ### Existing Features
+
 #### Navbar
-Navbar is based on a template from Bootstrap Documentation. On the left, there's a logo that is also a clickable link to the homepage. Find Book link to the page for searching books and the Contact Page link. THe Find Book link doesn't appear if the user is not logged in.
-On the right, there are links to the Register and Login pages. If the user is logged in, the links to the Register and Login pages are replaced with the links to the Profile with a small profile image icon and Logout pages. Similarly, left of them, there are links Add Book, My Books and My Favourites that lead to the corresponding pages, and they also appear only on successfull login. The links are responsive and collapse into a hamburger menu on smaller screens.
-For the profile image there's a default image that is used if the user doesn't upload their own image.
+- The logo functions as a link to the homepage, ensuring users can always navigate back easily.
+- Features a user-specific navigation experience; authenticated users can access options to add trees and manage their collections.
+- Search functionality embedded in the navbar allows users to find specific trees.
+- Adapts to different devices with a collapsible hamburger menu on smaller screens.
 
 #### Footer
-Footer is based on a template from [MdBootstrap Documentation](https://mdbootstrap.com/docs/standard/navigation/footer/). It contains links to the social media accounts of the website. The links open in a new tab. At the bottom, there are copywrite information. There's a JS code that takes care of the fotter's possibility to stick to the bottom of the page.
+- Styled with Bootstrap for consistency and contains important links, including social media and contact information.
+- Social media links open in new tabs to maintain user presence on the app.
 
-Navbar and Footer are the common elements for all the pages of the website.
+#### User Authentication System
+- Secure registration, login, and logout capabilities.
+- Users can manage their profiles, with the option to update personal information or delete their account.
+- Profile management includes a default profile image which can be replaced with a user-uploaded one.
+- Show/Hide password functionality improves the user experience on authentication forms.
 
-#### Messages
-In-built Django messages system is used to inform the user about the actions they took. The messages are displayed on the top of the page. The messages are responsive and disappear after a few seconds.
+#### Home Page Features for Visitors and Users
+- The **Home page** serves as an **inspirational gateway** into the app, highlighting the app's central theme of tree appreciation with a visually engaging design.
+- **Visitors** are treated to **educational resources**, an **inspirational quote** related to the beauty of trees, and **links to guides** on tree identification and forest therapy.
+- The page encourages exploration with quick access to resources about the benefits of forest bathing and outdoor therapy for mental health, complementing the information with links to authoritative external content.
+- **Call-to-action buttons** prompt visitors to register or log in, offering a clear path to a more personalized experience, such as adding new trees or viewing their tree collection.
+- **Registered users** receive a warm welcome by name and can navigate easily with tailored options like 'Add Tree' and 'My Trees', designed to enhance their interactive experience with the app.
 
-#### Homepage
-On the homepage there are animations, images and a short description of the website. The animations are made with CSS and Javascript. The animations and contents are responsive. There are also buttons to My Books and My Profile Page.
+#### Tree Management Features
+- Users can add new tree entries with a form that accepts detailed information.
+- Edit and delete capabilities allow users to manage their tree collection effectively.
+- Individual tree detail pages offer comprehensive information and imagery.
 
-#### Login/Register Pages
-Login and Register Pages are simple pages with forms for login and registration. The forms are made with html and are controlled by views in Django. The forms are responsive. The forms are validated on the client side and the server side. The forms are validated on the client side with HTML5 validation. The final result is a new user record in the database. After the user is registered, the user is redirected to the My Books Page. After the user is logged in, the user is redirected to the My Books Page.
+#### Browsing Trees
+- Visitors to the site can browse the tree collection without the need to register or log in, encouraging engagement with the app's content right from the start.
+- Each tree is presented in a card layout with a clear image and the common name displayed, making it easy for users to visually scan and select trees of interest.
+- Registered users have the added functionality of adding trees to their personal collection directly from the browse view, promoting interaction and personalized curation of content.
+- The browsing page includes a user-friendly interface with pagination or infinite scroll (depending on implementation) to ensure a seamless browsing experience, even with a large number of entries.
+- For both visitors and registered users, clicking on a tree card directs to a detailed view, offering a deeper dive into the information about the tree species, including its habitat, origin, and other engaging details.
+- The browsing feature is fully responsive, ensuring that visitors and users have a consistent experience across all devices, whether they are at home on a desktop computer or on-the-go with a mobile device.
 
-#### Contact Page
-Contact Page is a simple page with a contact form. The form is made with EmailJS. The form is responsive. The form is validated on the client side and the server side. The form is validated on the client side with HTML5 validation. The final result is an email that the developer receives on their email account.
+#### Search Functionality
+- Allows for keyword searches throughout the tree database, displaying results in a visually pleasing card layout.
 
-#### Find a Book Page
-Find a Book Page is a page with a search form. The form is made with html and is controlled by a view in Django. The form is responsive. The form is validated on the client side and the server side. The form is validated on the client side with HTML5 validation. The final result is a list of books that match the search criteria.
-There's a search field in which a user can write their queries. The button next to the search field triggers the search. The search works for the data that include titles, authors and categories of the books. If the input field is not empty, the clear search buttton appears. The clear search button clears the search field. If the input field is empty, the clear search button disappears. The search results are ordered by the date of creation of the book record.
-The nuber of found records appears above the table. Table has as columns number (sequential), Author, TItle, Category, and like. On smaller screens, numbers and categories columns dissapear. The book can be liked or unliked by clicking on the heart icon. Unliked book has a blue shallow animated heart, liked the red solid animated heart. The implementation isn't perfect, because every (un)liking refreshes the page, and if there are many books, the pages moves to the top.
-User can click on the title of the book to be redirected to the book details page.
+### Custom Error Pages
+To enhance the user experience, our app includes customized error pages that guide users back to the app's main content when they encounter an error.
 
-#### Book Details Page
-To this page the user is redirected when they click on the title of the book in the search results on Finda A Book Page, on My Books Page or on My Favourites Page. The page contains all the information about the book. The page is responsive. The page contains the title, author, image, full description, date of addition, category and the number of likes.
-There's a Back button to bring the user back to the page from which they came to the Book Details. It is not he perfect solution, but it's the best that could be done in the time given.
-There's also the possibility to like or unlike a book like on the Find a Book Page.
-#### Add Book
-Add Book Page is a page with a form for adding a book to the database. The form is made with html and is controlled by a view in Django. Only non required filed is the image. The form is validated on the client side and the server side. The final result is a new book record in the database. After the book is added, the user is redirected to the My Books Page.
+#### 404 Page Not Found
+Our custom 404 page gently informs users that the page they are looking for cannot be found. It provides a clear and friendly message, assuring them that it's just a minor detour. The page features a serene forest background and offers a direct link to return to the homepage.
 
-#### My Books Page
-My Books Page is a page with a table of books added by the user. The page is responsive. The table has as columns number (sequential), Author, Title, Category, and like. On smaller screens, numbers and categories columns dissapear. The book can be edited or deleted by clicking on the relative buttons on the right of the record. The user can click on the title of the book to be redirected to the book details page.
-At the bootom of the page is Add a Book button that brings the user to the Add Book Page.
-By clicking on the Edit button, the user is redirected to the Edit Book Page. By clicking on the Delete button, the user is redirected to the Delete Book Page.
+![404 Page](./media/docs_images/404_sc_sh.png)
 
-#### Edit Book Page
-Edit Book Page is a form for editing a book record. The form is made with html and is controlled by a view in Django. Only non required filed is the image. The form is validated on the client side and the server side.
-The form is prepopulated with the data from the book record. The user can edit the data and submit the form. The final result is an updated book record in the database. After the book is edited, the user is redirected to the My Books Page.
-If the user clicks on the Cancel button, they are redirected to the My Books Page without any changes in the record of the database.
+#### 405 Method Not Allowed
+When a user attempts an action that's not allowed, our 405 error page is there to guide them. It acknowledges the wrong turn with a calm forest backdrop and encourages users to return to the main path, offering a link back to the safety of the homepage.
 
-#### Delete Book Page
-Delete Book Page is a simple one. It contains the details of the book record: title, author, image, and short description.
-There are also a confirmation message and two buttons. If the user clicks on the Delete button, the book record is deleted from the database and the user is redirected to the My Books Page. If the user clicks on the Cancel button, they are redirected to the My Books Page without any changes in the record of the database.
-The original idea was to have a modal for the confirmation message on My Books Page, but there wasn't time for implementation.
+#### 500 Internal Server Error
+Unexpected server issues are addressed with our 500 error page. It reassures users that we are aware of the problem and are diligently working to fix it. While our digital environment recovers, users can click on the provided link to return to the homepage, which remains a bastion of tranquility and order amidst the chaos.
 
-### My Favourites Page
-Similarly to Find a Book and My Books Pages, this Page contains a table of books. The table has as columns number (sequential), Author, Title, Category, and UnFav. On smaller screens, numbers and categories columns dissapear. The book can be unliked by clicking on the red X icon. By UnFav(ouring) of the book, the same is removed from the list.
-At the bottom of the page is Add to Favourites button that brings the user to the Fidn a Book Page that allows users to like or unlike a book.
+![500 Page](./media/docs_images/500_sc_sh.png)
 
-#### Profile Page
-To arrive to Profile Page, user can click or on the button on the Homepage or on the link in the Navbar (that is, a round profile image with username on the right). The page contains the user's profile image, username and email. There are two buttons: Edit Profile and Delete Profile. By clicking on the Edit Profile button, the user is redirected to the Edit Profile Page.
-By clicking on the Delete Profile button, the Delete Profile modal is called for the confirmation. If confirmed, the user is redirected to the Homepage and their profile is deleted from the database. The same deletion causes the deletion of all the books added by the user. The user is logged out and the session is terminated. If the user clicks on the Cancel button, they are back to the Profile Page without any changes in the record of the database.
+Each error page maintains the app's theme, reflecting the natural and peaceful essence of our brand while providing users with a seamless and non-disruptive experience during their digital nature walks.
 
-#### Edit Profile Page
-Edit Profile Page is a simple form that gives the user the possibility to change their email, pasword and profile image. The form is made with Django, and is controlled by a view in Django. The form is validated on the client side and the server side. The form is prepopulated with the data from the user record. The user can edit the data and submit the form. The final result is an updated user record in the database. After the user is edited, the user is redirected back to the Profile Page. If password is left empty, the password is not changed.
-If the user clicks on the Cancel button, they are redirected to the Profile Page without any changes in the record of the database.
-#### Custom Error Page
-Custom 404 Error Page is made with Django. It is a simple page with a message and a large round image that changes from grayscale to colour on hoverm and by clicking on it, the user comes back to the Homepage.
+#### Responsive Layout
+- Ensures a fluid experience on a variety of devices, with pages and components that adjust to screen sizes.
 
-#### Favicon
-Favicons are made by the online [favicon.io](https://favicon.io/) generator. The favicon is a simple B4L logo that is self explanatory and recognizable.
-#### Future Features
-In early stages, the idea was to have a rich text editor for the book descriptions. The idea was to use Summernote. The implementation wasn't successful, and the idea was partialy abandoned. The idea is to implement it in the future.
-The idea was to have a dedicated page for the categories in order to add a new category. The idea was to have a Many to Many relationship between the Book and Category models. The idea was to implement it in the future.
-Another idea was to have a details of the contributing user on the book detail page, and to be able to see all the users and their books on the dedicated page. The idea was to implement it in the future. 
-Obviously, there was the idea of implementing the administrator's access and different functionalities. Especially the control of the deletions (books and users) and the control of the categories. In that way, the deletion couldn't be automatic, but controlled by requests to Administrator.
-Developer wanted to implement the pagination for all the tables, but there wasn't time for that. The idea is to implement it in the future.
+#### Additional UI Features
+- Password visibility toggle for ease during authentication processes.
+- Modal dialogs for critical actions:
+  - Confirmations for logging out, deleting user profiles, and removing tree entries ensure intentional user interactions and prevent accidental data loss.
+  - Modal forms for user and tree deletions include password confirmation to secure the process.
 
 [Back to top ⇧](#table-of-contents)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Issues and Bugs
-- *Book Deletion Modal*
-    - **Issue:** The idea was to have a modal for the confirmation message on My Books Page, but there wasn't time for implementation. The attempt to add modal resulted in making automatic modal for the deletion for each record. That was not the desired result.
-- *Book Liking*
-    - **Issue:** The implementation isn't perfect, because every (un)liking refreshes the page, and if there are many books, the pages moves to the top. The developer tried to implement it without using JS, but that didn't give the desired result.
-- *Back Button*
-    - **Issue:** The idea was to have a Back button that would bring the user back to the page from which they came to the Book Details. It is not he perfect solution. It uses a navigation history to go one step back. If the book is (un)liked, and page refreshes, that back needs to be pressed a few times to get the user back to the desired page without refreshing the cache.
-- *Book Short Description*
-    - **Issue:** In early stages, the idea was to have a modal showing on book title clicked with only a short description and the button read more that would bring to the Book detail page. But, there wasn't time for full implementation.
-- *Directory Structure*
-    - **Issue:** The directory structure is not the best. The developer tried to make it as logical as possible, but there's a lot of room for improvement. The templates in the authors app are not following the ideal structure (/templates/app-name/...). Unfortunatelly, the developer realised that too late and didn't want to compromise the functionality of the website by changing the structure.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 [Back to top ⇧](#table-of-contents)
+
+## Technologies Used
+
+### Main Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+    - HTML5 is used to structure the content of the website.
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+    - CSS3 is utilized for styling the website's content, with responsive design elements for mobile and desktop views.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    - JavaScript adds interactive elements to the website, enhancing user experience.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+    - Python, combined with Django, forms the backbone of the website's backend logic.
+
+### Frameworks, Libraries & Programs Used
+
+#### Front-End
+- [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+    - Bootstrap 4.6 is used for its responsive design features and pre-designed components.
+- [Font Awesome](https://fontawesome.com/)
+    - Font Awesome provides icons used across the website.
+
+#### Back-End
+- [Django](https://www.djangoproject.com/)
+    - Django is the primary web framework used for rapid development and pragmatic design.
+
+- [Cloudinary](https://cloudinary.com/)
+    - Cloudinary is integrated for efficient image upload and management.
+
+- [PostgreSQL](https://www.postgresql.org/)
+    - **PostgreSQL** to create the database of the website.
+
+- [ElephantSQL](https://www.elephantsql.com/)
+    - **ElephantSQL** for hosting of the database of the website.
+
+- [Heroku](https://www.heroku.com/)
+    - **Heroku** for the website deployment.
+
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)
+    - Django Allauth provides authentication, registration, and account management capabilities.
+
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+    - This Django app helps to manage Django forms rendering in an elegant and DRY way.
+
+- [Pillow](https://pillow.readthedocs.io/en/stable/)
+    - Python Imaging Library (Pillow) is used for adding image processing capabilities to your Django application.
+
+- [Python-Decouple](https://pypi.org/project/python-decouple/)
+    - Used for separating the parameters of your application from the code, enhancing security and flexibility.
+
+- [Gunicorn](https://pypi.org/project/gunicorn/)
+    - Gunicorn, a Python WSGI HTTP Server, is used for running the Django web application on Heroku.
+
+- [Psycopg2](https://pypi.org/project/psycopg2/)
+    - Psycopg2 is a PostgreSQL adapter for Python, allowing interaction between Python applications and PostgreSQL database.
+
+- [Python-Dotenv](https://pypi.org/project/python-dotenv/)
+    - Manages environment variables, important for securing sensitive information like database credentials.
+
+- [Requests](https://pypi.org/project/requests/)
+    - Requests library is used to send HTTP requests easily, useful for interacting with external APIs or services.
+
+- [DJ-Database-URL](https://pypi.org/project/dj-database-url/)
+    - Simplifies database configuration using URLs, particularly useful when deploying to platforms like Heroku.
+
+- [OAuthlib](https://oauthlib.readthedocs.io/en/latest/)
+    - OAuthlib is a framework which implements OAuth1 and OAuth2 functionalities, useful for social authentication in Django.
+
+- [PyJWT](https://pyjwt.readthedocs.io/en/latest/)
+    - PyJWT is used for encoding and decoding JSON Web Tokens (JWT) in Python, particularly helpful in authentication processes.
+
+- [Cryptography](https://pypi.org/project/cryptography/)
+    - Provides cryptographic recipes and primitives, essential for ensuring secure data storage and transmission.
+
+- [EmailJS](https://www.emailjs.com/)
+    - EmailJS JavaScript library is used for creating a functional contact form.
+
+- Other dependencies like `asgiref`, `certifi`, `cffi`, `charset-normalizer`, `defusedxml`, `idna`, `itsdangerous`, `packaging`, `python3-openid`, `pycparser`, `pytz`, `sqlparse`, `typing_extensions`, `tzdata`, and `urllib3` support various functionalities and are part of the Python ecosystem used in the project.
+
+
+#### Version Control and Deployment
+- [Git](https://git-scm.com/)
+    - Git is used for version control, tracking changes in the source code throughout the development process.
+- [GitHub](https://github.com/)
+    - GitHub hosts the code repository and facilitates version control using Git.
+
+#### Other Tools and Libraries
+- [JavaScript Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+    - Utilized for making asynchronous HTTP requests to the server for data exchange.
+- [Responsive Design](https://www.w3schools.com/css/css_rwd_intro.asp)
+    - CSS media queries ensure the site is responsive across various device sizes.
+- Custom JavaScript
+    - Custom scripts are employed for functionalities like form validation, show/hide password features, and scroll management.
+
+### Additional Tools
+- [Visual Studio Code](https://code.visualstudio.com/)
+    - VS Code is used as the primary code editor for development.
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+    - Chrome DevTools assists in testing and debugging the application in a browser environment.
+- [W3C Markup Validation Service](https://validator.w3.org/)
+    - Used to ensure the quality and validity of HTML code.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+    - Used for validating the CSS code.
+- [JSHint](https://jshint.com/)
+    - A tool for detecting errors and potential problems in JavaScript code.
+
+[Back to top ⇧](#table-of-contents)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Technologies Used
 
@@ -979,6 +1099,19 @@ Developer wanted to implement the pagination for all the tables, but there wasn'
     - Peek was used to record the website in action.
 
 [Back to top ⇧](#table-of-contents)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Testing
 For Testing details go to a separated file [TESTING.md](TESTING.md)
