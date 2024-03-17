@@ -802,11 +802,6 @@ To visualize the relationships and structure, diagrams can be created using tool
 
 [Back to top ⇧](#table-of-contents)
 
-
-
-
-
-
 ## Features
 
 ### Existing Features
@@ -922,196 +917,91 @@ Each error page maintains the app's theme, reflecting the natural and peaceful e
     - Bootstrap 4.6 is used for its responsive design features and pre-designed components.
 - [Font Awesome](https://fontawesome.com/)
     - Font Awesome provides icons used across the website.
+- [Google Fonts](https://fonts.google.com/)
+    - The project uses **Google Fonts** to style the website's fonts.
 
 #### Back-End
 - [Django](https://www.djangoproject.com/)
     - Django is the primary web framework used for rapid development and pragmatic design.
-
 - [Cloudinary](https://cloudinary.com/)
     - Cloudinary is integrated for efficient image upload and management.
-
 - [PostgreSQL](https://www.postgresql.org/)
-    - **PostgreSQL** to create the database of the website.
-
+    - PostgreSQL is used as the database for the website.
 - [ElephantSQL](https://www.elephantsql.com/)
-    - **ElephantSQL** for hosting of the database of the website.
-
+    - ElephantSQL for hosting of the database.
 - [Heroku](https://www.heroku.com/)
-    - **Heroku** for the website deployment.
-
+    - Heroku for the website deployment.
 - [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)
-    - Django Allauth provides authentication, registration, and account management capabilities.
-
+    - For authentication, registration, and account management.
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-    - This Django app helps to manage Django forms rendering in an elegant and DRY way.
-
+    - To manage Django forms rendering.
 - [Pillow](https://pillow.readthedocs.io/en/stable/)
-    - Python Imaging Library (Pillow) is used for adding image processing capabilities to your Django application.
-
+    - For image processing capabilities.
 - [Python-Decouple](https://pypi.org/project/python-decouple/)
-    - Used for separating the parameters of your application from the code, enhancing security and flexibility.
-
+    - For managing sensitive configuration parameters.
 - [Gunicorn](https://pypi.org/project/gunicorn/)
-    - Gunicorn, a Python WSGI HTTP Server, is used for running the Django web application on Heroku.
-
+    - WSGI HTTP Server for running the Django application.
 - [Psycopg2](https://pypi.org/project/psycopg2/)
-    - Psycopg2 is a PostgreSQL adapter for Python, allowing interaction between Python applications and PostgreSQL database.
-
+    - PostgreSQL adapter for Python.
 - [Python-Dotenv](https://pypi.org/project/python-dotenv/)
-    - Manages environment variables, important for securing sensitive information like database credentials.
-
+    - For managing environment variables.
 - [Requests](https://pypi.org/project/requests/)
-    - Requests library is used to send HTTP requests easily, useful for interacting with external APIs or services.
-
+    - For sending HTTP requests.
 - [DJ-Database-URL](https://pypi.org/project/dj-database-url/)
-    - Simplifies database configuration using URLs, particularly useful when deploying to platforms like Heroku.
-
+    - For database configuration.
 - [OAuthlib](https://oauthlib.readthedocs.io/en/latest/)
-    - OAuthlib is a framework which implements OAuth1 and OAuth2 functionalities, useful for social authentication in Django.
-
+    - For OAuth1 and OAuth2 functionalities.
 - [PyJWT](https://pyjwt.readthedocs.io/en/latest/)
-    - PyJWT is used for encoding and decoding JSON Web Tokens (JWT) in Python, particularly helpful in authentication processes.
-
+    - For encoding and decoding JSON Web Tokens.
 - [Cryptography](https://pypi.org/project/cryptography/)
-    - Provides cryptographic recipes and primitives, essential for ensuring secure data storage and transmission.
-
+    - For cryptographic recipes and primitives.
 - [EmailJS](https://www.emailjs.com/)
-    - EmailJS JavaScript library is used for creating a functional contact form.
-
-- Other dependencies like `asgiref`, `certifi`, `cffi`, `charset-normalizer`, `defusedxml`, `idna`, `itsdangerous`, `packaging`, `python3-openid`, `pycparser`, `pytz`, `sqlparse`, `typing_extensions`, `tzdata`, and `urllib3` support various functionalities and are part of the Python ecosystem used in the project.
-
+    - For creating a functional contact form.
 
 #### Version Control and Deployment
 - [Git](https://git-scm.com/)
-    - Git is used for version control, tracking changes in the source code throughout the development process.
+    - Git for version control.
 - [GitHub](https://github.com/)
-    - GitHub hosts the code repository and facilitates version control using Git.
-
-#### Other Tools and Libraries
-- [JavaScript Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-    - Utilized for making asynchronous HTTP requests to the server for data exchange.
-- [Responsive Design](https://www.w3schools.com/css/css_rwd_intro.asp)
-    - CSS media queries ensure the site is responsive across various device sizes.
-- Custom JavaScript
-    - Custom scripts are employed for functionalities like form validation, show/hide password features, and scroll management.
-
-### Additional Tools
-- [Visual Studio Code](https://code.visualstudio.com/)
-    - VS Code is used as the primary code editor for development.
-- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
-    - Chrome DevTools assists in testing and debugging the application in a browser environment.
-- [W3C Markup Validation Service](https://validator.w3.org/)
-    - Used to ensure the quality and validity of HTML code.
-- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
-    - Used for validating the CSS code.
-- [JSHint](https://jshint.com/)
-    - A tool for detecting errors and potential problems in JavaScript code.
-
-[Back to top ⇧](#table-of-contents)
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-## Technologies Used
-
-### Main Languages Used
-- [HTML5](https://en.wikipedia.org/wiki/HTML5)
-    - The project uses **HTML5** to create the content of the website.
-- [CSS3](https://en.wikipedia.org/wiki/CSS)
-    - The project uses **CSS3** to style the content of the website.
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-    - The project uses **JavaScript** to add interactivity to the website.
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-    - The project uses **Python** to create the backend of the website.
-
-### Frameworks, Libraries & Programs Used
-#### Front-End
-- [Bootstrap 5](https://getbootstrap.com/)
-    - The project uses **Bootstrap 5** to simplify the structure of the website and make the website responsive easily.
-- [Google Fonts](https://fonts.google.com/)
-    - The project uses **Google Fonts** to style the fonts of the website. The fonts used are "Montserrat Alternates", "Roboto Serif", and "Mooli".
-- [Font Awesome](https://fontawesome.com/)
-    - The project uses **Font Awesome** to add icons to the website.
-
-#### Back-End
-- [Django](https://www.djangoproject.com/)
-- The project uses **Django** to create the backend of the website.
-- [pip3 (Python Package Installer)](https://pip.pypa.io/en/stable/) 
-    - The project uses **pip3** to install the necessary tools and libraries.
-- [PostgreSQL](https://www.postgresql.org/)
-    - **PostgreSQL** to create the database of the website.
-- [ElephantSQL](https://www.elephantsql.com/)
-    - **ElephantSQL** for hosting of the database of the website.
+    - For hosting the code repository.
 - [Heroku](https://www.heroku.com/)
-    - **Heroku** for the website deployment.
-- [Cloudinary](https://cloudinary.com/)
-    - The project uses **Cloudinary** to store the images of the website.
-- [Summernote](https://summernote.org/)
-    - The project uses **Summernote** to create a rich text editor for the website. Although, this functionality wasn't entirely implemented in the final version of the website.
-- [gunicorn](https://pypi.org/project/gunicorn/)
-    - The project uses Python **gunicorn** library to run the website on Heroku.
-- [dj_database_url](https://pypi.org/project/dj-database-url/)
-    - The project uses Python **dj_database_url** library to connect to the database on Heroku.
-- [psycopg2](https://pypi.org/project/psycopg2/)
-    - The project uses Python **psycopg2** library to connect to the database on Heroku.
-- [python-dotenv](https://pypi.org/project/python-dotenv/)
-    - The project uses **python-dotenv** library to hide sensitive information.
+    - For deploying the website.
 
-- [EmailJS](https://www.emailjs.com/)
-    - EmailJS JavaScript library was used to create a functional contact form.
+#### Design and Planning
+- [Balsamiq](https://balsamiq.com/)
+    - For creating wireframes.
+- [QuickDBD](https://www.quickdatabasediagrams.com/)
+    - For designing the database.
 
-#### Other
-- [Git](https://git-scm.com/) for version control.
-- [GitHub](https://github.com/) for storing the repository online during development.
-- GitHub Projects was used throughout the project for tracking of things to do and bug fixing - [the project's board here](https://github.com/users/tomdu3/projects/4).
-- [Balsamiq](https://balsamiq.com/) to create the wireframes during the design process.
-- [QuickDBD](https://www.quickdatabasediagrams.com/) to create the database design.
-- [Am I Responsive](http://ami.responsivedesign.is/) to create the mockup image at the beginning of this file.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) to check the website for accessibility issues.
-- [W3C Markup Validation Service](https://validator.w3.org/) to check the HTML code.
-- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check the CSS code.
-- [JSHint](https://jshint.com/) to check the JavaScript code.
-- [CI Python Linter](https://pep8ci.herokuapp.com/) to check the Python code.
-- [Favicon.io](https://favicon.io/) to create the favicon.
-- [GitPod](https://gitpod.io/) as a cloud based IDE (only at the early stage of the development).
-- [Visual Studio Code](https://code.visualstudio.com/) as a local IDE.
-- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) for testing and debugging.
-- [Google Chrome](https://www.google.com/chrome/) for testing and debugging.
-- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) for testing and debugging.
-- [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing and debugging.
-- [Canva Color Palette Generator](https://www.canva.com/colors/color-palette-generator/)
-	- Canva Color Palette Generator was used to make the initial colour palette.
-- [Webp Converter](https://developers.google.com/speed/webp)
-	 - Webp Converter was used to convert images to WEBP format on Linux.
-- [GIMP - GNU Image Manipulation Program](https://www.gimp.org/)
-    - GIMP was used to resize and crop images.
+#### Testing and Validation
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+    - For checking website accessibility issues.
+- [W3C Markup Validation Service](https://validator.w3.org/)
+    - For validating HTML code.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+    - For validating CSS code.
+- [JSHint](https://jshint.com/)
+    - For checking JavaScript code.
+- [CI Python Linter](https://pep8ci.herokuapp.com/)
+    - For checking Python code compliance with PEP8.
 
-- [Gnome-screenshot](https://help.gnome.org/users/gnome-screenshot/stable/)
-    - Gnome-screenshot was used to take screenshots of the website.
-- [Peek](https://github.com/phw/peek)
-    - Peek was used to record the website in action.
+#### Development Tools
+- [Visual Studio Code](https://code.visualstudio.com/)
+    - As a local IDE.
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+    - For testing and debugging.
+- [Mozilla Firefox](https://www.mozilla.org/en
 
 [Back to top ⇧](#table-of-contents)
 
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Testing
 For Testing details go to a separated file [TESTING.md](TESTING.md)
