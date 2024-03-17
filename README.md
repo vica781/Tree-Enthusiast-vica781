@@ -783,20 +783,28 @@ Developer is committed to maintaining and improving the accessibility of the Tre
 
 [Back to top ⇧](#table-of-contents)
 
-
-
-
-
 ## Database Design
 Database design was made with [QuickDBD](https://www.quickdatabasediagrams.com/). The database is hosted on ElephantSQL and is a PostgreSQL database.
 
-![Database Design](./docs/images/quickdbd_database_diagram.png)
+![Database Design](./media/docs_images/quickdbd-diagram.png)
 
-- **UserProfile** Model extends the AbstractUser Model. The UserProfile Model is used to store additional information about the user, in this case a profile picture. It's activated once the user takes an action that requires a profile picture, that is updating the profile data.
-- **Book** Model has fields _title, author, slug, short_description, full_description, image_url, likes,_ and _user_. The user field is a foreign key to the UserProfile Model. The likes in fact is not, stricly saying, the field of the book. It's Many to Many connection that generates a linking model between Book record and User record. The slug field is used to create a unique URL for each book. The slug field is automatically generated from the title and there's a custom save method that checks if the slug is unique. If it's not unique, a number is added to the slug. The slug field is used in the URL to identify the book. The id is used to identify the book in the database. The id is used in the URL to identify the book and it's generate automatically.
-- **Category** model is a simple one. Other than id that is generated automatically, it has only a multiple choice field name. The name field is used to identify the category in the database. It is a One to Many relationship between Category and Book models. The original idea was to have Many to Many model, but there wasn't time for implementation.
+![Database Design](./media/docs_images/quickdbd-diagram-1.png)
+
+The database for the Tree Enthusiast app is designed to store user profiles, tree information, and contact messages. It utilizes the PostgreSQL database and the models are structured as follows:
+
+- **Profile Model**: This model extends the built-in Django User model to store profile images using Cloudinary's cloud-based image management solution. It's linked to the User model with a one-to-one relationship, ensuring that each user has a single corresponding profile. The profile is automatically created or updated when a user registers or modifies their profile information.
+
+- **Tree Model**: This model captures the details of individual trees. It includes fields for common names, tree types, origins, introductions, images, and habitats. Each tree is associated with a user through a foreign key relationship, allowing for easy tracking of which user added the tree. Timestamps for creation and updates are automatically managed by Django.
+
+- **Message Model**: Designed to store contact form submissions, this model includes fields for the sender's name, email, optional subject, and the message body. Each message is timestamped upon creation to keep a record of when it was sent.
+
+To visualize the relationships and structure, diagrams can be created using tools like [QuickDBD](https://www.quickdatabasediagrams.com/). The models are organized to facilitate the app's functionality in allowing users to manage their tree collection and communicate through the contact form.
 
 [Back to top ⇧](#table-of-contents)
+
+
+
+
 
 
 ## Features

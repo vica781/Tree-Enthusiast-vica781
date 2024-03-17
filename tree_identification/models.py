@@ -4,7 +4,6 @@ import os
 from django.conf import settings
 from cloudinary.models import CloudinaryField
 
-# MODELS FOR THE USER AUTHENTICATION
 
 # Model to store Registration form data
 class Profile(models.Model):
@@ -21,7 +20,6 @@ class Profile(models.Model):
             return os.path.join(settings.MEDIA_URL, "profile_pics/default.png")
 
 
-# MODELS FOR THE TREE IDENTIFICATION
 # Model to represent the tree data
 class Tree(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)    
