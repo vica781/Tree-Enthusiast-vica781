@@ -720,6 +720,8 @@ The selection of images for the Tree Enthusiast app is a meticulous process that
 
 ![The selection of images for the Tree Enthusiast app](./media/docs_images/color-scheme-bg-imgs.png) 
 
+[Back to top ⇧](#table-of-contents)
+
 The overarching green palette, highlighted by the lush forest backgrounds, sets a thematic continuity that aligns with the app’s core subject—trees. This choice of imagery not only brings users closer to the subject matter but also serves as a constant visual reinforcement of the app’s theme. The incorporation of detailed macro photography, such as close-ups of sea buckthorn and vibrant foliage, further immerses users in the natural world, fostering a deeper connection with the content.
 
 ![The overlay, navbar and footer font colour](./media/docs_images/color-scheme-home.png)
@@ -728,33 +730,36 @@ The overlay colors on different screens and image cards are carefully chosen to 
 
 ![The overlay, navbar and footer font colour](./media/docs_images/color-sceme-my_trees.png)
 
-In addition, the color of the font used in the navigation bar and the footer is optimized for readability against the variable backgrounds. The choice of a light-colored font on a darker background ensures legibility across diverse images, whether the backdrop is the dense green of a forest or the vivid oranges of sea buckthorn berries.
+[Back to top ⇧](#table-of-contents)
 
-![Favicon/App's Logo and prfile images](./media/docs_images/favicon-prof-imgs.png)
+In addition, the color of the font used in the navigation bar and the footer is optimized for readability against the variable backgrounds. The choice of a light-colored font on a darker background ensures legibility across diverse images, whether the backdrop is the dense green of a forest or the vivid oranges of sea buckthorn berries. This consistent color scheme across the app’s interface elements ensures a harmonious visual experience for users, regardless of the content they are viewing. To analise the colour palette developer used tools from [ColorSpace](https://mycolor.space/?hex=%23EFF4EB&sub=1).
+
+![The overlay, navbar and footer font colour](./media/docs_images/colour-palette.png)
+
 
 Favicons and profile images featuring silhouettes of trees and leaves reinforce the botanical focus of the app. They serve as a visual shorthand for the app’s purpose, providing a consistent and recognizable branding across various user interfaces.
+
+![Favicon/App's Logo and prfile images](./media/docs_images/favicon-prof-imgs.png)
 
 Overall, the design choices made in the Tree Enthusiast app are reflective of an intentional strategy to harmonize the visual elements with the user interface. By employing a consistent and nature-inspired color scheme, the app creates an immersive experience that is both visually cohesive and user-friendly. The seamless integration of imagery and interface elements contributes to a user experience that is both aesthetically pleasing and functionally intuitive, allowing users to navigate the app with ease while remaining engaged with its content.
 
 [Back to top ⇧](#table-of-contents)
 
-
-
-
-
-
 ##### Typography
 
-Monserrat Alternates is used for the logo and headings. Roboto Serif is used for the body text. Mooli is used for the book titles. They are all [Google Fonts](https://fonts.google.com/).
+For the Tree Enthusiast application, we've embraced a typography approach that ensures clarity, accessibility, and optimal text rendering across various devices and operating systems. Instead of selecting custom typefaces, we've utilized the native font stack available in [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/content/reboot/), which adapts to the default system font of our users' operating systems. This not only provides a seamless user experience but also leverages the high-performance type rendering that users are accustomed to on their devices.
 
+![Native font stack](./media/docs_images/fonts.png)
 
-##### Imagery
-The images were created with DALL-E 2, a neural network that generates images from text descriptions. Other images were taken from unsplash. For details see [Credits](#credits).
+- For macOS and iOS devices, the UI will display in **San Francisco**, providing a crisp and adaptable interface that aligns with Apple's design aesthetics.
+- **Segoe UI** will be used on Windows systems, which integrates smoothly with Microsoft's modern UI.
+- Android devices will render the app in **Roboto**, Google's signature font that's been designed for legibility on digital screens.
+- On Linux systems, **Noto Sans** offers a uniform appearance, supporting a wide range of scripts for international users.
+- Fallback fonts, such as **Helvetica Neue**, **Arial**, and **sans-serif**, ensure that if the primary fonts are not available, the text still appears polished and readable.
 
-##### Branding
-A logo is created that reflect the essence of "Books for Life." Nothing fancy, just a simple logo that is easy to remember and recognisable (B4L). The tool used is the online [favicon.io](https://favicon.io/) generator.
+Using the native font stack not only provides a comfortable and familiar reading experience but also aligns with our app's theme of natural elegance and simplicity. Our choice reflects our commitment to performance, sustainability, and user-centric design principles.
 
-![Books for Life logo](./docs/images/android-chrome-192x192.png)
+For more information on native font stacks and their benefits, please refer to [this insightful article by Smashing Magazine](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 ##### Prototypes
 Given the time constraints, the website was not prototyped. The website was built using the wireframes as a guide.
