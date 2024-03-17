@@ -759,18 +759,33 @@ For the Tree Enthusiast application, we've embraced a typography approach that e
 
 Using the native font stack not only provides a comfortable and familiar reading experience but also aligns with our app's theme of natural elegance and simplicity. Our choice reflects our commitment to performance, sustainability, and user-centric design principles.
 
-For more information on native font stacks and their benefits, please refer to [this insightful article by Smashing Magazine](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+For more information on native font stacks and their benefits, please refer to this insightful [article by Smashing Magazine](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 ##### Prototypes
-Given the time constraints, the website was not prototyped. The website was built using the wireframes as a guide.
+
+For the development of the Tree Enthusiast app, a fully interactive prototype was not created due to the iterative nature of the development process. The application was built iteratively, with features being added and refined as needed. The initial wireframes served as a foundational guide, but the design evolved organically as the project progressed.
 
 ##### Feedback and Iteration
-Generally, the developer relied on the feedback from the mentor and the peer-code review to improve the website. The developer also relied on the feedback from some other users to improve the website. The constant changing of the website functionalities and design was a result of the feedback received.
+
+The development of Tree Enthusiast has been greatly informed by feedback from various sources. The guiding insights from a dedicated mentor provided the initial direction, while peer reviews contributed to refinements along the way. User feedback was invaluable, highlighting usability and design improvements that were iteratively integrated. This ongoing feedback loop has been crucial in shaping an app that meets the needs of tree enthusiasts while remaining agile and responsive to change. Each iteration has brought functional enhancements and design polish, ensuring that the app not only functions well but also provides a visually pleasing and intuitive user experience.
 
 [Back to top ⇧](#table-of-contents)
 
 ## Accessibility
-Website complies with accessibility standards. The Lighthouse Validation was used to check the website for accessibility issues. The website is fully accessible.
+
+Ensuring website is accessible to all users is a core principle of the Tree Enthusiast app development. Developer have strived to meet accessibility standards to provide a user-friendly experience that is inclusive for individuals with disabilities.
+
+To assess and enhance website's accessibility, developer utilized Lighthouse, an open-source, automated tool by Google that improves the quality of web pages. Lighthouse was instrumental in checking site's for accessibility issues.
+
+The Tree Enthusiast app has been meticulously tested with Lighthouse Validation to ensure that it adheres to the best practices of web accessibility. As a result of commitment and continuous testing, the website currently holds a high accessibility score, reflecting its full accessibility for all users.
+
+Developer is committed to maintaining and improving the accessibility of the Tree Enthusiast app as web standards evolve and as user feedback received. Developer's goal is to ensure that every user, regardless of their ability, can explore, share, and contribute to vast tree database effortlessly.
+
+[Back to top ⇧](#table-of-contents)
+
+
+
+
 
 ## Database Design
 Database design was made with [QuickDBD](https://www.quickdatabasediagrams.com/). The database is hosted on ElephantSQL and is a PostgreSQL database.
