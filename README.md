@@ -831,7 +831,7 @@ To visualize the relationships and structure, diagrams can be created using tool
 - Visitors to the site can browse the tree collection without the need to register or log in, encouraging engagement with the app's content right from the start.
 - Each tree is presented in a card layout with a clear image and the common name displayed, making it easy for users to visually scan and select trees of interest.
 - Registered users have the added functionality of adding trees to their personal collection directly from the browse view, promoting interaction and personalized curation of content.
-- The browsing page includes a user-friendly interface with pagination or infinite scroll (depending on implementation) to ensure a seamless browsing experience, even with a large number of entries.
+- The browsing page includes a infinite scroll to ensure a seamless browsing experience, even with a large number of entries.
 - For both visitors and registered users, clicking on a tree card directs to a detailed view, offering a deeper dive into the information about the tree species, including its habitat, origin, and other engaging details.
 - The browsing feature is fully responsive, ensuring that visitors and users have a consistent experience across all devices, whether they are at home on a desktop computer or on-the-go with a mobile device.
 
@@ -999,13 +999,22 @@ Each error page maintains the app's theme, reflecting the natural and peaceful e
 ## Testing
 For Testing details go to a separated file [TESTING.md](TESTING.md)
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Deployment
 ### Local Deployment
 
 In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone the repository:
 
-- `git clone https://github.com/tomdu3/books-for-life.git`
+- `git clone https://github.com/vica781/Tree-Enthusiast-vica781.git`
 
 If done locally, the virtual environment needs to be created and activated. To do so, in your IDE Terminal, type the following commands:
 ```
@@ -1023,7 +1032,7 @@ venv\Scripts\activate
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tomdu3/books-for-life)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/new/?autostart=true#https://github.com/vica781/Tree-Enthusiast-vica781)
 
 ***
 
@@ -1086,11 +1095,11 @@ web: gunicorn core.wsgi
 
 8. Run `pip3 install -r requirements.txt` to install required Python packages.
 
-9. Add the url of your Heroku app ('https://books-4-life-2d26bdf04dec.herokuapp.com/') to your `settings.py` file:
+9. Add the url of your Heroku app ('https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com/') to your `settings.py` file:
 
 ```
 ALLOWED_HOSTS = [
-    'books-4-life-2d26bdf04dec.herokuapp.com',...
+    "tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com",...
 ]
 ```
 
@@ -1119,16 +1128,27 @@ Under Deployment Method, choose GitHub and search for your repository and click 
 ### Forking the GitHub Repository
 The project can be forked in order to make a copy of the original repository and propose changes to the project owner using Pull Requests.
 That can be done by following these steps:
-First, log in to GitHub and locate the [Project's Repository](github.com/tomdu3/books-for-life).
+First, log in to GitHub and locate the [Project's Repository](https://github.com/vica781/Tree-Enthusiast-vica781).
 At the top of the Repository, on the right side of the page, locate the "Fork" button.
 A copy of the Repository should now be in your GitHub account.
 You can now propose changes to the Repository by creating a Pull Request.
 
 ### Live deployment
-The web site is deployed on Heroku and can be found [here](https://books-4-life-2d26bdf04dec.herokuapp.com/).
+The web site is deployed on Heroku and can be found [here](https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com/).
 
 
 [Back to top ⇧](#table-of-contents)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Credits
 
