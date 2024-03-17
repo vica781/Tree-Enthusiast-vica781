@@ -693,24 +693,17 @@ For more details on the technologies used in the development of the Tree Enthusi
 
 [Back to top ⇧](#table-of-contents)
 
-
-
-
-
-
 #### SKELETON
 
-- **Wireframes:** The wireframes were created using Balsamiq. The wireframes were created for desktop, tablet, and mobile devices. The wireframes were created for the following pages: Home, Register, Login, Profile, Add Book, Edit Book, Delete Book, Book Details, Favourites, User Added Books, Contact, and 404.
+- **Wireframes:** The wireframes were created using Balsamiq. The wireframes were created for desktop, tablet, and mobile devices. 
 
-[Link to Wireframes](./docs/wireframes/initial_wireframes_balsamiq.pdf)
+[Link to Wireframes](./media/docs_images/wireframes.png)
+
+![Wireframes](./media/docs_images/wireframes.png)
 
 _N.B. The wireframes were created before the project was started. The final project will abundantly differ from the wireframes._
 
 [Back to top ⇧](#table-of-contents)
-
-
-
-
 
 #### **SURFACE**
 
