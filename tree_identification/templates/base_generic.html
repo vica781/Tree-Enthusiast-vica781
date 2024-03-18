@@ -122,7 +122,7 @@
             </li>
             <li class="nav-item">
               <a
-                class="btn btn-success nav-link"
+                class="btn btn-success nav-link nav-btns"
                 data-toggle="modal"
                 data-target="#logoutModal"
                 >Logout</a
@@ -130,12 +130,12 @@
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="btn btn-primary nav-link mr-1" href="{% url 'login' %}"
+              <a class="btn btn-primary nav-link nav-btns mr-1" href="{% url 'login' %}"
                 >Login</a
               >
             </li>
             <li class="nav-item">
-              <a class="btn btn-info nav-link me-1" href="{% url 'register' %}"
+              <a class="btn btn-info nav-link nav-btns me-1" href="{% url 'register' %}"
                 >Sign Up</a
               >
             </li>
@@ -161,12 +161,12 @@
     <main class="mb-0">{% block content %}{% endblock %}</main>
 
     <footer class="footer mt-0 pt-2 bg-dark">
-      <div class="footer-container">
+      <div class="footer-container container-fluid">
         <div class="row">
           <!-- First column for About information -->
           <div class="col-md-4">
             <h5 class="footer-headings">About Tree Enthusiast</h5>
-            <p class="footer-paragraph">
+            <p class="footer-paragraph px-5">
               This app is dedicated to tree lovers everywhere. Explore, share,
               and contribute to our vast tree database. Learn about various tree
               species and connect with fellow enthusiasts.
@@ -181,7 +181,7 @@
                 <a
                   href="{% url 'home' %}"
                   aria-label="Link to Home Page"
-                  class="footer-links yellow-on-hover"
+                  class="footer-links yellow-on-hover footer-link"
                   style="color: #9ACD32;"
                   >Home</a
                 >
@@ -190,7 +190,7 @@
                 <a
                   href="{% url 'add_tree' %}"
                   aria-label="Link to Add Tree Page"
-                  class="footer-links yellow-on-hover"
+                  class="footer-links yellow-on-hover footer-link"
                   style="color: #9ACD32;"
                   >Add Tree</a
                 >
@@ -199,7 +199,7 @@
                 <a
                   href="{% url 'my_trees' %}"
                   aria-label="Link to My Trees Collection Page"
-                  class="footer-links yellow-on-hover"
+                  class="footer-links yellow-on-hover footer-link"
                   style="color: #9ACD32;"
                   >My Trees</a
                 >
@@ -215,11 +215,11 @@
                   href="{% url 'contact' %}"
                   class="text-primery yellow-on-hover"
                   aria-label="Link contact Page"
-                  style="color: #9ACD32;"
-                  ><h5 class="footer-headings yellow-on-hover">
+                  style="color: #9ACD32;">
+                  <h5 class="footer-headings yellow-on-hover footer-link">
                     Contact Us
-                  </h5></a
-                >
+                  </h5>
+                </a>
               </li>
               <li class="footer-li">Email: info@treeenthusiast.com</li>
               <li class="footer-li">Phone: 011-11111-111</li>
@@ -264,7 +264,7 @@
       <div class="row">
         <div class="col-12 text-center">
           <p class="footer-paragraph">
-            &copy; {% now 'Y' %} Tree Enthusiast. For educational purposes.
+            &copy; {% now 'Y' %} Tree Enthusiast. Victoria Kalenik. For educational purposes.
           </p>
         </div>
       </div>

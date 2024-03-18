@@ -205,4 +205,5 @@ document.addEventListener("DOMContentLoaded", function () {
 function moveCursorToStart(textarea) {
         textarea.setSelectionRange(0, 0);
         textarea.scrollTop = 0; // For multi-line textareas, ensures scrolling to the top.
-    }
+}
+    

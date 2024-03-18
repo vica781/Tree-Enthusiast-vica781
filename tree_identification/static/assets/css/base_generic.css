@@ -43,10 +43,17 @@ nav ul li {
 nav ul li a {
     color: #eff4eb;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bolder;
 }
 .nav-item .nav-link:hover {
     color: #f8da17;
+    font-weight: bolder;
+}
+.nav-link.nav-btns {
+    font-weight: bolder; 
+}
+.form-inline .btn-outline-warning {
+    font-weight: bolder;
 }
 /* -------------------------------- footer -------------------------------- */
 .footer {
@@ -67,6 +74,16 @@ nav ul li a {
 }
 .yellow-on-hover:hover {
     color: #f8da17 !important;
+}
+.footer-link {
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 0;
+}
+.footer-headings {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 0;
 }
 /* ---------------------------- MEDIA QUERIES ------------------------------ */
 @media screen and (max-width: 768px) {
@@ -91,5 +108,8 @@ nav ul li a {
     .footer-paragraph {
         font-size: 0.75rem;
         padding: 0 1rem 0 1rem;
-    }
+    }     
+} 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    
 }
