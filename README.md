@@ -58,6 +58,10 @@ Join the comunity and turn every green encounter into a moment of learning, shar
 
 ## User Stories
 
+For a detailed view of the planned features and their development status, visit the project's agile board:
+
+[Tree Enthusiast Agile Board](https://github.com/users/vica781/projects/3)
+
 ***
 
 <font size="5"><b>1.</b> As a <b>new user</b>, I want to <b>be able to register on the platform</b>, so that I can <b>login and get access</b>.</font>
@@ -694,8 +698,9 @@ For more details on the technologies used in the development of the Tree Enthusi
 [Back to top ⇧](#table-of-contents)
 
 #### SKELETON
+##### **Wireframes**
 
-- **Wireframes:** The wireframes were created using Balsamiq. The wireframes were created for desktop, tablet, and mobile devices. 
+The wireframes were created using Balsamiq. The wireframes were created for desktop, tablet, and mobile devices. 
 
 [Link to Wireframes](./media/docs_images/wireframes.png)
 
@@ -866,6 +871,36 @@ Each error page maintains the app's theme, reflecting the natural and peaceful e
   - Modal forms for user and tree deletions include password confirmation to secure the process.
 
 [Back to top ⇧](#table-of-contents)
+
+## Features Left to Implement
+
+Providing users with opportunity like and dislike posts about Trees, and comment on them was one of the planned User Stories, these features were not implemented due to time constraints. These features are still under consideration for future development. For a detailed view of the planned features and their development status, visit the project's agile board:
+
+[Tree Enthusiast Agile Board](https://github.com/users/vica781/projects/3)
+
+### User Interaction with Tree Content
+While the Tree Enthusiast website has a multitude of features, there are always more ways to engage users. A key feature set that was earmarked for future implementation is the ability for visitors and registered users to like or dislike trees, along with the capability to see the like/dislike counts and comment on the detailed tree view pages.
+
+#### Interaction Icons and Counts
+- **Like and Dislike Icons**: Visitors should be able to see like and dislike icons with counters on the tree overview cards and detailed pages.
+- **User Engagement**: Enable registered and logged-in users to like or dislike trees and comment on them directly from both the overview listings and detailed pages.
+
+#### Dynamic Content Updates
+- **Real-time Updates**: Interaction counts and comments should update dynamically to reflect real-time user engagement.
+- **Prompt for Action**: Encourage non-logged-in visitors to register or log in when they attempt to interact with tree content.
+
+#### User-Friendly Interface
+- **Consistency Across Views**: The like, dislike, and comment features should be presented in a user-friendly and consistent manner throughout the site.
+- **Performance Considerations**: Ensure the new interactive features do not impact the site's performance negatively, maintaining a smooth user experience.
+
+The implementation of these features will further the goal of creating an engaging and community-driven website where tree enthusiasts can share and express their opinions and knowledge about different tree species.
+
+[Back to top ⇧](#table-of-contents)
+
+
+
+### Features for Future Development
+
 
 <br>
 <br>

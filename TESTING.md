@@ -1,3 +1,4 @@
+<!-- MY TESTING DOCUMENTATION -->
 # Testing
 
 This is the Testing section of the [README.md](README.md) file. It contains all the testing information for the project "Books for Life".
@@ -18,186 +19,398 @@ Return to [README.md](README.md)
 [Back to top ⇧](#table-of-contents)
 
 ### Testing User Stories
-***
-1. As a ***new user***, I want to ***be able to register for an account on the "Books for Life" website***, so that I can ***log in with username or email, and password***.
+## User Stories
 
-- **Acceptance Criteria**
-***Registration Form:***
-- [x] There is a registration form accessible from the website's homepage.
-- [x] The registration form includes fields for username, email address, password, and password confirmation.
-- [x] Passwords are required to meet minimum default complexity requirements.
-***Validation:***
-- [x] Users are alerted with clear error messages if they submit incomplete or invalid data.
-- [x] Users receive an error message if the chosen username is already in use.
-- [x] Users receive an error message if the provided email address is already registered.
-***Password Security:***
-- [x] Passwords are securely hashed and salted before being stored in the database.
-- [x] The system enforces password complexity requirements.
-***User Data Storage:***
-- [x] User data (username, hashed password, email, etc.) is stored securely in the database upon successful registration.
-***User Feedback:***
-- [x] Upon successful registration, the user receives a confirmation message.
-- [ ] Optionally, an email confirmation link is sent to the user's provided email address.
-***Login Functionality:***
-- [x] After registration, users can log in using their username and password.
-- [x] Users receive an error message if they enter incorrect login credentials.
-***Session Management:***
-- [x] User sessions are managed securely, allowing users to stay logged in until they choose to log out.
+For a detailed view of the planned features and their development status, visit the project's agile board:
+
+[Tree Enthusiast Agile Board](https://github.com/users/vica781/projects/3)
 
 ***
 
-2. As a ***registered user***, I want to ***be able to edit my profile information***, so I can ***easily change a password, and a profile picture***.
-
-- **Acceptance Criteria**
-
-- [x] When logged in as a registered user, I should see an option to access my profile settings.
-- [x]  Within the profile settings, I should see fields for editing my email, password, and uploading a new profile picture. If the profile picture field doesn't exist, I should see a placeholder image.
-- [x] The password field should allow me to change my password with appropriate validation rules (e.g., minimum length, complexity requirements).
-- [x] After making changes, I should be able to save my updated profile information.
-- [x] Once saved, my profile information should reflect the changes on my user profile page.
+<font size="5"><b>1.</b> As a <b>new user</b>, I want to <b>be able to register on the platform</b>, so that I can <b>login and get access</b>.</font>
 
 ***
 
-3. As a ***registered user***, I want ***the option to delete my user profile*** so I can ***decide to leave the website***.
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
 
+- [x] User can register using their full name, email, and password through a registration form on the platform.
+- [x] The user receives messages upon both successful and unsuccessful registration attempts.
 
-- **Acceptance Criteria**
+##### TASKS
+_A single unit of work broken down from the defined user story_
 
-- [x] When logged in as a registered user, I should see an option to access my account settings.
-- [x] Within the account settings, there should be a clear and easily accessible option to delete my user profile.
-- [x] Clicking the "Delete Profile" option should prompt me to confirm my decision.
-- [x] After confirming, my user profile and all associated data should be permanently deleted.
-- [x] Upon deletion, I should be logged out, and I should receive a confirmation message indicating that my profile has been deleted.
+- [x] Design and implement the registration form with front-end validation for full name, email, and password fields.
+- [x] Redirect registered user to a landing page.
+
+***
+
+<font size="5"><b>2.</b> As a <b>user</b>, I want to <b>log in to my account</b>, so that I can <b>access personalized features and secure my account information</b>.</font>
 
 ***
 
-4. As a ***registered user***, I want to ***add a new book to the website***, so that ***its details would be added to the database***.
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
 
-- **Acceptance Criteria**
+- [x] Criteria 1: The login page should have fields for entering username and password.
+- [x] Criteria 2: The system should authenticate the user's credentials against the database.
+- [x] Criteria 3: Upon successful login, the user should be redirected to their dashboard.
+- [x] Criteria 4: The system should display an error message for incorrect login credentials.
+- [x] Criteria 5: There should be an option for users to reset their password if forgotten.
+- [x] Criteria 6: The login page should provide a clear option for users to navigate to the registration page if they do not have an account.
 
-- [x] The user must be logged in as a registered user to access the "Add Book" feature.
-- [x] There should be a clearly visible option or button for adding a new book on the website.
-- [x] The user should be able to enter the following information for the book: Title (mandatory), Author (mandatory), Image (mandatory), Short Description (mandatory, limited character count), Full Description (mandatory), Image (optional).
-- [x] The title and the author should provide a slug, but there should be a validation to generate different slug if there are books with the same  title.
-- [x] The image upload should support common image formats (e.g., JPG, PNG) and have a file size limit. Invalid image formats or oversized images should be rejected with a clear error message.
-- [x] After submitting the book details, the book should be saved in the database with a unique identifier.
-- [x] The newly added book should be displayed on the website immediately after submission.
-- [x] The user should receive a confirmation message after successfully adding a book.
+##### TASKS
+_A single unit of work broken down from the defined user story_
 
-***
+- [x] Task 1: Design and implement the login page with username and password fields.
+- [x] Task 2: Develop the backend logic for user authentication.
+- [x] Task 3: Set up a secure connection to the user database for credential verification.
+- [x] Task 4: Implement user feedback for login success or failure.
+- [x] Task 5: Create a password reset feature.
+- [x] Task 6: Add a prompt on the login page that directs users to the registration page, with text such as "Don't have an account?" and link "Register here."
 
 [Back to top ⇧](#table-of-contents)
 
+***
 
-5. As a ***registered user***, I want to ***be able to update the the books I've added***, so I can ***correct the information of the record (title, author, image, descriptions)***.
-
-- **Acceptance Criteria**
-
-- [x] The user must be logged in as a registered user to access the book update feature.
-- [x] There should be a visible and accessible option or button to edit/update a book's information.
-- [x] When the user clicks the edit/update option for a book, they should be directed to a book editing form.
-- [x] The editing form should display the current information of the book (title, author, image, descriptions).
-- [x] The user should be able to modify the title, author, image, and descriptions fields.
-- [x] The form should have validation to ensure that required fields are not left empty.
-- [x] The user should have the option to cancel the editing process and return to the book details page without saving any changes.
-- [x] Upon saving the changes, the book's information (title, author, image, descriptions) should be updated in the database.
-- [x] A confirmation message should be displayed to the user after successfully updating the book's information.
+<font size="5"><b>3.</b> As a <b>user</b>, I want to <b>be able to securely log out of my account</b>, so that I can <b>ensure my account is safe when I'm not using it.</b></font>
 
 ***
 
-6. As a ***registered user***, I want to ***be able to delete book details from my profile***, so it ***will no longer be accessible***.
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
 
-- **Acceptance Criteria**
+- [x] Criteria 1: There should be a clearly visible logout option accessible from any page after login.
+- [x] Criteria 2: The system should end the user's session upon clicking the logout button.
+- [x] Criteria 3: After logging out, the user should be redirected to the home page.
+- [x] Criteria 4: The user should be informed about sucsess of login out.
+- [x] Criteria 5: The system should confirm the user's intention to log out to prevent accidental logouts.
 
-- [x] When I am logged in as a registered user and I navigate to my profile, I should see a list of books associated with my profile.
-- [x] Next to each book entry in my profile, there should be "Edit" and "Delete" buttons that I can click on to initiate the book deletion process.
-- [x] When I click the "Delete" button for a specific book, a confirmation dialog or prompt should appear to ensure that I want to delete the book.
-- [x] If I confirm the deletion, the book details should be permanently removed from my profile and should no longer be visible.
-- [x] After successfully deleting a book, I should receive a confirmation message or notification indicating that the deletion was successful.
-- [x] If I cancel the deletion from the confirmation dialog, the book should remain on my profile, unchanged.
-- [x] The deletion process should be quick and responsive, ensuring a smooth user experience.
-- [x] The system should handle any errors gracefully and provide appropriate error messages if the deletion process fails for any reason.
+##### TASKS
+_A single unit of work broken down from the defined user story_
 
-***
-
-7. As a ***registered user***, I want to ***be able to like a book review*** so that I can ***keep track of my favorite books***.
-
-- **Acceptance Criteria**
-- [x] The user must be logged in to their registered account.
-- [x] In search results there should be a  "Like" or "Favourite" button.
-- [x] Clicking the "Like" button should add the book details to the user's list of liked/favourite books.
-- [x] Clicking the "Like" button again should remove the book presentation from the user's liked/favorite books.
-- [x] The user should see a visual indication (e.g., change in button color or icon) when a book presentation is liked.
-- [x] The user should see a visual indication (e.g., change in button color or icon) when a book presentation is unliked.
-- [x] The liked/favourite book presentations should be stored and associated with the user's account.
-- [x] The user should be able to easily access their list of liked/favourite books from their user profile.
-- [x] If the user unlikes a book presentation, it should be immediately removed from their liked/favourite list.
+- [x] Task 1: Implement a logout button in the user interface.
+- [x] Task 2: Develop the backend logic to terminate the session upon logout.
+- [x] Task 3: Set up a redirect to the home page or login page after logout.
+- [x] Task 4: Create a logout confirmation prompt.
+- [x] Task 5: Create a message to let user know that they successfully logged out.
 
 ***
 
-8. As a ***registered user***, I want to ***see a list of all the books I've added to the website*** for ***easy reference***.
-
-- **Acceptance Criteria**
-
-- [x] User Authentication: The feature should only be accessible to registered users who are logged in.
-- [x] Navigation: There should be a clear and easily accessible link or button in the user interface that takes the user to their list of added books.
-- [x] Book List Display: When the user accesses their list, they should see a clear and organized list of all the books they have added to the website.
-- [x] Each book entry should display at least the book title, author, and category.
-- [x] Detail View: Users should be able to click on a book in the list to view more details about that book, including a description, and any other relevant information.
-- [x] Edit and Delete Options: Users should be able to edit the information of a book in their list.
-- [x]  Users should also have the option to delete a book from their list.
-- [x] Responsive Design: The feature should be accessible and user-friendly on various devices and screen sizes (e.g., desktop, tablet, mobile).
-- [x] Performance: The page should load reasonably quickly, even if the user has a large number of books in their list.
+<font size="5"><b>4.</b> As a <b>user/tree enthusiast</b>, I want to <b>easily access and use the contact page on the website</b>, so that I can <b>reach out for support or share feedback about my experiences with adding and viewing tree information.</b></font>
 
 ***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+- [x] Criteria 1: The contact page is easily accessible from any page on the website, including while adding or viewing tree information, ideally within one or two clicks.
+- [x] Criteria 2: The contact page includes method of contact suitable for different types of inquiries, such as technical support or feedback.
+- [x] Criteria 3: The contact form on the page is simple and intuitive, requiring only essential information, and it provides clear confirmation once a message is successfully sent.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+- [x] Task 1: Design and implement an easily noticeable and accessible link to the contact page, ensuring it is available during all major user activities, such as account creation and tree data entry.
+- [x] Task 2: Develop and integrate the contact page with contact option, including a user-friendly form with space for a message.
+- [x] Task 3: Set up backend support for form submission, ensuring reliable delivery of user messages and automatic confirmation responses to the user.
 
 [Back to top ⇧](#table-of-contents)
 
-9. As a ***bibliophile*** and a ***registered user***, I want to ***access a dedicated "Favourites" page***, so I can ***see all the books I've liked in one place***.
+***
 
-- **Acceptance Criteria**
-
-- [x] When I log in as a registered user, there should be a "Favourites" option visible in the navigation menu.
-- [x] Clicking on the "Favourites" option should take me to a dedicated page that displays all the books I've marked as favorites.
-- [x] On the "Favourites" page, I should see a clear and user-friendly list of the books I've liked, including their titles, authors, and cover images.
-- [x] If I haven't marked any books as favorites yet, the page should display a friendly message indicating that my list is empty and encouraging me to explore and like books.
-- [x] Each book displayed on the "Favourites" page should have a button or link that allows me to remove it from my favourites list.
-- [x] When I remove a book from my favourites list, it should be immediately removed from the "Favourites" page without requiring a page refresh.
-- [x] The "Favourites" page should be responsive and work well on both desktop and mobile devices.
+<font size="5"><b>5.</b> As a <b>registered user</b>, I want to <b>easily manage my account and personalize my profile</b>, so that I can <b>enhance my user experience and maintain my account security.</b></font>
 
 ***
 
-10. As a ***bibliophile*** and a ***registered user***, I want to ***search for books on the website***, so that I can ***browse and discover new books added by all users on the website***.
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
 
-- **Acceptance Criteria**
+1. ***Profile Accessibility from Navbar:***
+- [x] Criteria 1: The user's username appears as a clickable link in the navbar, next to the Logout button, once they are logged in.
+- [x] Criteria 2: A `user icon` placeholder from font awasom or other source for the user's profile is displayed next to their username in the navbar.
 
-- [x] The website should have a search bar prominently displayed on the homepage.
-- [x] As a registered user, I should be able to access the search functionality without any issues.
-- [x] When I type a search query into the search bar and press "Enter" or click the search button, the website should display a list of relevant books based on my query.
-- [x] The search results should include book titles, authors, and category of each book.
-- [x] Each search result should be clickable, allowing me to view more details about the book when I click on it.
-- [x] The search functionality should be responsive and work well on both desktop and mobile devices.
-- [x] The search should support basic search features such as partial matching (e.g., "macbeth" should return results for books with "Macbeth" in the title).
-- [x]  The search should make me able to like a certain book.
+2. ***Profile Viewing and Editing:***
+- [x] Criteria 3: Users can view their profile details by clicking on their username in the navbar.
+- [x] Criteria 4: Users have the option to edit their profile, including adding or changing their profile image.
+- [x] Criteria 5: The User Profile form has a personalized heading that greets the user by their username.
+- [x] Criteria 6: The User Profile form has a main content area that includes placeholder for the user's profile image, first and last names, and email address.
+- [x] Criteria 7: There is a distinct section at the bottom of the User Profile with "Update Profile" and "Delete Profile" buttons .
+- [x] Criteria 8: There is a message to inform user about result of the profile update.
+
+3. ***Account Security:***
+- [x] Criteria 9: Users can change their password from their profile settings.
+- [x] Criteria 10: The process for changing the password includes current password verification for security.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+1. ***Implement User Link in Navbar:***
+- [x] Task 1: Develop the functionality to display the logged-in user's username as a link in the navbar.
+- [x] Task 2: Integrate a `user icon` placeholder next to the username in the navbar.
+
+2. ***Profile Page Development:***
+- [x] Task 3: Create a profile page accessible by clicking the username in the navbar.
+- [x] Task 4: Design the user interface for viewing and editing profile details, including image upload.
+- [x] Task 5: Implement a dynamic greeting in the User Profile header that fetches and displays the current user's username.
+- [x] Task 6: Create a main content area that includes placeholders for the user's profile image, username, and email address.
+- [x] Task 7: Ensure that the user's current profile image, username, and email are correctly fetched and displayed in the main content area.
+- [x] Task 8: Add "Update Profile" and "Delete Profile" buttons at the bottom of the profile page.
+- [x] Task 9: Ensure that the user is notifyed about outcome of the profile update.
+
+3. ***Password Change Functionality:***
+- [x] Task 10: Develop a secure password change feature within the profile settings.
+- [x] Task 11: Implement current password verification before allowing password changes.
+
+[Back to top ⇧](#table-of-contents)
 
 ***
 
-11. As a ***registered user***, I want to ***be able to use a contact form***, so I can ***reach out to the website administrators with questions, feedback, or concerns***.
-
-- **Acceptance Criteria**
-
-- [x] The contact form should be accessible to registered users when they are logged in.
-- [x] The contact form should have fields for the user to input their name, email address, subject, message, and an optional attachment field.
-- [x] The name and email address fields should be pre-filled with the user's registered information.
-- [x] There should be a "Submit" button to send the message to the website administrators.
-- [x] Upon submitting the form, the user should receive a confirmation message indicating that their message has been sent successfully.
-- [x] Website administrators should receive an email notification with the user's message, subject, and contact information when a user submits the form.
-- [x] Users should not be able to submit the form if any required fields are left blank or if the attachment exceeds the maximum size.
-Users should receive an error message if there are any issues with their submission (e.g., invalid email address, attachment too large) and should be prompted to correct the errors.
-- [x] The contact form should be responsive and visually appealing on different devices (e.g., desktop, tablet, mobile).
-- [x] The contact form should be accessible to users with disabilities, following WCAG guidelines.
+<font size="5"><b>6.</b> As a <b>registered user</b>, I want to <b>delete my profile securely and with clear confirmation steps</b>, so that I can <b>ensure that my decision is intentional and informed, and be reassured of successful deletion.</b></font>
 
 ***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+1. ***Secure Profile Deletion:***
+ - [x] Criteria 1: The user can initiate profile deletion from the 'Delete Profile' button on their profile page. 
+ - [x] Criteria 2: A confirmation modal appears when the user clicks the 'Delete Profile' button, asking them to confirm their decision.
+
+2. ***Defensive Design for Deletion:***
+- [x] Criteria 3: The confirmation modal for deletion clearly outlines the consequences of profile deletion. 
+- [x] Criteria 4: The modal provides two options: 'Confirm Deletion' and 'Cancel', with distinct visual differences for clarity.
+
+3. ***Password Confirmation for Deletion:***
+ - [x] Criteria 7: The user is required to confirm their password before the profile is deleted.
+ - [x] Criteria 8: The system verifies the password before proceeding with profile deletion.
+
+4. ***Feedback on Deletion:***
+- [x] Criteria 9: Upon confirming deletion, the user is logged out and their profile is permanently deleted. 
+- [x] Criteria 10: The user receives a notification confirming the successful deletion of their profile.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+1. ***Implement Deletion Process:***
+- [x] Task 1: Develop functionality for the 'Delete Profile' button on the user profile page. 
+- [x] Task 2: Create a confirmation modal that appears when 'Delete Profile' is clicked.
+
+2. ***Modal Design and Functionality:***
+- [x] Task 3: Design the confirmation modal with clear messaging and options for 'Confirm Deletion' and 'Cancel'. 
+- [x] Task 4: Ensure that the modal visually distinguishes between the 'Confirm Deletion' and 'Cancel' options.
+
+3. ***Implement Password Confirmation:***
+- [x] Task 7: Update the deletion modal to include a password confirmation field. 
+- [x] Task 8: Validate the user's password when the deletion form is submitted.
+
+4. ***User Feedback and Completion:***
+- [x] Task 9: Implement the deletion process, including user logout and data removal upon confirmation. 
+- [x] Task 10: Create a notification system to confirm successful profile deletion to the user.
+
+[Back to top ⇧](#table-of-contents)
+
+***
+
+<font size="5"><b>7.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
+
+***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+- [x] Criteria 1: The user must be registered and logged into the website.
+- [x] Criteria 2: The user should be able to access the 'Add Tree' page from the navigation menu.
+- [x] Criteria 3: The 'Add Tree' form must include fields for the tree's common name, type, origin, a short introduction, an image upload option, and a description of the tree's habitat.
+- [x] Criteria 4: Upon submitting the form, the tree information should be saved to the user's tree collection.
+- [x] Criteria 5: The user should receive a success message upon successful addition of the tree.
+- [x] Criteria 6: Appropriate validation messages should be displayed in case of form errors.
+- [x] Criteria 7: The tree information should be viewable in the 'My Trees' section of the website.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+- [x] Task 1: Create a secure authentication system to ensure only registered and logged-in users can access the 'Add Tree' feature.
+- [x] Task 2: Design and implement the 'Add Tree' page with the necessary form fields.
+- [x] Task 3: Set up server-side logic to handle the 'Add Tree' form submission, including data validation and storage.
+- [x] Task 4: Develop a user feedback system to confirm successful addition of a tree or inform of any errors.
+- [x] Task 5: Integrate the newly added tree data into the 'My Trees' section for the user.
+- [x] Task 6: Conduct testing to ensure all acceptance criteria are met. 
+
+[Back to top ⇧](#table-of-contents)
+
+***
+
+<font size="5"><b>8.</b> As a <b>registered and logged-in user</b>, I want to <b>add a new tree to my collection</b>, so that I can <b>share information about different trees.</b></font>
+
+***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+- [x] Criteria 1: The user must be registered and logged into the website.
+- [x] Criteria 2: The user should be able to access the 'Add Tree' page from the navigation menu.
+- [x] Criteria 3: The 'Add Tree' form must include fields for the tree's common name, type, origin, a short introduction, an image upload option, and a description of the tree's habitat.
+- [x] Criteria 4: Upon submitting the form, the tree information should be saved to the user's tree collection.
+- [x] Criteria 5: The user should receive a success message upon successful addition of the tree.
+- [x] Criteria 6: Appropriate validation messages should be displayed in case of form errors.
+- [x] Criteria 7: The tree information should be viewable in the 'My Trees' section of the website.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+- [x] Task 1: Create a secure authentication system to ensure only registered and logged-in users can access the 'Add Tree' feature.
+- [x] Task 2: Design and implement the 'Add Tree' page with the necessary form fields.
+- [x] Task 3: Set up server-side logic to handle the 'Add Tree' form submission, including data validation and storage.
+- [x] Task 4: Develop a user feedback system to confirm successful addition of a tree or inform of any errors.
+- [x] Task 5: Integrate the newly added tree data into the 'My Trees' section for the user.
+- [x] Task 6: Conduct testing to ensure all acceptance criteria are met. 
+
+[Back to top ⇧](#table-of-contents)
+
+***
+
+<font size="5"><b>9.</b> As a <b>registered and logged-in user</b>, I want to <b>edit the information of trees I have added</b>, so that I can <b>update or correct their details as needed.</b></font>
+
+***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+- [x] Criteria 1: The user must be registered and logged into the website.
+- [x] Criteria 2: The user should be able to access the 'Edit' option for each tree in their 'My Trees' collection.
+- [x] Criteria 3: Upon selecting 'Edit', the user should be directed to a form pre-populated with the existing details of the tree.
+- [x] Criteria 4: The edit form should allow changes to all aspects of the tree's information, including name, type, origin, introduction, image, and habitat.
+- [x] Criteria 5: The user should be able to submit the updated information with a confirmation option.
+- [x] Criteria 6: Upon successful update, a confirmation message should be displayed.
+- [x] Criteria 7: Any errors or validation issues during the update process should be communicated to the user.
+- [x] Criteria 8: The updated information should be reflected in the 'My Trees' collection and the tree's detail view.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+- [x] Task 1: Implement a secure and intuitive edit option for each tree in the user's collection.
+- [x] Task 2: Design and develop the tree edit form with fields for all editable details.
+- [x] Task 3: Ensure that the form is pre-populated with the tree's existing information.
+- [x] Task 4: Handle the form submission and update the tree information in the database.
+- [x] Task 5: Provide clear success and error messages post-submission.
+- [x] Task 6: Ensure that the updates are immediately visible in the tree's detail view and in the 'My Trees' collection.
+- [x] Task 7: Test the editing feature for functionality and user-friendliness.
+
+[Back to top ⇧](#table-of-contents)
+
+***
+
+<font size="5"><b>10.</b> As a <b>registered and logged-in user</b>, I want to <b>have the ability to delete trees from my collection</b>, so that I can <b>remove outdated or incorrect tree entries.</b></font>
+
+***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+- [x] Criteria 1: The user must be registered and logged into the website.
+- [x] Criteria 2: The user should be able to access a 'Delete' option for each tree in their 'My Trees' collection.
+- [x] Criteria 3: On selecting 'Delete', a confirmation prompt should appear to prevent accidental deletions.
+- [x] Criteria 4: The user should be required to confirm their password to proceed with the deletion as an additional security measure.
+- [x] Criteria 5: Upon confirming the deletion, the tree should be permanently removed from the user's collection.
+- [x] Criteria 6: The user should receive a success message confirming the tree's removal.
+- [x] Criteria 7: The deletion action should not affect other trees in the collection.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+- [x] Task 1: Implement a secure 'Delete' option for each tree in the user's collection.
+- [x] Task 2: Design and develop a confirmation prompt to verify the user's intent to delete.
+- [x] Task 3: Implement a password confirmation step for additional security.
+- [x] Task 4: Handle the deletion process in the backend, ensuring that the tree is permanently removed from the database.
+- [x] Task 5: Provide clear success messages based on the deletion outcome.
+- [x] Task 6: Ensure the website's user interface is updated immediately to reflect the deletion.
+- [x] Task 7: Test the feature to ensure it works as intended and is secure.
+
+[Back to top ⇧](#table-of-contents)
+
+***
+
+<font size="5"><b>11.</b> As a <b>user of the Tree Enthusiast website</b>, I want to <b>search for trees using their common names</b>, so that I can <b>quickly find specific trees and learn more about them.</b></font>
+
+***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+- [x] Criteria 1: Users, whether logged in or not, should be able to use the search feature.
+- [x] Criteria 2: The search bar should be easily accessible, preferably on the website's header.
+- [x] Criteria 3: Users should be able to enter the common name of a tree and submit the search query.
+- [x] Criteria 4: The search results page should display all trees that match the entered common name.
+- [x] Criteria 5: Each search result should include relevant information such as the tree's image, common name, and a link to its detailed page.
+- [x] Criteria 6: If no matches are found, the website should display a message like "No trees found with that common name."
+- [x] Criteria 7: The search feature should provide results promptly and accurately.
+- [x] Criteria 8: The search results should be presented in a user-friendly manner, allowing easy navigation to detailed tree pages.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+- [x] Task 1: Implement a search bar that users can access from any page on the website.
+- [x] Task 2: Develop the backend logic to search the tree database by common name.
+- [x] Task 3: Design and implement a search results page to display the matching trees.
+- [x] Task 4: Ensure each search result includes a link to the detailed information page of the tree.
+- [x] Task 5: Handle scenarios with no search results by displaying an appropriate message.
+- [x] Task 6: Test the search functionality with various common names to ensure accuracy and speed.
+- [x] Task 7: Ensure the search results layout is responsive and user-friendly.
+
+[Back to top ⇧](#table-of-contents)
+
+***
+
+<font size="5"><b>12.</b> As a <b>visitor to the Tree Enthusiast website</b>, I want to <b>access a 'Browse Trees' feature</b>, so that I can <b>view all trees listed in the database in a user-friendly format</b>, and if interested, be prompted to 'Login' or 'Sign Up' for further interactions. As a <b>registered and logged-in user</b>, I should be able to <b>edit or delete trees I have added</b>, or access 'Add Tree', 'My Trees', or 'Home' when viewing tree details.</font>
+
+***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+- [x] Criteria 1: The 'Browse Trees' feature should be accessible to all visitors, regardless of their login status.
+- [x] Criteria 2: All trees in the database should be displayed in an image-card format, similar to the 'My Trees' section, with each card linking to the tree's detailed page.
+- [x] Criteria 3: Visitors who are not registered or logged in should be prompted to log in or sign up when viewing detailed tree information.
+- [x] Criteria 4: Registered and logged-in users should have the ability to edit or delete their own tree entries from the detailed view.
+- [x] Criteria 5: For trees not added by the logged-in user, options like 'Add Tree', 'My Trees', and 'Home' should be available for navigation.
+- [x] Criteria 6: The interface for browsing trees should be intuitive and engaging, encouraging visitors to explore the tree collection.
+- [x] Criteria 7: The feature should ensure a seamless transition from viewing to registration or login for new users.
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+- [x] Task 1: Develop the 'Browse Trees' section accessible from the website's main navigation for all visitors.
+- [x] Task 2: Display trees in an image-card layout, with links to detailed information.
+- [x] Task 3: Implement prompts for non-logged-in visitors to register/sign up.
+- [x] Task 4: Enable edit and delete functionalities for logged-in users on their own tree entries.
+- [x] Task 5: Provide navigation options for logged-in users to access 'Add Tree', 'My Trees', or 'Home' from tree's detail view.
+- [x] Task 6: Design a user-friendly and engaging interface for the 'Browse Trees' section.
+- [x] Task 7: Ensure the site's performance and speed are optimized for handling numerous tree entries.
+- [x] Task 8: Test the feature thoroughly for different user scenarios and make adjustments based on feedback.
+
+[Back to top ⇧](#table-of-contents)
+
+***
+
+<font size="5"><b>13.</b> As a <b>registered and logged-in user</b> of the Tree Enthusiast website, I want to <b>search and view trees with a specific common name added by any user</b>, while being able to <b>edit and delete only the trees that I have added</b>, and have access to 'My Trees', 'Add Tree', and 'Home' buttons when viewing trees added by others, so that I can <b>manage my contributions and navigate the site effectively without affecting other users' entries.</b></font>
+
+***
+
+##### ACCEPTANCE CRITERIA
+_A set of predefined requirements that must be met to meet the user story needs (and mark it as complete)_.
+
+- [x] Criteria 1: All users, upon logging in, should be able to search for trees by their common name and see results added by any user.
+- [x] Criteria 2: The search results page should display all matching trees with relevant details like images and common names.
+- [x] Criteria 3: 'Edit' and 'Delete' options should be visible and functional only next to the trees that the logged-in user has added.
+- [x] Criteria 4: For trees not added by the user, buttons for 'My Trees', 'Add Tree', and 'Home' should be available for easy navigation. 
+
+##### TASKS
+_A single unit of work broken down from the defined user story_
+
+- [x] Task 1: Implement frontend logic to display 'Edit' and 'Delete' buttons only for trees added by the logged-in user.
+- [x] Task 2: Ensure 'My Trees', 'Add Tree', and 'Home' buttons are displayed when viewing trees added by other users.
+- [x] Task 3: Conduct testing to ensure proper functionality and security across different user scenarios.
 
 [Back to top ⇧](#table-of-contents)
 
