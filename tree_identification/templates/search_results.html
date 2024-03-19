@@ -6,7 +6,7 @@
     <div class="col-12">
       <img
         src="{% static 'assets/images/background_images/blubells.webp' %}"
-        alt="Tree Trunk Image"
+        alt="Bluebells in a forest"
         class="img-fluid w-100"
         style="height: 100vh; object-fit: cover"
       >
@@ -36,15 +36,14 @@
                         class="bd-placeholder-img card-img-top img-fluid pt-2 px-2"
                         style="max-height: 200px; object-fit: contain"
                         src="{{ tree.tree_image.url }}"
+                        alt="{{ tree.common_name }}"
                       >
-                      <div class="card-body d-flex flex-column">
-                        <p class="card-text text-center">
-                          <a href="{% url 'tree_detail' tree_id=tree.id %}">
-                            <h5 class="card-title-tree-name">
-                              {{ tree.common_name }}
-                            </h5>
-                          </a>
-                        </p>
+                      <div class="card-body d-flex flex-column">                        
+                        <a href="{% url 'tree_detail' tree_id=tree.id %}">
+                          <h5 class="card-title-tree-name text-center">
+                            {{ tree.common_name }}
+                          </h5>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -59,17 +58,17 @@
               <div class="d-flex justify-content-center mt-4 mb-2">
                 <a
                   href="{% url 'add_tree' %}"
-                  class="btn btn-success search-tesults-btns mr-2 p-1"
+                  class="btn btn-success search-results-btns mr-2 p-1"
                   >Add Tree</a
                 >
                 <a
                   href="{% url 'my_trees' %}"
-                  class="btn btn-primary search-tesults-btns mr-2 p-1"
+                  class="btn btn-primary search-results-btns mr-2 p-1"
                   >My Trees</a
                 >
                 <a
                   href="{% url 'home' %}"
-                  class="btn btn-info search-tesults-btns p-1"
+                  class="btn btn-info search-results-btns p-1"
                 >
                   Home
                 </a>
@@ -79,17 +78,17 @@
               <div class="d-flex justify-content-center mt-4">
                 <a
                   href="{% url 'login' %}"
-                  class="btn btn-success search-tesults-btns mr-2 p-1"
+                  class="btn btn-success search-results-btns mr-2 p-1"
                   >Login</a
                 >
                 <a
                   href="{% url 'register' %}"
-                  class="btn btn-primary search-tesults-btns mr-2 p-1"
+                  class="btn btn-primary search-results-btns mr-2 p-1"
                   >Sign Up</a
                 >
                 <a
                   href="{% url 'home' %}"
-                  class="btn btn-info search-tesults-btns p-1"
+                  class="btn btn-info search-results-btns p-1"
                 >
                   Home
                 </a>
