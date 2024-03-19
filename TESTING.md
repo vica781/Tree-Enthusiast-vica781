@@ -812,13 +812,6 @@ These are the results of the validation:
 The website was tested with **pass** on the following browsers:
 Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, Safari, Vivaldi, Brave.
 
-In regards to **responsiveness**, the website was tested with **pass** on the following devices:
-The website was tested with **pass** on the following devices:
-- Laptop ThinkPad x270 on Linux Manjaro 3.0 Uranos
-- Ipad Air 2 on iOS 16.7
-- Iphone 12 on iOS 16.7
-- Xiaomi Mi Note 11 Pro on Android 14.0.1
-
 ### User Testing
 The website was tested by differen users, with different devices and browsers. The feedback was positive and the website was easy to use and navigate.
 There were several suggestions for improvement, which were implemented in the future. The bugs discovered were fixed.
