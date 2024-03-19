@@ -18,8 +18,8 @@ Return to [README.md](README.md)
 
 [Back to top ⇧](#table-of-contents)
 
-### Testing User Stories
-## User Stories
+## Testing User Stories
+### User Stories
 
 For a detailed view of the planned features and their development status, visit the project's agile board:
 
@@ -616,6 +616,7 @@ Manual testing was conducted on the following elements that appear on every page
 ![Contact Page Test](./docs/images/manual_testing/contact.gif)
 
 ## Automated Testing
+
 ### Code Validation
 
 #### HTML Validation
@@ -624,46 +625,25 @@ The [W3C Markup Validator](https://validator.w3.org/) service was used to valida
 These are the results of the validation:
 
 - Homepage
-![Homepage HTML Validation](./docs/images/html_css_validation/homepage_html.png)
+![Homepage HTML Validation](./media/testing/validation/html_validation/home-page-html.png)
 
 - Login Page
-![Login Page HTML Validation](./docs/images/html_css_validation/login_html.png)
+![Login Page HTML Validation](./media/testing/validation/html_validation/login-page-html.png)
 
 - Register Page
-![Register Page HTML Validation](./docs/images/html_css_validation/register_html.png)
+![Register Page HTML Validation](./media/testing/validation/html_validation/signup-page-html.png)
 
 - Contact Page
-![Contact Page HTML Validation](./docs/images/html_css_validation/contact_html.png)
+![Contact Page HTML Validation](./media/testing/validation/html_validation/contact-html.png)
 
-- Find Book Page
-![Find Book Page HTML Validation](./docs/images/html_css_validation/find_book_html.png)
+- Tree Details Page
+![Tree Details Page HTML Validation](./media/testing/validation/html_validation/tree-detail-html.png)
 
-- Add Book Page
-![Add Book Page HTML Validation](./docs/images/html_css_validation/add_book_html.png)
+- Browse Trees Page
+![Browse Trees Page HTML Validation](./media/testing/validation/html_validation/browse-trees-html.png)
 
-- User Page (My Books Page)
-![User Page (My Books Page) HTML Validation](./docs/images/html_css_validation/user_page_html.png)
-
-- Book Details Page
-![Book Details Page HTML Validation](./docs/images/html_css_validation/book_detail_html.png)
-
-- Edit Book Page (Update Book)
-![Edit Book Page HTML Validation](./docs/images/html_css_validation/edit_book_html.png)
-
-- Delete Book Page
-![Delete Book Page HTML Validation](./docs/images/html_css_validation/delete_book_html.png)
-
-- User Favourites Page
-![User Favourites Page HTML Validation](./docs/images/html_css_validation/favourites_html.png)
-
-- User Profile Page
-![User Profile Page HTML Validation](./docs/images/html_css_validation/user_profile_html.png)
-
-- Update Profile Page
-![Update Profile Page HTML Validation](./docs/images/html_css_validation/user_profile_update_html.png)
-
-- 404 Page (Manual Insertion)
-![404 Page HTML Validation](./docs/images/html_css_validation/404_html.png)
+- Search Results Page
+![Search Results Page HTML Validation](./media/testing/validation/html_validation/search-results-html.png)
 
 [Back to top ⇧](#table-of-contents)
 
@@ -673,33 +653,46 @@ The [CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used for 
 These are the results of the validation:
 
 - Homepage CSS File
-![Homepage CSS Validation](./docs/images/html_css_validation/homepage_css.png)
+![Homepage CSS Validation](./media/testing/validation/css_validation/style-css.png)
 
-- General CSS File
-![General CSS Validation](./docs/images/html_css_validation/style_css.png)
+- base_generic CSS File
+![General CSS Validation](./media/testing/validation/css_validation/base-generic-css.png)
 
 [Back to top ⇧](#table-of-contents)
 
 
 The [JSHint JavaScript Code Quality Tool](https://jshint.com/) was used to validate the sites `JS` code.
 
-- Contact JS File
-![Contact JS Validation](./docs/images/js_validation/contact_js_validation.png)
-
-- Find Book JS File
-![Find Book JS Validation](./docs/images/js_validation/search_js_validation.png)
-
 - Script JS File
-![Script JS Validation](./docs/images/js_validation/script_js_validation.png)
+![Script JS Validation](./media/testing/validation/js_validation/script_js_validation.png)
 
 
 #### Python Validation
 For Python code, the [CI PEP8 online validator](https://pep8ci.herokuapp.com/) was used to validate the code.
 
-Because there are so many, the developer includes here only the results of the validation of the `settings.py` file. All other Python files were validated and passed the test with same results.
+Because there are so many, the developer includes here only the results of the validation of the several files. All other Python files were validated and passed the test with same results.
 
 - Settings.py File
-![Settings.py Validation](./docs/images/python_validation/settings_py.png)
+![Settings.py Validation](./media/testing/validation/python_validation/settings-py.png)
+
+- Models.py File
+![Models.py Validation](./media/testing/validation/python_validation/models-py.png)
+
+- Views.py File
+![Views.py Validation](./media/testing/validation/python_validation/views-py.png)
+
+- Forms.py File
+![Forms.py Validation](./media/testing/validation/python_validation/forms-py.png)
+
+- Apps.py File
+![Apps.py Validation](./media/testing/validation/python_validation/apps-py.png)
+
+- Admin.py File
+![Admin.py Validation](./media/testing/validation/python_validation/admin-py.png)
+
+- Urls.py File
+![Urls.py Validation](./media/testing/validation/python_validation/urls-py.png)
+
 
 [Back to top ⇧](#table-of-contents)
 
@@ -709,59 +702,7 @@ The [Lighthouse](https://developers.google.com/web/tools/lighthouse) tool was us
 
 These are the results of the validation:
 
-- Homepage
 
-![Homepage Lighthouse Validation](./docs/images/lighthouse/home_lighthouse.png)
-
-- Login Page
-
-![Login Page Lighthouse Validation](./docs/images/lighthouse/login_lighthouse.png)
-
-- Register Page
-
-![Register Page Lighthouse Validation](./docs/images/lighthouse/register_lighthouse.png)
-
-- Contact Page
-
-![Contact Page Lighthouse Validation](./docs/images/lighthouse/contact_lighthouse.png)
-
-- Find Book Page
-
-![Find Book Page Lighthouse Validation](./docs/images/lighthouse/search_lighthouse.png)
-
-- Add Book Page
-
-![Add Book Page Lighthouse Validation](./docs/images/lighthouse/add_book_lighthouse.png)
-
-- User Page (My Books Page)
-
-![User Page (My Books Page) Lighthouse Validation](./docs/images/lighthouse/user_page_lighthouse.png)
-
-- Book Details Page
-
-![Book Details Page Lighthouse Validation](./docs/images/lighthouse/book_detail_lighthouse.png)
-
-- Edit Book Page (Update Book)
-
-![Edit Book Page Lighthouse Validation](./docs/images/lighthouse/edit_book_lighthouse.png)
-
-- Delete Book Page
-
-![Delete Book Page Lighthouse Validation](./docs/images/lighthouse/delete_book_lighthouse.png)
-
-- User Favourites Page
-
-![User Favourites Page Lighthouse Validation](./docs/images/lighthouse/favourites_lighthouse.png)
-
-- User Profile Page
-
-![User Profile Page Lighthouse Validation](./docs/images/lighthouse/user_profile_lighthouse.png)
-
-- Update Profile Page
-
-![Update Profile Page Lighthouse Validation](./docs/images/lighthouse/update_profile_lighthouse.png)
-
-- 404 Page couldn't be tested with Lighthouse
 
 [Back to top ⇧](#table-of-contents)
 
