@@ -9,14 +9,14 @@
         src="{% static 'assets/images/background_images/maple.webp' %}"
         alt="Background Image"
         class="img-fluid w-100"
-      />
+      >
       {% else %}
       <img
         src="{% static 'assets/images/background_images/juniper.webp' %}"
         alt="Landing Image"
         class="img-fluid w-100"
         style="height: 100vh; object-fit: cover"
-      />
+      >
       {% endif %}
 
       <!-- Overlay Container -->
@@ -65,7 +65,7 @@
                         name="common_name"
                         value="{{ tree.common_name|default_if_none:'' }}"
                         placeholder="Enter name of a tree"
-                      />
+                      >
                     </div>
 
                     <!-- Image Upload and Display -->
@@ -77,13 +77,13 @@
                         class="form-control-file"
                         id="tree_image"
                         name="tree_image"
-                      />
+                      >
                       {% if tree.tree_image %}
                       <img
                         src="{{ tree.tree_image.url }}"
                         alt="Current Tree Image"
                         class="img-fluid mt-2"
-                      />
+                      >
                       {% endif %}
                     </div>
 
@@ -95,7 +95,7 @@
                         id="tree_type"
                         name="tree_type"
                         value="{{ tree.tree_type|default_if_none:'' }}"
-                        placeholder="Is it a tree or shrub?"/>
+                        placeholder="Is it a tree or shrub?">
                     </div>
 
                     <div class="form-group">

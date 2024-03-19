@@ -396,5 +396,8 @@
     .profile-update-heading {
         font-size: 1.7rem;
     }
-    
+    .card-title-tree-name {
+        font-size: 1rem;
+        text-align: center;
+    }
 }

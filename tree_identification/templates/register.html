@@ -8,7 +8,7 @@
     alt="Landing Image"
     class="img-fluid w-100"
     style="height: 100vh; object-fit: cover"
-  />
+  >
 
   <!-- Form Overlay -->
   <div
@@ -43,7 +43,7 @@
                 placeholder="Choose a username"
                 required
                 value="{{ form.username.value|default_if_none:'' }}"
-              />
+              >
               {% for error in form.username.errors %}
                 <div class="invalid-feedback">{{ error }}</div>
               {% endfor %}
@@ -59,7 +59,7 @@
                 name="{{ form.first_name.name }}"
                 placeholder="Enter your first name"
                 value="{{ form.first_name.value|default_if_none:'' }}"
-              />
+              >
               {% for error in form.first_name.errors %}
                 <div class="invalid-feedback">{{ error }}</div>
               {% endfor %}
@@ -75,7 +75,7 @@
                 name="{{ form.last_name.name }}"
                 placeholder="Enter your last name"
                 value="{{ form.last_name.value|default_if_none:'' }}"
-              />
+              >
               {% for error in form.last_name.errors %}
                 <div class="invalid-feedback">{{ error }}</div>
               {% endfor %}
@@ -93,7 +93,7 @@
                 placeholder="Enter your email"
                 required
                 value="{{ form.email.value|default_if_none:'' }}"
-              />
+              >
               {% for error in form.email.errors %}
                 <div class="invalid-feedback">{{ error }}</div>
               {% endfor %}
@@ -109,7 +109,7 @@
                 name="{{ form.password1.name }}"
                 placeholder="Choose a password"
                 required
-              />
+              >
               {% for error in form.password1.errors %}
                 <div class="invalid-feedback">{{ error }}</div>
               {% endfor %}
@@ -136,7 +136,7 @@
                 name="{{ form.password2.name }}"
                 placeholder="Confirm your password"
                 required
-              />
+              >
               {% for error in form.password2.errors %}
                 <div class="invalid-feedback">{{ error }}</div>
               {% endfor %}

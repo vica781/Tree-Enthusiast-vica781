@@ -414,6 +414,137 @@ _A single unit of work broken down from the defined user story_
 
 [Back to top ⇧](#table-of-contents)
 
+## User Stories Testing (outcomes)
+
+The development and functionality of the Tree Enthusiast app were guided by specific user stories. Each user story was tested to ensure it meets its acceptance criteria and provides a seamless user experience. Below is a summary of how each user story was tested and the outcomes of these tests.
+
+### 1. As a new user, I want to be able to register on the platform, so that I can login and get access.
+
+- **Testing Procedure:**
+  - Attempted to register with various inputs, including valid and invalid data, to test the robustness of the registration form.
+  - Checked for appropriate error messages and feedback for unsuccessful attempts (e.g., entering an invalid email format, short passwords).
+  - Confirmed a successful registration process redirected the user to a landing page and provided a welcome message.
+
+- **Outcome:**
+  - All test scenarios behaved as expected. The app correctly handled both successful and unsuccessful registration attempts.
+
+### 2. As a user, I want to log in to my account, so that I can access personalized features and secure my account information.
+
+- **Testing Procedure:**
+  - Logged in with registered credentials to verify access to personalized features and secure account information.
+  - Tested login functionality with incorrect credentials to ensure security measures are effective.
+  - Checked the implementation of the password reset feature and navigational prompt to the registration page for new users.
+
+- **Outcome:**
+  - Login functionality worked correctly. Incorrect login attempts resulted in appropriate error messages, and the password reset feature functioned as intended.
+
+### 3. As a user, I want to be able to securely log out of my account, so that I can ensure my account is safe when I'm not using it.
+
+- **Testing Procedure:**
+  - Tested the logout feature from various pages within the app.
+  - Confirmed the presence of a confirmation prompt to prevent accidental logouts.
+  - Verified redirection to the home page after logging out.
+
+- **Outcome:**
+  - The logout process worked correctly across different pages, with a confirmation prompt enhancing security and preventing unintentional logouts.
+
+[Back to top ⇧](#table-of-contents)
+
+### 4. As a user/tree enthusiast, I want to easily access and use the contact page on the website, so I can reach out for support or share feedback.
+
+- **Testing Procedure:**
+  - Navigated to the contact page from different sections of the website.
+  - Filled out and submitted the contact form, checking for confirmation messages and user-friendly form design.
+
+- **Outcome:**
+  - The contact page was easily accessible and user-friendly. The form submission process functioned smoothly with clear confirmations after sending messages.
+
+### 5. As a registered user, I want to easily manage my account and personalize my profile, so I can enhance my user experience and maintain my account security.
+
+- **Testing Procedure:**
+  - Tested the profile editing feature by changing various user details, including profile pictures.
+  - Checked the functionality for updating profiles and securely changing passwords.
+
+- **Outcome:**
+  - Users were able to successfully manage and personalize their accounts. All profile changes were updated correctly and securely.
+
+[Back to top ⇧](#table-of-contents)
+
+### 6. As a registered user, I want to delete my profile securely and with clear confirmation steps, so I can ensure that my decision is intentional and informed.
+
+- **Testing Procedure:**
+  - Navigated to the profile deletion section and initiated the delete process.
+  - Tested the confirmation modal for clarity and functionality, ensuring it required explicit confirmation to proceed.
+  - Verified that password confirmation was required for additional security and that successful deletion resulted in user logout and redirection.
+
+- **Outcome:**
+  - The profile deletion process was secure, requiring multiple confirmations. Post-deletion redirection and logout were executed as intended.
+
+### 7. As a registered and logged-in user, I want to add a new tree to my collection, so I can share information about different trees.
+
+- **Testing Procedure:**
+  - Accessed the 'Add Tree' feature and submitted various entries with complete and partial information to test form validation.
+  - Checked the successful addition of trees to the user's collection and the proper display of success messages.
+
+- **Outcome:**
+  - All aspects of the tree addition process functioned correctly. Form validation ensured complete and accurate data entry, and newly added trees appeared in the user’s collection.
+
+### 8. As a registered and logged-in user, I want to edit the information of trees I have added, so I can update or correct their details as needed.
+
+- **Testing Procedure:**
+  - Edited information for trees in the user's collection, including changing names, descriptions, and images.
+  - Tested for immediate reflection of edits in the 'My Trees' section and tree detail views.
+
+- **Outcome:**
+  - The edit feature worked seamlessly, with changes promptly reflected in the app. The user interface for editing was intuitive and user-friendly.
+
+[Back to top ⇧](#table-of-contents)
+
+### 9. As a registered and logged-in user, I want to have the ability to delete trees from my collection, so I can remove outdated or incorrect tree entries.
+
+- **Testing Procedure:**
+  - Tested the tree deletion process from the user's collection.
+  - Verified the presence of a confirmation prompt to prevent accidental deletions and checked if the tree was permanently removed from the collection after confirmation.
+
+- **Outcome:**
+  - Tree deletion was secure and effective, with all deleted trees being permanently removed from the user’s collection.
+
+### 10. As a user of the Tree Enthusiast website, I want to search for trees using their common names, so I can quickly find specific trees and learn more about them.
+
+- **Testing Procedure:**
+  - Used the search feature with various common names.
+  - Checked the accuracy and relevance of the search results, as well as the user experience on the search results page.
+
+- **Outcome:**
+  - The search function was effective and accurate, returning relevant trees based on the entered common names. The results page was well-organized and user-friendly.
+
+[Back to top ⇧](#table-of-contents)
+
+### 11. As a visitor to the Tree Enthusiast website, I want to access a 'Browse Trees' feature, so I can view all trees listed in the database.
+
+- **Testing Procedure:**
+  - Accessed the 'Browse Trees' section as both a visitor and a logged-in user.
+  - Explored various tree entries and tested navigational prompts for visitors to log in or sign up for more interaction.
+
+- **Outcome:**
+  - The 'Browse Trees' feature was accessible and functional for all users. Visitors were appropriately prompted to register or log in for further interactions.
+
+### 12. As a registered and logged-in user of the Tree Enthusiast website, I want to manage my contributions and navigate the site effectively.
+
+- **Testing Procedure:**
+  - Tested the ability to search, view, edit, and delete trees added by the logged-in user.
+  - Checked for ease of navigation and user interface intuitiveness when interacting with trees added by other users.
+
+- **Outcome:**
+  - Registered and logged-in users were able to effectively manage their contributions. The site provided a smooth and intuitive navigation experience.
+
+Each user story was tested with a focus on fulfilling its defined acceptance criteria, ensuring that the Tree Enthusiast app meets the needs and expectations of its users.
+
+[Back to top ⇧](#table-of-contents)
+
+
+
+
 
 ### Manual Testing
 #### Common Elements Testing
