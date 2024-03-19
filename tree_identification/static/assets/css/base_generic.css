@@ -95,7 +95,7 @@ nav ul li a {
         font-size: 2rem;
     }
     nav ul li a {
-        font-size: 1rem;
+        font-size: .8rem;
     }
     .footer-headings,    
     .footer-socials {
@@ -110,6 +110,45 @@ nav ul li a {
         padding: 0 1rem 0 1rem;
     }     
 } 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    #nav-title {
+        font-size: 3rem; 
+    }
+    .navbar-brand img {
+        max-height: 70px; 
+    }
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+    .navbar-brand img {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    .navbar-toggler {
+        font-size: 3rem;
+    }
+    .form-control .search-input {
+        font-size: 1rem;
+    }
 }
+
+@media screen and (min-width: 1024px) {
+    #nav-title {
+        font-size: 2rem; 
+    }
+    .navbar-brand img {
+        max-height: 60px; 
+    }
+    nav ul li a {
+        font-size: 1rem;
+    }
+    .navbar-brand img {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    .navbar-toggler {
+        font-size: 4rem;
+    }
+}
+    

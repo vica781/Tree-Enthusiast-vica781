@@ -59,7 +59,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-/* ---------------------------- CONTACT PAGE ------------------------------- */
 
 /* ---------------------------- ADD TREE PAGE ------------------------------ */
 .add-tree-bg-image {
@@ -149,13 +148,19 @@
     border-radius: 50px; 
     font-size: 1.5rem; 
 }
- /* --------------------------- BROWSE TREES PAGE --------------------------- */
+ /* --------------------------- BROWSE TREES PAGE -------------------------- */
  .browse-trees-card {
     height: 300px; 
     width: 100%;
     margin-bottom: 1.5rem;
 }
-/* ---------------------------- TREE DETAILS PAGE --------------------------- */
+/* --------------------------- SEARCH RESULTS PAGE ------------------------- */
+ .search-results-card {
+    height: 300px; 
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+/* ---------------------------- TREE DETAILS PAGE -------------------------- */
 .tree-dtls-overlay-container {
     top: 50%; 
     left: 50%; 
@@ -294,7 +299,7 @@
         padding: 5px 10px; 
         margin: 2px;              
     }
-/* ___________________________ Browse Trees ___________________________ */
+/* _______________________________ Browse Trees ___________________________ */
     .browse-trees-card-title {
         font-size: 1.3rem;
     }
@@ -303,10 +308,93 @@
         padding: 5px 10px; 
         margin: 2px; 
     }
-    .card-title-brs-trs-name {
+    .browse-trees-name {
+        font-size: .75rem;
+        text-align: center;
+    }
+    /* ___________________________ Search Trees ___________________________ */
+    .search-results-card-title {
+        font-size: 1.3rem;
+    }
+    .search-results-btns {
+        font-size: 0.7rem;
+        padding: 5px 10px; 
+        margin: 2px; 
+    }
+    .search-results-tree-name {
         font-size: .75rem;
         text-align: center;
     }
 }
+/* ----------------------------- TABLET VIEW ------------------------------ */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .profile-overlay-container {
+        max-height: 90vh;
+    }
+    .account-img {
+        height: 150px;
+        width: 150px;
+    }    
+    .profile-account-img {
+        height: 150px;
+        width: 150px;
+    }
+    .profile-update-scrollable-content {
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+    .profile-update-heading {
+        font-size: 1.7rem;
+    }
+    /* ___________________________ My Trees ___________________________ */
+    .card-title-tree-name {
+        font-size: .8rem;
+        text-align: center;
+    } 
+    .my-trees-card-title {
+        font-size: 1.3rem;
+    }    
+    .my-trees-card {
+        height: 160px; 
+        width: 100%; 
+        margin-bottom: 1.5rem;    
+    }
+    /* Tree image adjustments */
+    .tree-card-image {
+        height: 110px; 
+        width: 100%; 
+        object-fit: cover;
+        object-fit: contain
+    }
+    .bd-placeholder-img {
+        max-height: 110px; 
+        object-fit: contain;
+    }
+    .my-trees-btns .btn {
+        font-size: 0.8rem;
+        padding: 5px 10px; 
+        margin: 2px;              
+    }
+}
 
+@media screen and (min-width: 1024px) {
+    .profile-overlay-container {
+        max-height: 90vh;
+    }
+    .account-img {
+        height: 150px;
+        width: 150px;
+    }    
+    .profile-account-img {
+        height: 150px;
+        width: 150px;
+    }
+    .profile-update-scrollable-content {
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+    .profile-update-heading {
+        font-size: 1.7rem;
+    }
     
+}

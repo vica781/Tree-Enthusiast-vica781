@@ -10,7 +10,7 @@
         class="img-fluid w-100"
         style="height: 100vh; object-fit: cover"
       />
-      
+
       <!-- Form Overlay -->
       <div
         class="container position-absolute overlay-container"
@@ -25,13 +25,13 @@
               <div class="d-flex justify-content-center align-items-center">
                 <h3>Search Results</h3>
               </div>
-              <hr />
+              <hr>
               <!-- Main Content SEARCH RESULTS -->
               <div class="container" style="height: 60vh; overflow-y: auto">
                 <div class="row">
                   {% for tree in trees %}
                   <div class="col-md-4">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm search-results-card">
                       <img
                         class="bd-placeholder-img card-img-top img-fluid pt-2 px-2"
                         style="max-height: 200px; object-fit: contain"
@@ -40,7 +40,9 @@
                       <div class="card-body d-flex flex-column">
                         <p class="card-text text-center">
                           <a href="{% url 'tree_detail' tree_id=tree.id %}">
-                            <h5 class="text-center">{{ tree.common_name }}</h5>
+                            <h5 class="card-title-tree-name">
+                              {{ tree.common_name }}
+                            </h5>
                           </a>
                         </p>
                       </div>
@@ -52,26 +54,45 @@
                 </div>
               </div>
               {% if request.user.is_authenticated %}
+              <hr>
               <!-- Buttons -->
-              <div class="d-flex justify-content-center mt-4">
-                <a href="{% url 'add_tree' %}" class="btn btn-success mr-2 p-1"
+              <div class="d-flex justify-content-center mt-4 mb-2">
+                <a
+                  href="{% url 'add_tree' %}"
+                  class="btn btn-success search-tesults-btns mr-2 p-1"
                   >Add Tree</a
                 >
-                <a href="{% url 'my_trees' %}" class="btn btn-primary mr-2 p-1"
+                <a
+                  href="{% url 'my_trees' %}"
+                  class="btn btn-primary search-tesults-btns mr-2 p-1"
                   >My Trees</a
                 >
-                <a href="{% url 'home' %}" class="btn btn-info p-1"> Home </a>
+                <a
+                  href="{% url 'home' %}"
+                  class="btn btn-info search-tesults-btns p-1"
+                >
+                  Home
+                </a>
               </div>
               {% else %}
               <!-- Buttons -->
               <div class="d-flex justify-content-center mt-4">
-                <a href="{% url 'login' %}" class="btn btn-success mr-2 p-1"
+                <a
+                  href="{% url 'login' %}"
+                  class="btn btn-success search-tesults-btns mr-2 p-1"
                   >Login</a
                 >
-                <a href="{% url 'register' %}" class="btn btn-primary mr-2 p-1"
+                <a
+                  href="{% url 'register' %}"
+                  class="btn btn-primary search-tesults-btns mr-2 p-1"
                   >Sign Up</a
                 >
-                <a href="{% url 'home' %}" class="btn btn-info p-1"> Home </a>
+                <a
+                  href="{% url 'home' %}"
+                  class="btn btn-info search-tesults-btns p-1"
+                >
+                  Home
+                </a>
               </div>
               {% endif %}
             </div>
