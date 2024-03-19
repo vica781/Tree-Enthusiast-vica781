@@ -637,8 +637,6 @@ During the development and testing phases of the Tree Enthusiast app, various ch
     - For encoding and decoding JSON Web Tokens.
 - [Cryptography](https://pypi.org/project/cryptography/)
     - For cryptographic recipes and primitives.
-- [EmailJS](https://www.emailjs.com/)
-    - For creating a functional contact form.
 
 #### Version Control and Deployment
 - [Git](https://git-scm.com/)
@@ -679,8 +677,6 @@ During the development and testing phases of the Tree Enthusiast app, various ch
 #### Additional Tools
 - [Am I Responsive](http://ami.responsivedesign.is/)
     - For creating mockup images.
-- [EmailJS](https://www.emailjs.com/)
-    - For implementing email functionality.
 
 [Back to top ⇧](#table-of-contents)
 
@@ -824,7 +820,6 @@ The web site is deployed on Heroku and can be found [here](https://tree-enthusia
 
 ### Code
 - The Navbar code was adapted from [Bootstrap](https://getbootstrap.com/docs/5.0/examples/navbars/).
-- The contact form functionality was inspired by [EmailJS](https://www.emailjs.com/).
 - Custom 404 and other error pages were developed with guidance from [Django Docs](https://docs.djangoproject.com/en/3.2/ref/views/#error-views).
 - The text animations on the Homepage were adapted from Alvaro Trigo's blog on [CSS text animations](https://alvarotrigo.com/blog/css-text-animations/) and a [CodePen example by Andy Sanchez](https://codepen.io/andysanchez-dev/pen/GYPevV*/).
 - Footer social media links were adapted from [MDBootstrap](https://mdbootstrap.com/docs/standard/navigation/footer/).

@@ -541,11 +541,9 @@ The development and functionality of the Tree Enthusiast app were guided by spec
 Each user story was tested with a focus on fulfilling its defined acceptance criteria, ensuring that the Tree Enthusiast app meets the needs and expectations of its users.
 
 [Back to top ⇧](#table-of-contents)
-
-
-
-
-
+******
+******
+******
 ### Manual Testing
 #### Common Elements Testing
 Manual testing was conducted on the following elements that appear on every page:
@@ -614,7 +612,9 @@ Manual testing was conducted on the following elements that appear on every page
 - Contact Page
 
 ![Contact Page Test](./docs/images/manual_testing/contact.gif)
-
+*******
+*******
+*******
 ## Automated Testing
 
 ### Code Validation
