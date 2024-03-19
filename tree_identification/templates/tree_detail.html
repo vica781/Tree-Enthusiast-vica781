@@ -15,9 +15,9 @@
           <div class="col-lg-10 offset-lg-1 col-md-12">
             <div class="p-3 mb-0 tree-dtls-form-container">
               <div class="container tree-dtls-overlay">
-                <h1 class="d-flex justify-content-center tree-detail-heading">
+                <h2 class="d-flex justify-content-center tree-detail-heading">
                   {{ tree.common_name }}
-                </h1>
+                </h2>
                 <hr>
                 <!-- Scrollable Content Area -->
                 <div class="scrollable-content tree-details-scrollable-content">
@@ -72,7 +72,6 @@
                   Delete
                 </button>
               </div>
-
               {% elif request.user.is_authenticated %}
               <!-- Buttons for Other Users -->
               <div class="row text-center mt-4">
@@ -95,7 +94,7 @@
                 </div>
               </div>
               {% else %}
-              <!-- Buttons for Other Users -->
+              <!-- Buttons for Anonymous Users -->
               <div class="row text-center mt-4">
                 <div class="col-12">
                   <a
