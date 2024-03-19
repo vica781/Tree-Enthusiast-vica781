@@ -22,7 +22,7 @@ class Profile(models.Model):
 
 # Model to represent the tree data
 class Tree(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)    
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     common_name = models.CharField(max_length=200, null=True, blank=True)
     tree_type = models.CharField(max_length=200, null=True, blank=True)
     origin = models.CharField(max_length=200, null=True, blank=True)

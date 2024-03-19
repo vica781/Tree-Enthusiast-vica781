@@ -9,7 +9,8 @@ from .models import Message, Tree
 
 
 class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField(widget=forms.EmailInput(attrs={"class": "form-control"}))
+    email = forms.EmailField(
+        widget=forms.EmailInput(attrs={"class": "form-control"}))
 
     class Meta:
         model = User
@@ -37,9 +38,12 @@ class UserRegisterForm(UserCreationForm):
 
 class ProfileUpdateForm(forms.ModelForm):
     email = forms.EmailField()
-    current_password = forms.CharField(widget=forms.PasswordInput(), required=True)
-    new_password = forms.CharField(widget=forms.PasswordInput(), required=False)
-    confirm_new_password = forms.CharField(widget=forms.PasswordInput(), required=False)
+    current_password = forms.CharField(
+        widget=forms.PasswordInput(), required=True)
+    new_password = forms.CharField(
+        widget=forms.PasswordInput(), required=False)
+    confirm_new_password = forms.CharField(
+        widget=forms.PasswordInput(), required=False)
 
     class Meta:
         model = Profile
@@ -48,8 +52,10 @@ class ProfileUpdateForm(forms.ModelForm):
     def clean_email(self):
         email = self.cleaned_data.get("email")
         user = self.instance.user
-        if User.objects.filter(email=email).exclude(username=user.username).exists():
-            raise forms.ValidationError("This email address is already in use.")
+        if User.objects.filter(email=email).exclude(
+                username=user.username).exists():
+            raise forms.ValidationError(
+                "This email address is already in use.")
         return email
 
     def clean(self):
@@ -98,8 +104,10 @@ class MessageForm(forms.ModelForm):
             super().__init__(*args, **kwargs)
             self.fields["name"].widget.attrs.update({"class": "form-control"})
             self.fields["email"].widget.attrs.update({"class": "form-control"})
-            self.fields["subject"].widget.attrs.update({"class": "form-control"})
-            self.fields["message"].widget.attrs.update({"class": "form-control"})
+            self.fields["subject"].widget.attrs.update(
+                {"class": "form-control"})
+            self.fields["message"].widget.attrs.update(
+                {"class": "form-control"})
             for field in self.fields:
                 self.fields[field].widget.attrs["class"] = "form-control"
                 self.fields[field].widget.attrs["placeholder"] = self.fields[

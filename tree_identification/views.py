@@ -1,3 +1,4 @@
+from django.contrib.auth import update_session_auth_hash
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -60,8 +61,9 @@ def register_user(request):
             else:
                 messages.error(
                     request,
-                    "Account creation was successful but automatic login failed.",
+                    "Account creation was successful but automatic login failed.",  # noqa
                 )
+
         else:
             # Check specifically for an email error
             email_error = form.errors.get("email", None)
@@ -69,7 +71,7 @@ def register_user(request):
                 # If there's an email error, just add the custom message once
                 messages.error(
                     request,
-                    "The email you entered is already taken, please choose another one.",
+                    "The email you entered is already taken, please choose another one.",  # noqa
                 )
             else:
                 # Add a general error message for any other form errors
@@ -85,7 +87,8 @@ def register_user(request):
 
 def check_username(request):
     username = request.GET.get("username", None)
-    response = {"is_taken": User.objects.filter(username__iexact=username).exists()}
+    response = {"is_taken": User.objects.filter(
+        username__iexact=username).exists()}
     return JsonResponse(response)
 
 
@@ -137,12 +140,13 @@ def contact(request):
         message = request.POST.get("message")
 
         # Save the message in the database
-        Message.objects.create(name=name, email=email, subject=subject, message=message)
+        Message.objects.create(
+            name=name, email=email, subject=subject, message=message)
 
         # Send confirmation email
         send_mail(
             "Confirmation - We Received Your Message",
-            "Thank you for contacting us. We have received your message and will respond shortly.",
+            "Thank you for contacting us. We have received your message and will respond shortly.",  # noqa
             settings.DEFAULT_FROM_EMAIL,
             [email],
             fail_silently=False,
@@ -161,10 +165,8 @@ def contact(request):
 
 @login_required
 def profile_user(request):
-    return render(request, "profile.html", context={"page_title": "Your Profile"})
-
-
-from django.contrib.auth import update_session_auth_hash
+    return render(request, "profile.html",
+                  context={"page_title": "Your Profile"})
 
 
 @login_required
@@ -174,7 +176,8 @@ def profile_update(request):
 
     if request.method == "POST":
         form = ProfileUpdateForm(
-            request.POST, request.FILES, instance=profile, initial={"email": user.email}
+            request.POST,
+            request.FILES, instance=profile, initial={"email": user.email}
         )
 
         # Get the 'current_password' from the form
@@ -183,7 +186,8 @@ def profile_update(request):
         # Now manually check if the current password is correct
         if not user.check_password(current_password):
             # If the password is incorrect, add a custom error message
-            messages.error(request, "The current password you entered is incorrect.")
+            messages.error(
+                request, "The current password you entered is incorrect.")
             return render(request, "profile_update.html", {"form": form})
 
         if form.is_valid():
@@ -205,13 +209,15 @@ def profile_update(request):
             # Save profile (for image and other profile-related updates)
             form.save()
 
-            messages.success(request, "Your profile has been updated successfully.")
+            messages.success(
+                request, "Your profile has been updated successfully.")
             return redirect("profile")
         else:
             # If form is not valid, render the form with errors
             return render(request, "profile_update.html", {"form": form})
     else:
-        form = ProfileUpdateForm(instance=profile, initial={"email": user.email})
+        form = ProfileUpdateForm(
+            instance=profile, initial={"email": user.email})
 
     return render(request, "profile_update.html", {"form": form})
 
@@ -221,14 +227,10 @@ def profile_delete(request, user_id):
     if request.method == "POST":
         # Retrieve the password from the form
         password = request.POST.get("confirm_password")
-
-        # Debugging: Print the password and username to the console (remove in production)
-        print(f"Password received: {password}")
-        print(f"User: {request.user.username}")
-
         # Manually check the password
         if request.user.check_password(password):
-            username = request.user.username  # Store the username before deletion
+            # Store the username before deletion
+            username = request.user.username
             request.user.delete()  # Delete the user
             messages.info(
                 request, f"{username}'s profile has been successfully deleted!"
@@ -236,7 +238,8 @@ def profile_delete(request, user_id):
             return redirect("home")
         else:
             # If password check fails, inform the user
-            messages.error(request, "Password is incorrect. Profile was not deleted.")
+            messages.error(
+                request, "Password is incorrect. Profile was not deleted.")
             return redirect("profile")
 
 
@@ -244,7 +247,9 @@ def profile_delete(request, user_id):
 def add_or_edit_tree(request, tree_id=None):
     if tree_id:
         tree = get_object_or_404(Tree, id=tree_id, user=request.user)
-        form = TreeForm(request.POST or None, request.FILES or None, instance=tree)
+        form = TreeForm(
+            request.POST or None,
+            request.FILES or None, instance=tree)
         page_title = "Edit Tree"
     else:
         tree = None
@@ -260,7 +265,6 @@ def add_or_edit_tree(request, tree_id=None):
             try:
                 new_tree = form.save(commit=False)
                 new_tree.user = request.user
-                # Before saving, you can log the new_tree object to see its fields
                 logger.debug(f"New Tree object: {new_tree}")
                 new_tree.save()
                 messages.success(
@@ -291,9 +295,11 @@ def add_or_edit_tree(request, tree_id=None):
 
 @login_required
 def my_trees(request):
-    trees = Tree.objects.filter(user=request.user)  # Fetch trees for the logged-in user
+    # Fetch trees for the logged-in user
+    trees = Tree.objects.filter(user=request.user)
     return render(
-        request, "my_trees.html", context={"page_title": "My Trees", "trees": trees}
+        request, "my_trees.html",
+        context={"page_title": "My Trees", "trees": trees}
     )
 
 
@@ -321,7 +327,8 @@ def delete_tree(request, tree_id):
             return redirect("my_trees")  # Redirect user to their trees
         else:
             # Password is incorrect
-            messages.error(request, "Password is incorrect. Tree was not deleted.")
+            messages.error(
+                request, "Password is incorrect. Tree was not deleted.")
             return redirect("tree_detail", tree_id=tree_id)
 
     return render(request, "confirm_delete.html", {"tree": tree})
@@ -329,7 +336,8 @@ def delete_tree(request, tree_id):
 
 def identification_guide(request):
     return render(
-        request, "identification_guide.html", context={"page_title": "Trees' Guide"}
+        request, "identification_guide.html",
+        context={"page_title": "Trees' Guide"}
     )
 
 
@@ -364,7 +372,8 @@ def contact(request):
         form = MessageForm()
 
     return render(
-        request, "contact.html", context={"page_title": "Contact", "form": form}
+        request, "contact.html",
+        context={"page_title": "Contact", "form": form}
     )
 
 

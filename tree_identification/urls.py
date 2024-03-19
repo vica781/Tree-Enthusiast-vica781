@@ -13,8 +13,8 @@ urlpatterns = [
     path("register/", views.register_user, name="register"),
     # Password Reset
     path(
-        "password_reset/", auth_views.PasswordResetView.as_view(), name="password_reset"
-    ),
+        "password_reset/", auth_views.PasswordResetView.as_view(),
+        name="password_reset"),
     path(
         "password_reset/done/",
         auth_views.PasswordResetDoneView.as_view(),
@@ -33,7 +33,9 @@ urlpatterns = [
     # User Profiles
     path("profile/", views.profile_user, name="profile"),
     path("profile/update/", views.profile_update, name="profile-update"),
-    path("profile/delete/<int:user_id>/", views.profile_delete, name="profile_delete"),
+    path(
+        "profile/delete/<int:user_id>/", views.profile_delete,
+        name="profile_delete"),
     path("check_username/", views.check_username, name="check_username"),
     path("check_email/", views.check_email, name="check_email"),
     # Contact
@@ -49,8 +51,8 @@ urlpatterns = [
     path("browse_trees/", views.browse_trees, name="browse_trees"),
     # Guides and Information
     path(
-        "identification_guide/", views.identification_guide, name="identification_guide"
-    ),
+        "identification_guide/", views.identification_guide,
+        name="identification_guide"),
     # Home Page
     path("", views.home, name="home"),
 ]
@@ -59,5 +61,5 @@ urlpatterns = [
 if settings.DEBUG:
     from django.conf.urls.static import static
 
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # noqa
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # noqa
