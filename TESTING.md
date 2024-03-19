@@ -541,81 +541,160 @@ The development and functionality of the Tree Enthusiast app were guided by spec
 Each user story was tested with a focus on fulfilling its defined acceptance criteria, ensuring that the Tree Enthusiast app meets the needs and expectations of its users.
 
 [Back to top ⇧](#table-of-contents)
-******
-******
-******
+
 ### Manual Testing
+
+Manual testing involves thorough checking of all the features of the application to ensure they function correctly and provide a good user experience.
+
 #### Common Elements Testing
-Manual testing was conducted on the following elements that appear on every page:
 
-- Navbar
+Common elements such as navigation bars, footers, and buttons were tested for consistent behavior across different pages and devices.
 
-![Navbar Test](./docs/images/manual_testing/navbar.gif)
+- **Navigation Bar and Links:**
+  - Ensured that the navigation bar is visible and functions correctly on all pages.
+  - Verified that all links lead to the correct pages without any broken links.
 
-- Footer
+- **Footer:**
+  - Checked the footer for proper display and functionality on all pages.
+  - Confirmed that footer links are working as intended.
 
-![Footer Test](./docs/images/manual_testing/footer.gif)
+- **Buttons:**
+  - Tested all buttons for appropriate actions when clicked.
+  - Made sure that buttons are properly labeled and positioned.
 
-- Favicon
+- **Forms:**
+  - Submitted forms to validate input fields and check for correct error/success message display.
+  - Tested form reset functionalities and default values.
 
-![Favicon Test](./docs/images/manual_testing/favicon.png)
+- **Accessibility:**
+  - Reviewed the application for basic accessibility features like tab navigation and readable fonts.
 
-#### Functionalities testing
-- Login
+#### Functionalities Testing
 
-![Login Test](./docs/images/manual_testing/login.gif)
+Specific functionalities of the application were tested to confirm they perform as designed.
 
-- Register
+- **User Registration and Login:**
+  - Tested registration with various inputs to validate form submission and error handling.
+  - Verified login functionality with correct and incorrect credentials for proper authentication.
 
-![Register Test](./docs/images/manual_testing/registration.gif)
+- **Profile Management:**
+  - Updated profiles to test edit functionalities and correct data persistence.
+  - Changed passwords to ensure the feature is secure and user-friendly.
 
-- Logout
+- **Tree Management:**
+  - Added, edited, and deleted trees to check CRUD operations within the application.
+  - Ensured updates are immediately reflected in the relevant sections.
 
-![Logout Test](./docs/images/manual_testing/logout.gif)
+- **Search Functionality:**
+  - Used the search function with different terms to test response accuracy and speed.
+  - Verified that the search bar is accessible from all necessary pages.
 
-- Profile Update
+- **Responsive Design:**
+  - Tested the application on various screen sizes to ensure design responsiveness.
+  - Checked layout and functionality on mobile, tablet, and desktop views.
 
-![Profile Update Test](./docs/images/manual_testing/profile_update.gif)
+- **Error Handling:**
+  - Induced errors to test application stability and correct error messaging.
 
-- Profile Delete
+[Back to top ⇧](#table-of-contents)
 
-![Profile Delete Test](./docs/images/manual_testing/profile_delete.gif)
-
-- Verify Profile Deletion (and all book records associated with the user)
-
-![Verify Profile Deletion Test](./docs/images/manual_testing/delete_verify.gif)
-
-- Add Book
-
-![Add Book Test](./docs/images/manual_testing/add_book.gif)
-
-- Edit Book
-
-![Edit Book Test](./docs/images/manual_testing/edit_book.gif)
-
-- Delete Book
-
-![Delete Book Test](./docs/images/manual_testing/delete_book.gif)
-
-- Find Book
-
-![Find Book Test](./docs/images/manual_testing/find_book.gif)
-
-- Book Details
-
-![Book Details Test](./docs/images/manual_testing/book_details.gif)
-
-- Favourites Page
-
-![Favourites Page Test](./docs/images/manual_testing/favourites.gif)
-
-- Contact Page
-
-![Contact Page Test](./docs/images/manual_testing/contact.gif)
-*******
-*******
-*******
 ## Automated Testing
+
+Automated testing covers a range of validations and checks to ensure code quality and application performance.
+
+### Code Validation
+
+All code was validated using industry-standard tools for syntax correctness and best practices.
+
+#### HTML Validation
+- **W3C Markup Validator** was used to validate the HTML of all pages.
+- Any issues found were corrected for standards-compliant markup.
+
+#### CSS Validation
+- **CSS Validation Service** was employed to check all CSS files.
+- Adjustments were made to ensure error-free CSS.
+
+#### JS Validation
+- **JSHint** was applied to JavaScript files to detect errors and potential problems.
+- Code was refactored based on the feedback to adhere to best practices.
+
+#### Python Validation
+- **PEP8 online validator** checked Python code against the PEP 8 style guide.
+- The code was updated for compliance with Python's style conventions.
+
+[Back to top ⇧](#table-of-contents)
+
+### Lighthouse Validation
+- **Google's Lighthouse** provided performance metrics for the website.
+- The feedback was used to optimize the site's performance, accessibility, and SEO.
+
+### Browser Validation
+- The website was tested across multiple browsers for compatibility.
+- Ensured consistent performance on browsers like Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge.
+
+### User Testing
+
+Feedback was gathered from a variety of users to test functionality and usability on different devices and browsers.
+
+- **Functionality Testing:**
+  - Users were asked to complete specific tasks while being observed to identify any usability issues.
+  - Feedback was collected to understand user satisfaction and areas needing improvement.
+
+- **Usability Testing:**
+  - The overall ease of use, layout understanding, and navigation were evaluated through user testing sessions.
+  - Adjustments were made based on user feedback to enhance the intuitive use of the application.
+
+Each stage of user testing was documented, with outcomes and subsequent improvements clearly outlined.
+
+[Back to top ⇧](#table-of-contents)
+
+## Automated Testing
+
+Automated testing methods were employed to efficiently validate code and functionalities.
+
+### Code Validation
+
+The following validation services were used to ensure that the application's codebase is adherent to best practices and standards.
+
+#### HTML Validation
+
+- Conducted using the W3C Markup Validator for all HTML pages.
+- Any validation errors were fixed to ensure compliance with HTML standards.
+
+#### CSS Validation
+
+- Utilized the W3C CSS Validation Service for the project's CSS files.
+- All issues were resolved to confirm that CSS is error-free and optimized.
+
+#### JS Validation
+
+- Applied JSHint for JavaScript code quality checks.
+- Improvements were made in accordance with the suggestions provided by the tool.
+
+#### Python Validation
+
+- Employed PEP8 online validator for Python code to ensure it follows the PEP 8 style guide.
+- The code was updated to meet the standards set by PEP 8.
+
+[Back to top ⇧](#table-of-contents)
+
+### Lighthouse Validation
+
+- The website was audited using Google's Lighthouse tool to measure performance, accessibility, best practices, and SEO.
+- Based on the reports, enhancements were implemented to improve the website's scores in these areas.
+
+### Browser Compatibility
+
+- Confirmed that the website operates correctly across different browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
+
+### User Feedback
+
+- User testing was conducted with various individuals to gather feedback on the user experience.
+- Suggestions for improvements were taken into account, and necessary changes were implemented.
+
+Each user story underwent meticulous testing, with the results documented to ensure transparency and continuous improvement.
+
+[Back to top ⇧](#table-of-contents)
 
 ### Code Validation
 
@@ -702,6 +781,29 @@ The [Lighthouse](https://developers.google.com/web/tools/lighthouse) tool was us
 
 These are the results of the validation:
 
+- Home Page
+![Home Page Lighthouse Validation](./media/testing/lighthouse/homepage-lighthouse.JPG)
+
+- Login Page
+![Login Page Lighthouse Validation](./media/testing/lighthouse/signup-lighthouse.JPG)
+
+- Contact Page
+![Contact Page Lighthouse Validation](./media/testing/lighthouse/contactpage-lighthouse.JPG)
+
+- Tree Details Page
+![Tree Details Page Lighthouse Validation](./media/testing/lighthouse/edittree-page-lighthouse.JPG)
+
+- Edit Tree Page
+![Edit Tree Page Lighthouse Validation](./media/testing/lighthouse/edittree-page-lighthouse.JPG)
+
+- Update Profile Page
+![Update Profile Page Lighthouse Validation](./media/testing/lighthouse/updateprofile-page-lighthouse.JPG)
+
+- Search Results Page
+![Search Results Page Lighthouse Validation](./media/testing/lighthouse/searchpage-lighthouse.JPG)
+
+- Profile Page
+![Profile Page Lighthouse Validation](./media/testing/lighthouse/profilepage-lighthouse.JPG)
 
 
 [Back to top ⇧](#table-of-contents)
