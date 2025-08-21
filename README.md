@@ -1,13 +1,13 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 <h1>
-    <a href="https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com/">
+    <a href="https://tree-enthusiast-vica781.onrender.com">
         <img src="./media/docs_images/oak-logo.png" alt="Tree Enthusiast logo" width="105" height="100" style="vertical-align:middle">
     </a>
     TREE ENTHUSIAST
 </h1>
 
 
-[![Am I Responsive Mockup](./media/docs_images/am_I_responsive.png)](https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com/)
+[![Am I Responsive Mockup](./media/docs_images/am_I_responsive.png)](https://tree-enthusiast-vica781.onrender.coms)
 
 ## Table of Contents
 
@@ -741,6 +741,8 @@ Add /admin to the address to access the Django admin panel using your superuser 
 
 ### Heroku Deployment
 
+N.B. The Heroku deployment is currently not working due to a Heroku issue. Therefore, the project will be deployed on Render instead.
+
 Sign up to [Heroku](https://heroku.com/) for free if you don't already have an account.
 
 1. Create a new app in Heroku.
@@ -803,6 +805,10 @@ Under Deployment Method, choose GitHub and search for your repository and click 
 
 [Back to top ⇧](#table-of-contents)
 
+### Deploying on Render
+
+The app is now deployed on [Render](https://render.com/). The project can be found [here](https://tree-enthusiast-vica781.onrender.com/).
+
 ### Forking the GitHub Repository
 The project can be forked in order to make a copy of the original repository and propose changes to the project owner using Pull Requests.
 That can be done by following these steps:
@@ -812,7 +818,7 @@ A copy of the Repository should now be in your GitHub account.
 You can now propose changes to the Repository by creating a Pull Request.
 
 ### Live deployment
-The web site is deployed on Heroku and can be found [here](https://tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com/).
+The web site is deployed on Heroku and can be found [here](https://tree-enthusiast-vica781.onrender.com).
 
 [Back to top ⇧](#table-of-contents)
 
