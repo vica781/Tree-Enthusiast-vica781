@@ -48,6 +48,7 @@ ALLOWED_HOSTS = [
     "Victoria-Laptop",
     "DESKTOP-5QJH8QH",
     "tree-enthusiast-vica781-11c9e6b9e6b1.herokuapp.com",
+    "tree-enthusiast-vica781.onrender.com"
 ]
 
 # Application definition
